@@ -360,3 +360,8 @@
 	file_name = "sugarcube"
 	name = "Sugarcube Transport"
 	prefix = "ISV"
+
+/datum/map_template/shuttle/subshuttles/nanotrasen_miningshuttle
+	file_name = "nanotrasen_miningshuttle"
+	name = "Mining Shuttle"
+	prefix = "NTSV"
