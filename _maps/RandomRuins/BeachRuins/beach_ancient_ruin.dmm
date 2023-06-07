@@ -20,7 +20,9 @@
 /turf/open/floor/concrete/slab_1,
 /area/ruin/beach/complex/wall)
 "aA" = (
-/obj/machinery/light/small/directional/north,
+/obj/machinery/light/small{
+	dir = 1
+	},
 /obj/structure/spacevine/weak,
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -52,11 +54,16 @@
 "aP" = (
 /obj/effect/turf_decal/trimline/opaque/white/filled/warning,
 /obj/effect/turf_decal/industrial/stand_clear/white,
-/obj/machinery/computer/cryopod/directional/south,
+/obj/machinery/computer/cryopod{
+	dir = 1;
+	pixel_y = -27
+	},
 /turf/open/floor/plasteel/mono,
 /area/ruin/beach/complex)
 "aV" = (
-/obj/machinery/light/small/directional/north,
+/obj/machinery/light/small{
+	dir = 1
+	},
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
@@ -98,7 +105,9 @@
 	},
 /area/ruin/beach/complex)
 "cl" = (
-/obj/machinery/light/small/directional/north,
+/obj/machinery/light/small{
+	dir = 1
+	},
 /obj/structure/spacevine/weak,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/cable{
@@ -123,11 +132,15 @@
 /obj/effect/turf_decal/box/white,
 /obj/effect/decal/cleanable/oil,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/light/small/directional/west,
+/obj/machinery/light/small{
+	dir = 8
+	},
 /turf/open/floor/concrete/slab_4,
 /area/ruin/beach/complex)
 "cD" = (
-/obj/machinery/light/small/directional/north,
+/obj/machinery/light/small{
+	dir = 1
+	},
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/cable{
 	icon_state = "2-4"
@@ -227,13 +240,6 @@
 /obj/structure/spacevine/weak,
 /turf/open/floor/plasteel/mono,
 /area/ruin/beach/complex)
-"ee" = (
-/obj/machinery/door/airlock/grunge{
-	dir = 4
-	},
-/obj/structure/spacevine/weak,
-/turf/open/floor/concrete/slab_4,
-/area/ruin/beach/complex)
 "en" = (
 /obj/effect/turf_decal/trimline/opaque/white/filled/warning{
 	dir = 8
@@ -290,7 +296,9 @@
 	},
 /area/ruin/beach/complex)
 "fH" = (
-/obj/machinery/light/small/directional/east,
+/obj/machinery/light/small{
+	dir = 4
+	},
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/table,
 /obj/item/reagent_containers/food/drinks/mug{
@@ -305,7 +313,7 @@
 /obj/item/lighter/greyscale{
 	pixel_x = 4
 	},
-/obj/machinery/light/small/directional/south,
+/obj/machinery/light/small,
 /turf/open/floor/concrete/slab_3,
 /area/ruin/beach/complex)
 "fP" = (
@@ -335,7 +343,9 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/light/small/directional/east,
+/obj/machinery/light/small{
+	dir = 4
+	},
 /obj/structure/spacevine/weak,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/concrete/slab_1,
@@ -398,7 +408,9 @@
 /turf/open/floor/concrete/slab_4,
 /area/ruin/beach/complex)
 "gZ" = (
-/obj/machinery/light/dim/directional/east,
+/obj/machinery/light/dim{
+	dir = 4
+	},
 /obj/structure/spacevine/weak,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/concrete/slab_4,
@@ -414,15 +426,8 @@
 /obj/structure/flora/ausbushes/ppflowers,
 /turf/open/floor/plating/grass/beach/lit,
 /area/ruin/beach/complex)
-"hE" = (
-/obj/machinery/door/airlock/grunge{
-	dir = 8
-	},
-/obj/structure/spacevine/weak,
-/turf/open/floor/concrete/slab_4,
-/area/ruin/beach/complex)
 "hO" = (
-/obj/machinery/light/small/directional/south,
+/obj/machinery/light/small,
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
@@ -487,7 +492,7 @@
 /turf/open/floor/concrete/slab_3,
 /area/ruin/beach/complex)
 "ix" = (
-/obj/machinery/light/small/directional/south,
+/obj/machinery/light/small,
 /obj/structure/spacevine/weak,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/cable{
@@ -680,7 +685,7 @@
 /turf/open/floor/concrete/slab_1,
 /area/ruin/beach/complex/wall)
 "lR" = (
-/obj/machinery/light/small/directional/south,
+/obj/machinery/light/small,
 /obj/structure/spacevine/weak,
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -699,7 +704,9 @@
 /turf/open/floor/plating,
 /area/ruin/beach/complex/shuttle)
 "lW" = (
-/obj/machinery/light/small/directional/east,
+/obj/machinery/light/small{
+	dir = 4
+	},
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/cable{
 	icon_state = "2-8"
@@ -757,7 +764,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/machinery/light/small/directional/south,
+/obj/machinery/light/small,
 /obj/structure/spacevine/weak,
 /turf/open/floor/concrete/slab_3,
 /area/ruin/beach/complex)
@@ -856,12 +863,6 @@
 	},
 /turf/open/floor/plating,
 /area/ruin/beach/complex/shuttle)
-"om" = (
-/obj/machinery/door/airlock/grunge{
-	dir = 4
-	},
-/turf/open/floor/concrete/slab_4,
-/area/ruin/beach/complex)
 "on" = (
 /obj/effect/turf_decal/trimline/opaque/white/filled/warning{
 	dir = 8
@@ -897,11 +898,15 @@
 	},
 /obj/effect/decal/cleanable/robot_debris/old,
 /obj/effect/decal/cleanable/cobweb/cobweb2,
-/obj/machinery/light/small/directional/east,
+/obj/machinery/light/small{
+	dir = 4
+	},
 /turf/open/floor/plasteel/mono,
 /area/ruin/beach/complex)
 "oJ" = (
-/obj/machinery/light/small/directional/north,
+/obj/machinery/light/small{
+	dir = 1
+	},
 /obj/structure/spacevine/dense,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/cable{
@@ -1061,7 +1066,7 @@
 /turf/open/water/beach,
 /area/ruin/unpowered)
 "rA" = (
-/obj/machinery/light/small/directional/south,
+/obj/machinery/light/small,
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
@@ -1169,7 +1174,9 @@
 /turf/open/floor/concrete/slab_1,
 /area/ruin/beach/complex/wall)
 "sJ" = (
-/obj/machinery/light/small/directional/east,
+/obj/machinery/light/small{
+	dir = 4
+	},
 /obj/structure/spacevine/dense,
 /turf/open/floor/concrete/slab_4,
 /area/ruin/beach/complex)
@@ -1203,9 +1210,7 @@
 /turf/open/floor/plasteel/mono,
 /area/ruin/beach/complex/shuttle)
 "tG" = (
-/obj/machinery/door/airlock/grunge{
-	dir = 4
-	},
+/obj/machinery/door/airlock/grunge,
 /obj/structure/cable{
 	icon_state = "6-8"
 	},
@@ -1214,7 +1219,9 @@
 /turf/open/floor/concrete/slab_4,
 /area/ruin/beach/complex)
 "tK" = (
-/obj/machinery/light/small/directional/west,
+/obj/machinery/light/small{
+	dir = 8
+	},
 /obj/structure/spacevine/weak,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/cable{
@@ -1233,7 +1240,9 @@
 	dir = 10
 	},
 /obj/effect/decal/cleanable/oil/streak,
-/obj/machinery/light/small/directional/east,
+/obj/machinery/light/small{
+	dir = 4
+	},
 /turf/open/floor/plasteel/mono,
 /area/ruin/beach/complex)
 "uy" = (
@@ -1262,7 +1271,9 @@
 /area/ruin/beach/complex)
 "uH" = (
 /obj/structure/table,
-/obj/machinery/light/small/directional/north,
+/obj/machinery/light/small{
+	dir = 1
+	},
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/concrete/slab_3,
 /area/ruin/beach/complex)
@@ -1311,9 +1322,7 @@
 /turf/open/floor/concrete/slab_1,
 /area/ruin/beach/complex/wall)
 "vi" = (
-/obj/machinery/door/airlock/grunge{
-	dir = 4
-	},
+/obj/machinery/door/airlock/grunge,
 /turf/open/floor/concrete/slab_1,
 /area/ruin/beach/complex/wall)
 "vy" = (
@@ -1386,7 +1395,9 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/light/small/directional/west,
+/obj/machinery/light/small{
+	dir = 8
+	},
 /obj/structure/spacevine/weak,
 /turf/open/floor/plasteel/mono,
 /area/ruin/beach/complex)
@@ -1421,7 +1432,9 @@
 /turf/open/floor/concrete/slab_3,
 /area/ruin/beach/complex)
 "wG" = (
-/obj/machinery/light/small/directional/west,
+/obj/machinery/light/small{
+	dir = 8
+	},
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
@@ -1492,7 +1505,9 @@
 /obj/structure/chair/comfy/shuttle{
 	dir = 8
 	},
-/obj/machinery/light/small/directional/north,
+/obj/machinery/light/small{
+	dir = 1
+	},
 /obj/item/toy/plush/nukeplushie,
 /obj/structure/cable{
 	icon_state = "2-4"
@@ -1545,7 +1560,9 @@
 	pixel_x = 10;
 	pixel_y = 5
 	},
-/obj/machinery/light/small/directional/east,
+/obj/machinery/light/small{
+	dir = 4
+	},
 /turf/open/floor/concrete/slab_4,
 /area/ruin/beach/complex)
 "yh" = (
@@ -1562,7 +1579,7 @@
 /obj/structure/chair/comfy/shuttle{
 	dir = 8
 	},
-/obj/machinery/light/small/directional/south,
+/obj/machinery/light/small,
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
@@ -1607,7 +1624,9 @@
 /turf/open/floor/concrete/slab_1,
 /area/ruin/beach/complex/wall)
 "zn" = (
-/obj/machinery/light/small/directional/east,
+/obj/machinery/light/small{
+	dir = 4
+	},
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
@@ -1695,7 +1714,7 @@
 	},
 /area/ruin/beach/complex)
 "AF" = (
-/obj/machinery/light/small/directional/south,
+/obj/machinery/light/small,
 /obj/structure/spacevine/weak,
 /obj/structure/cable{
 	icon_state = "1-8"
@@ -1791,7 +1810,9 @@
 /turf/open/floor/plasteel/mono,
 /area/ruin/beach/complex)
 "Ci" = (
-/obj/machinery/light/small/directional/north,
+/obj/machinery/light/small{
+	dir = 1
+	},
 /obj/structure/spacevine/weak,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/concrete/slab_1,
@@ -1826,7 +1847,9 @@
 /turf/open/floor/concrete/slab_3,
 /area/ruin/beach/complex)
 "Cz" = (
-/obj/machinery/light/small/directional/west,
+/obj/machinery/light/small{
+	dir = 8
+	},
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -1857,17 +1880,19 @@
 /obj/effect/turf_decal/trimline/opaque/white/filled/warning{
 	dir = 4
 	},
-/obj/machinery/light/dim/directional/east,
+/obj/machinery/light/dim{
+	dir = 4
+	},
 /turf/open/floor/plasteel/mono,
 /area/ruin/beach/complex)
 "Dc" = (
-/obj/machinery/light/dim/directional/south,
+/obj/machinery/light/dim,
 /obj/structure/spacevine/dense,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/concrete/slab_3,
 /area/ruin/beach/complex)
 "Dd" = (
-/obj/machinery/power/apc/auto_name/directional/south,
+/obj/machinery/power/apc/auto_name/south,
 /obj/structure/cable{
 	icon_state = "0-8"
 	},
@@ -1876,12 +1901,16 @@
 /area/ruin/beach/complex/wall)
 "Dh" = (
 /obj/effect/turf_decal/trimline/opaque/white/filled/warning,
-/obj/machinery/light/small/directional/east,
+/obj/machinery/light/small{
+	dir = 4
+	},
 /obj/structure/spacevine/weak,
 /turf/open/floor/plasteel/mono,
 /area/ruin/beach/complex)
 "DF" = (
-/obj/machinery/light/small/directional/north,
+/obj/machinery/light/small{
+	dir = 1
+	},
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -1999,7 +2028,9 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/light/small/directional/east,
+/obj/machinery/light/small{
+	dir = 4
+	},
 /obj/structure/spacevine/weak,
 /turf/open/floor/concrete/slab_4,
 /area/ruin/beach/complex)
@@ -2018,7 +2049,7 @@
 /obj/effect/turf_decal/trimline/opaque/white/filled/warning{
 	dir = 4
 	},
-/obj/machinery/power/apc/auto_name/directional/west,
+/obj/machinery/power/apc/auto_name/west,
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
@@ -2027,7 +2058,7 @@
 "FO" = (
 /obj/structure/table,
 /obj/machinery/recharger,
-/obj/machinery/light/small/directional/south,
+/obj/machinery/light/small,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/concrete/slab_1,
 /area/ruin/beach/complex/wall)
@@ -2080,7 +2111,7 @@
 /area/ruin/beach/complex)
 "GC" = (
 /obj/structure/cable,
-/obj/machinery/power/apc/auto_name/directional/south,
+/obj/machinery/power/apc/auto_name/south,
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
@@ -2260,7 +2291,10 @@
 "Jy" = (
 /obj/effect/turf_decal/trimline/opaque/white/filled/warning,
 /obj/effect/turf_decal/industrial/stand_clear/white,
-/obj/machinery/newscaster/directional/south,
+/obj/machinery/newscaster{
+	dir = 1;
+	pixel_y = -30
+	},
 /turf/open/floor/plasteel/mono,
 /area/ruin/beach/complex)
 "JC" = (
@@ -2287,7 +2321,9 @@
 /turf/open/floor/plating,
 /area/ruin/beach/complex/shuttle)
 "JS" = (
-/obj/machinery/light/small/directional/east,
+/obj/machinery/light/small{
+	dir = 4
+	},
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -2391,9 +2427,7 @@
 /turf/open/floor/concrete/slab_1,
 /area/ruin/beach/complex/wall)
 "Lt" = (
-/obj/machinery/door/airlock/grunge{
-	dir = 4
-	},
+/obj/machinery/door/airlock/grunge,
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
@@ -2420,9 +2454,7 @@
 /turf/open/floor/concrete/slab_1,
 /area/ruin/beach/complex/wall)
 "LN" = (
-/obj/machinery/door/airlock/grunge{
-	dir = 4
-	},
+/obj/machinery/door/airlock/grunge,
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
@@ -2447,7 +2479,7 @@
 /turf/open/floor/plating/grass/beach/lit,
 /area/ruin/unpowered)
 "Mb" = (
-/obj/machinery/light/small/directional/south,
+/obj/machinery/light/small,
 /obj/structure/spacevine/dense,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/concrete/slab_1,
@@ -2479,7 +2511,9 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/machinery/light/small/directional/north,
+/obj/machinery/light/small{
+	dir = 1
+	},
 /obj/structure/spacevine/weak,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/concrete/slab_3,
@@ -2840,7 +2874,9 @@
 /obj/effect/turf_decal/trimline/opaque/white/filled/warning{
 	dir = 8
 	},
-/obj/machinery/light/dim/directional/west,
+/obj/machinery/light/dim{
+	dir = 8
+	},
 /turf/open/floor/plasteel/mono,
 /area/ruin/beach/complex)
 "SG" = (
@@ -2861,12 +2897,14 @@
 /area/ruin/beach/complex/wall)
 "SN" = (
 /obj/structure/table,
-/obj/machinery/light/dim/directional/east,
+/obj/machinery/light/dim{
+	dir = 4
+	},
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/concrete/slab_4,
 /area/ruin/beach/complex)
 "SS" = (
-/obj/machinery/light/small/directional/south,
+/obj/machinery/light/small,
 /obj/structure/spacevine/weak,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/concrete/slab_3,
@@ -2900,7 +2938,9 @@
 /turf/open/water/beach,
 /area/ruin/unpowered)
 "Ty" = (
-/obj/machinery/light/small/directional/west,
+/obj/machinery/light/small{
+	dir = 8
+	},
 /obj/structure/spacevine/weak,
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -3014,7 +3054,9 @@
 /obj/effect/turf_decal/trimline/opaque/white/filled/warning{
 	dir = 8
 	},
-/obj/machinery/light/dim/directional/west,
+/obj/machinery/light/dim{
+	dir = 8
+	},
 /obj/structure/spacevine/weak,
 /turf/open/floor/plasteel/mono,
 /area/ruin/beach/complex)
@@ -3032,9 +3074,7 @@
 /turf/open/floor/concrete/slab_1,
 /area/ruin/beach/complex/wall)
 "Wm" = (
-/obj/machinery/door/airlock/grunge{
-	dir = 4
-	},
+/obj/machinery/door/airlock/grunge,
 /obj/effect/decal/cleanable/blood/tracks{
 	dir = 8
 	},
@@ -3219,7 +3259,9 @@
 /obj/item/grenade/c4/x4{
 	pixel_x = 6
 	},
-/obj/machinery/light/small/directional/west,
+/obj/machinery/light/small{
+	dir = 8
+	},
 /turf/open/floor/plasteel/mono,
 /area/ruin/beach/complex)
 "ZN" = (
@@ -6327,7 +6369,7 @@ Ae
 AA
 AA
 IO
-ee
+dm
 IO
 AA
 AA
@@ -6476,7 +6518,7 @@ Vm
 mL
 AA
 AA
-hE
+dm
 UB
 AA
 AA
@@ -7260,7 +7302,7 @@ AA
 AA
 AA
 AA
-om
+xw
 UB
 AA
 wo

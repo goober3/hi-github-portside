@@ -31,7 +31,9 @@
 /area/shuttle/syndicate/bridge)
 "ag" = (
 /obj/structure/table/reinforced,
-/obj/machinery/light/directional/west,
+/obj/machinery/light{
+	dir = 8
+	},
 /obj/item/reagent_containers/food/drinks/bottle/whiskey{
 	desc = "A bottle of whiskey. There's a label that reads 'tears' taped to the front.";
 	name = "Bottle of Tears";
@@ -60,7 +62,9 @@
 /area/shuttle/syndicate/bridge)
 "ai" = (
 /obj/structure/table/reinforced,
-/obj/machinery/light/directional/north,
+/obj/machinery/light{
+	dir = 1
+	},
 /obj/item/storage/toolbox/syndicate,
 /obj/item/assembly/voice,
 /obj/item/crowbar/red,
@@ -82,7 +86,9 @@
 /area/shuttle/syndicate/bridge)
 "al" = (
 /obj/structure/table/reinforced,
-/obj/machinery/light/directional/east,
+/obj/machinery/light{
+	dir = 4
+	},
 /obj/item/stack/cable_coil,
 /obj/item/crowbar/red,
 /obj/item/radio/headset/syndicate/alt,
@@ -116,7 +122,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/item/radio/intercom/directional/north{
+/obj/item/radio/intercom{
 	freerange = 1;
 	name = "Syndicate Radio Intercom"
 	},
@@ -176,7 +182,10 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/industrial/outline/yellow,
-/obj/machinery/firealarm/directional/south,
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -26
+	},
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/syndicate/bridge)
 "aB" = (
@@ -203,7 +212,9 @@
 	name = "tactical chair"
 	},
 /obj/effect/turf_decal/industrial/outline/yellow,
-/obj/machinery/light/directional/north,
+/obj/machinery/light{
+	dir = 1
+	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/status_display/evac{
 	pixel_y = 32
@@ -216,7 +227,9 @@
 "aG" = (
 /obj/effect/turf_decal/industrial/outline/yellow,
 /obj/structure/table/reinforced,
-/obj/machinery/light/directional/west,
+/obj/machinery/light{
+	dir = 8
+	},
 /obj/item/paper_bin{
 	pixel_x = -4;
 	pixel_y = 4
@@ -226,7 +239,9 @@
 	pixel_x = 6;
 	pixel_y = 6
 	},
-/obj/machinery/firealarm/directional/north,
+/obj/machinery/firealarm{
+	pixel_y = 26
+	},
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/syndicate/hallway)
 "aH" = (
@@ -237,7 +252,9 @@
 	name = "tactical chair"
 	},
 /obj/effect/turf_decal/industrial/outline/yellow,
-/obj/structure/extinguisher_cabinet/directional/north,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -26
+	},
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/syndicate/airlock)
 "aJ" = (
@@ -253,7 +270,9 @@
 /obj/effect/turf_decal/industrial/outline/yellow,
 /obj/effect/turf_decal/industrial/warning,
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/light/small/directional/north,
+/obj/machinery/light/small{
+	dir = 1
+	},
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/syndicate/airlock)
 "aO" = (
@@ -306,7 +325,9 @@
 	pixel_x = 6
 	},
 /obj/item/stack/medical/ointment,
-/obj/structure/extinguisher_cabinet/directional/north,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -26
+	},
 /obj/machinery/status_display/ai{
 	pixel_y = 32
 	},
@@ -347,7 +368,9 @@
 	},
 /obj/item/reagent_containers/glass/bottle/charcoal,
 /obj/structure/table/reinforced,
-/obj/machinery/light/directional/north,
+/obj/machinery/light{
+	dir = 1
+	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/syndicate/medical)
@@ -404,6 +427,16 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/mineral/plastitanium/red,
 /area/shuttle/syndicate/eva)
+"bu" = (
+/obj/structure/chair/comfy/shuttle{
+	name = "tactical chair"
+	},
+/obj/effect/turf_decal/industrial/outline/yellow,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 26
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/shuttle/syndicate/airlock)
 "bw" = (
 /obj/structure/shuttle/engine/propulsion,
 /obj/effect/turf_decal/industrial/warning/full,
@@ -546,7 +579,7 @@
 /obj/effect/turf_decal/industrial/warning{
 	dir = 9
 	},
-/obj/item/radio/intercom/directional/north{
+/obj/item/radio/intercom{
 	freerange = 1;
 	name = "Syndicate Radio Intercom";
 	pixel_y = 22
@@ -685,7 +718,10 @@
 /obj/effect/turf_decal/industrial/outline/yellow,
 /obj/structure/rack,
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/firealarm/directional/east,
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = 26
+	},
 /obj/item/clothing/suit/space/syndicate,
 /obj/item/tank/internals/oxygen/yellow,
 /obj/item/clothing/mask/gas{
@@ -876,7 +912,10 @@
 "cU" = (
 /obj/effect/turf_decal/industrial/outline/yellow,
 /obj/structure/rack,
-/obj/machinery/firealarm/directional/west,
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = -26
+	},
 /obj/item/clothing/suit/space/syndicate/black/red,
 /obj/item/tank/internals/oxygen/yellow,
 /obj/item/clothing/mask/gas{
@@ -970,7 +1009,7 @@
 	dir = 10
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/light/small/directional/south,
+/obj/machinery/light/small,
 /turf/open/floor/mineral/plastitanium/red,
 /area/shuttle/syndicate/airlock)
 "dd" = (
@@ -1024,7 +1063,7 @@
 /obj/effect/turf_decal/industrial/warning{
 	dir = 6
 	},
-/obj/machinery/light/small/directional/south,
+/obj/machinery/light/small,
 /turf/open/floor/mineral/plastitanium/red,
 /area/shuttle/syndicate/airlock)
 "dr" = (
@@ -1043,7 +1082,7 @@
 	dir = 5
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/item/radio/intercom/directional/north{
+/obj/item/radio/intercom{
 	freerange = 1;
 	name = "Syndicate Radio Intercom";
 	pixel_y = 22
@@ -1060,7 +1099,9 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/machinery/light/directional/west,
+/obj/machinery/light{
+	dir = 8
+	},
 /obj/machinery/status_display/evac{
 	pixel_x = -32
 	},
@@ -1100,7 +1141,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/machinery/light/small/directional/south,
+/obj/machinery/light/small,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/syndicate/medical)
@@ -1121,8 +1162,13 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/box/corners,
-/obj/machinery/light/directional/west,
-/obj/machinery/firealarm/directional/west,
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = -26
+	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/shuttle/syndicate/eva)
 "dN" = (
@@ -1217,7 +1263,9 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/machinery/light/directional/east,
+/obj/machinery/light{
+	dir = 4
+	},
 /obj/machinery/status_display/evac{
 	pixel_x = 32
 	},
@@ -1232,7 +1280,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/machinery/light/small/directional/south,
+/obj/machinery/light/small,
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/syndicate/armory)
 "eb" = (
@@ -1291,7 +1339,9 @@
 	pixel_x = 4;
 	pixel_y = 4
 	},
-/obj/structure/extinguisher_cabinet/directional/north,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 26
+	},
 /obj/machinery/airalarm/syndicate{
 	pixel_y = 25
 	},
@@ -1331,7 +1381,10 @@
 /obj/machinery/atmospherics/components/unary/portables_connector/visible{
 	dir = 8
 	},
-/obj/machinery/firealarm/directional/east,
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = 26
+	},
 /turf/open/floor/pod/dark,
 /area/shuttle/syndicate/armory)
 "ev" = (
@@ -1410,7 +1463,9 @@
 	pixel_y = 32
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/light/directional/north,
+/obj/machinery/light{
+	dir = 1
+	},
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
@@ -1450,8 +1505,13 @@
 /obj/effect/turf_decal/industrial/warning{
 	dir = 4
 	},
-/obj/machinery/light/directional/east,
-/obj/machinery/firealarm/directional/east,
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = 26
+	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -1545,7 +1605,9 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/machinery/light/directional/east,
+/obj/machinery/light{
+	dir = 4
+	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/mineral/plastitanium/red,
 /area/shuttle/syndicate/airlock)
@@ -1593,7 +1655,9 @@
 "ol" = (
 /obj/effect/turf_decal/industrial/outline/yellow,
 /obj/structure/table/reinforced,
-/obj/machinery/light/directional/east,
+/obj/machinery/light{
+	dir = 4
+	},
 /obj/item/storage/fancy/cigarettes/cigpack_syndicate{
 	pixel_x = 8
 	},
@@ -1702,8 +1766,13 @@
 /obj/effect/turf_decal/industrial/warning{
 	dir = 8
 	},
-/obj/machinery/light/directional/west,
-/obj/machinery/firealarm/directional/west,
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = -26
+	},
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
@@ -1976,7 +2045,7 @@
 /obj/effect/turf_decal/industrial/warning/cee{
 	dir = 1
 	},
-/obj/machinery/light/small/directional/south,
+/obj/machinery/light/small,
 /turf/open/floor/circuit/red,
 /area/shuttle/syndicate/hallway)
 "KL" = (
@@ -2030,8 +2099,12 @@
 /obj/effect/turf_decal/box/corners{
 	dir = 8
 	},
-/obj/machinery/light/directional/east,
-/obj/structure/extinguisher_cabinet/directional/north,
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 26
+	},
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
@@ -2257,7 +2330,9 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/machinery/light/directional/west,
+/obj/machinery/light{
+	dir = 8
+	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/shuttle/syndicate/airlock)
 "We" = (
@@ -2691,7 +2766,7 @@ ad
 ad
 ad
 aO
-aI
+bu
 bJ
 Sa
 nu

@@ -61,12 +61,9 @@
 /turf/closed/wall/r_wall,
 /area/ruin/unpowered)
 "dt" = (
-/obj/machinery/door/airlock/security{
-	dir = 4
-	},
+/obj/machinery/door/airlock/security,
 /obj/machinery/door/poddoor{
-	id = "cryocontainmentlockdown";
-	dir = 4
+	id = "cryocontainmentlockdown"
 	},
 /obj/effect/decal/cleanable/blood/footprints{
 	dir = 8
@@ -163,7 +160,9 @@
 /area/ruin/unpowered)
 "ha" = (
 /obj/structure/table/reinforced,
-/obj/machinery/light/directional/north,
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/open/floor/plasteel/white/airless,
 /area/ruin/unpowered)
 "hw" = (
@@ -174,7 +173,7 @@
 /area/ruin/unpowered)
 "ih" = (
 /obj/effect/decal/cleanable/blood/gibs/limb,
-/obj/machinery/light/built/directional/south,
+/obj/machinery/light/built,
 /obj/item/light/tube/broken,
 /obj/structure/cable{
 	icon_state = "1-8"
@@ -269,12 +268,9 @@
 /turf/open/floor/engine/airless,
 /area/ruin/unpowered)
 "qf" = (
-/obj/machinery/door/airlock/public/glass{
-	dir = 4
-	},
+/obj/machinery/door/airlock/public/glass,
 /obj/machinery/door/poddoor{
-	id = "cryocontainmentlockdown";
-	dir = 4
+	id = "cryocontainmentlockdown"
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
@@ -320,12 +316,9 @@
 /turf/open/floor/plasteel/white/airless,
 /area/ruin/unpowered)
 "tm" = (
-/obj/structure/door_assembly/door_assembly_research{
-	dir = 4
-	},
+/obj/structure/door_assembly/door_assembly_research,
 /obj/machinery/door/poddoor{
-	id = "cryocontainmentlockdown";
-	dir = 4
+	id = "cryocontainmentlockdown"
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -370,7 +363,9 @@
 "ve" = (
 /obj/structure/table/greyscale,
 /obj/item/storage/fancy/cigarettes/cigpack_carp,
-/obj/machinery/light/small/directional/west,
+/obj/machinery/light/small{
+	dir = 8
+	},
 /obj/machinery/atmospherics/components/unary/vent_pump/layer2{
 	dir = 8
 	},
@@ -385,7 +380,9 @@
 /turf/open/space,
 /area/space)
 "ye" = (
-/obj/machinery/light/directional/north,
+/obj/machinery/light{
+	dir = 1
+	},
 /obj/structure/chair/greyscale{
 	dir = 8
 	},
@@ -474,7 +471,9 @@
 /area/ruin/unpowered)
 "Fk" = (
 /obj/machinery/smartfridge/chemistry,
-/obj/machinery/light/directional/east,
+/obj/machinery/light{
+	dir = 4
+	},
 /turf/open/floor/plasteel/white/airless,
 /area/ruin/unpowered)
 "Fq" = (
@@ -512,7 +511,9 @@
 	},
 /area/ruin/unpowered)
 "Hn" = (
-/obj/machinery/light/broken/directional/north,
+/obj/machinery/light/broken{
+	dir = 1
+	},
 /turf/open/floor/engine/airless,
 /area/ruin/unpowered)
 "Hy" = (
@@ -530,6 +531,10 @@
 /obj/effect/decal/cleanable/blood/drip,
 /turf/open/floor/plating/airless,
 /area/ruin/unpowered)
+"IX" = (
+/obj/structure/lattice,
+/turf/open/space,
+/area/space)
 "Ji" = (
 /obj/structure/grille/broken,
 /obj/effect/decal/cleanable/glass,
@@ -583,7 +588,9 @@
 /obj/machinery/atmospherics/components/binary/pump{
 	dir = 8
 	},
-/obj/machinery/light/directional/north,
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/open/floor/plasteel/white/airless,
 /area/ruin/unpowered)
 "NM" = (
@@ -663,7 +670,7 @@
 /turf/open/floor/plating/airless,
 /area/ruin/unpowered)
 "Sk" = (
-/obj/machinery/light/broken/directional/south,
+/obj/machinery/light/broken,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
 	},
@@ -736,7 +743,8 @@
 /turf/open/floor/plating/airless,
 /area/ruin/unpowered)
 "Xn" = (
-/obj/machinery/light/broken/directional/west{
+/obj/machinery/light/broken{
+	dir = 8;
 	icon_state = "tube-broken"
 	},
 /obj/item/ammo_casing/spent{
@@ -772,7 +780,7 @@
 /turf/open/floor/plating/airless,
 /area/ruin/unpowered)
 "Ye" = (
-/obj/machinery/light/broken/directional/south,
+/obj/machinery/light/broken,
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
@@ -811,7 +819,7 @@ KY
 KY
 KY
 KY
-jq
+IX
 KY
 KY
 KY
@@ -835,7 +843,7 @@ KY
 KY
 KY
 KY
-jq
+IX
 KY
 KY
 "}
@@ -852,7 +860,7 @@ KY
 KY
 KY
 KY
-jq
+IX
 KY
 KY
 KY
@@ -874,7 +882,7 @@ KY
 KY
 Ro
 jq
-jq
+IX
 Bl
 KY
 KY
@@ -912,7 +920,7 @@ KY
 KY
 KY
 KY
-jq
+IX
 bp
 xB
 KY
@@ -935,7 +943,7 @@ Tr
 Cq
 GV
 Cq
-jq
+IX
 KZ
 KY
 "}
@@ -1008,7 +1016,7 @@ KY
 KY
 KY
 KY
-jq
+IX
 KY
 KY
 KY
@@ -1075,7 +1083,7 @@ un
 OH
 Ye
 Cq
-jq
+IX
 ts
 KY
 "}
@@ -1083,10 +1091,10 @@ KY
 KZ
 KY
 KY
-jq
+IX
 KY
 KY
-jq
+IX
 KY
 cy
 Gj
@@ -1103,7 +1111,7 @@ KY
 ts
 KY
 KY
-jq
+IX
 KY
 KY
 cy
@@ -1121,7 +1129,7 @@ KY
 "}
 (17,1,1) = {"
 ts
-jq
+IX
 cy
 Cq
 Cq
@@ -1135,7 +1143,7 @@ qk
 OH
 TG
 Cq
-jq
+IX
 KZ
 KY
 "}
@@ -1181,7 +1189,7 @@ KY
 "}
 (20,1,1) = {"
 ts
-jq
+IX
 cy
 Cq
 Hn
@@ -1195,7 +1203,7 @@ Rj
 eT
 km
 cy
-jq
+IX
 KZ
 KY
 "}
@@ -1241,7 +1249,7 @@ Pg
 "}
 (23,1,1) = {"
 ts
-jq
+IX
 Cq
 Cq
 Jj
@@ -1255,7 +1263,7 @@ kH
 TU
 oD
 Cq
-jq
+IX
 KZ
 KY
 "}
@@ -1301,11 +1309,11 @@ KY
 "}
 (26,1,1) = {"
 KZ
-jq
-jq
-jq
-jq
-jq
+IX
+IX
+IX
+IX
+IX
 cy
 cy
 Cq
@@ -1315,7 +1323,7 @@ Cq
 NM
 qf
 cy
-jq
+IX
 ts
 KY
 "}
@@ -1327,7 +1335,7 @@ KY
 KY
 KY
 KY
-jq
+IX
 KY
 KY
 KY

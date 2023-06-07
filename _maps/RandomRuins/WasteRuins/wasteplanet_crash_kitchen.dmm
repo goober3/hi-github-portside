@@ -32,6 +32,13 @@
 "dr" = (
 /turf/closed/wall/mineral/titanium,
 /area/ruin/unpowered)
+"dA" = (
+/obj/structure/extinguisher_cabinet,
+/obj/structure/girder,
+/turf/open/floor/plating{
+	icon_state = "panelscorched"
+	},
+/area/ruin/unpowered)
 "fE" = (
 /obj/structure/curtain/bounty,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
@@ -55,7 +62,10 @@
 /obj/structure/chair{
 	dir = 4
 	},
-/obj/machinery/firealarm/directional/south,
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -24
+	},
 /turf/open/floor/carpet/nanoweave/purple,
 /area/ruin/unpowered)
 "im" = (
@@ -154,7 +164,10 @@
 	pixel_x = 6;
 	pixel_y = 6
 	},
-/obj/machinery/firealarm/directional/west,
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = -28
+	},
 /obj/effect/turf_decal/corner/opaque/white{
 	dir = 1
 	},
@@ -191,7 +204,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/machinery/light/directional/south,
+/obj/machinery/light,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
 	},
@@ -259,14 +272,12 @@
 /turf/open/floor/wood,
 /area/ruin/unpowered)
 "yB" = (
+/obj/machinery/door/airlock/public/glass,
 /obj/machinery/door/firedoor/border_only{
 	dir = 4
 	},
 /obj/machinery/door/firedoor/border_only{
 	dir = 8
-	},
-/obj/machinery/door/airlock/public/glass{
-	dir = 4
 	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ruin/unpowered)
@@ -317,7 +328,6 @@
 /obj/structure/chair{
 	dir = 8
 	},
-/obj/structure/extinguisher_cabinet/directional/south,
 /turf/open/floor/carpet/nanoweave/purple,
 /area/ruin/unpowered)
 "HV" = (
@@ -375,7 +385,9 @@
 /area/ruin/unpowered)
 "QS" = (
 /obj/structure/chair/comfy/teal,
-/obj/machinery/airalarm/directional/north,
+/obj/machinery/airalarm/all_access{
+	pixel_y = 24
+	},
 /turf/open/floor/wood,
 /area/ruin/unpowered)
 "Rt" = (
@@ -396,7 +408,9 @@
 	},
 /area/ruin/unpowered)
 "Sh" = (
-/obj/machinery/light/small/directional/east,
+/obj/machinery/light/small{
+	dir = 4
+	},
 /obj/machinery/door/window/westright,
 /obj/structure/window/reinforced/spawner,
 /obj/machinery/atmospherics/components/binary/pump/layer2,
@@ -430,15 +444,12 @@
 	pixel_y = -24
 	},
 /obj/structure/closet/emcloset/wall{
-	pixel_x = 28;
-	dir = 8
+	pixel_x = 32
 	},
 /turf/open/floor/plasteel/tech,
 /area/ruin/unpowered)
 "TZ" = (
-/obj/machinery/door/airlock/public/glass{
-	dir = 4
-	},
+/obj/machinery/door/airlock/public/glass,
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
@@ -641,7 +652,7 @@ Vy
 dr
 br
 vc
-Nb
+dA
 pa
 Nb
 pa

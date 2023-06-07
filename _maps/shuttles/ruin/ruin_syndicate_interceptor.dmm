@@ -61,7 +61,9 @@
 /obj/machinery/atmospherics/pipe/manifold/orange{
 	dir = 8
 	},
-/obj/machinery/light/directional/west,
+/obj/machinery/light{
+	dir = 8
+	},
 /turf/open/floor/plating,
 /area/ship/bridge)
 "E" = (
@@ -165,7 +167,10 @@
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/bridge)
 "Y" = (
-/obj/structure/extinguisher_cabinet/directional/north,
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 33;
+	pixel_x = -8
+	},
 /obj/machinery/button/door{
 	pixel_y = 26;
 	pixel_x = 5;

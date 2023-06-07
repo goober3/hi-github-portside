@@ -117,8 +117,7 @@
 "D" = (
 /obj/machinery/door/poddoor{
 	id = "mechaship1";
-	name = "Cargo Bay Door";
-	dir = 4
+	name = "Cargo Bay Door"
 	},
 /turf/open/floor/mineral/titanium/yellow/airless,
 /area/ruin/space/has_grav/powered/mechtransport)

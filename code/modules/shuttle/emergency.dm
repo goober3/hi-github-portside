@@ -76,8 +76,6 @@
 	var/unlocked = FALSE
 	var/datum/overmap/ship/controlled/linked_ship
 
-MAPPING_DIRECTIONAL_HELPERS(/obj/item/storage/overmap_ship, 28)
-
 /obj/item/storage/overmap_ship/connect_to_shuttle(obj/docking_port/mobile/port, obj/docking_port/stationary/dock)
 	linked_ship = port?.current_ship
 
@@ -98,13 +96,9 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/item/storage/overmap_ship, 28)
 	..()
 	new /obj/item/storage/toolbox/emergency/shuttle/fueled(src)
 
-MAPPING_DIRECTIONAL_HELPERS(/obj/item/storage/overmap_ship/fueled, 28)
-
 /obj/item/storage/overmap_ship/electric/PopulateContents()
 	..()
 	new /obj/item/storage/toolbox/emergency/shuttle/electric(src)
-
-MAPPING_DIRECTIONAL_HELPERS(/obj/item/storage/overmap_ship/electric, 28)
 
 /obj/item/storage/overmap_ship/attackby(obj/item/W, mob/user, params)
 	if (can_interact(user))

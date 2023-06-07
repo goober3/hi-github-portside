@@ -34,24 +34,6 @@
 	},
 /turf/open/floor/plating,
 /area/ruin/jungle/syndifort)
-"bt" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/door/poddoor/shutters/preopen{
-	name = "Window Shutters";
-	id = "jsynwin";
-	dir = 8
-	},
-/turf/open/floor/plating,
-/area/ruin/jungle/syndifort)
-"bC" = (
-/obj/machinery/door/poddoor/shutters/preopen{
-	name = "Window Shutters";
-	id = "jsynwin";
-	dir = 4
-	},
-/obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plating,
-/area/ruin/jungle/syndifort/jerry)
 "bP" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/table,
@@ -158,7 +140,9 @@
 /area/ruin/jungle/syndifort)
 "eW" = (
 /obj/effect/decal/cleanable/blood,
-/obj/machinery/light/small/directional/north,
+/obj/machinery/light/small{
+	dir = 1
+	},
 /turf/open/floor/plating,
 /area/ruin/jungle/syndifort)
 "eX" = (
@@ -202,7 +186,9 @@
 /obj/item/storage/box/syndimaid,
 /obj/item/storage/box/syndimaid,
 /obj/item/blackmarket_uplink,
-/obj/machinery/light/directional/west,
+/obj/machinery/light{
+	dir = 8
+	},
 /turf/open/floor/plating,
 /area/ruin/jungle/syndifort/jerry)
 "gx" = (
@@ -236,12 +222,12 @@
 /obj/item/clothing/gloves/combat,
 /obj/item/clothing/shoes/combat,
 /obj/item/clothing/mask/gas/syndicate,
-/obj/machinery/light/small/directional/south,
+/obj/machinery/light/small,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ruin/jungle/syndifort)
 "gQ" = (
 /obj/structure/table/wood,
-/obj/machinery/light/small/directional/south,
+/obj/machinery/light/small,
 /turf/open/floor/plating,
 /area/ruin/jungle/syndifort)
 "gU" = (
@@ -250,7 +236,9 @@
 /obj/item/storage/fancy/cigarettes/cigpack_syndicate,
 /obj/item/paper_bin,
 /obj/item/pen/edagger,
-/obj/machinery/light/directional/west,
+/obj/machinery/light{
+	dir = 8
+	},
 /turf/open/floor/plating,
 /area/ruin/jungle/syndifort/jerry)
 "gY" = (
@@ -259,7 +247,9 @@
 	pixel_x = 4
 	},
 /obj/structure/table/wood,
-/obj/machinery/light/small/directional/north,
+/obj/machinery/light/small{
+	dir = 1
+	},
 /turf/open/floor/plating{
 	icon_state = "panelscorched";
 	initial_gas_mix = "ws_atmos"
@@ -353,7 +343,9 @@
 	},
 /area/ruin/jungle/syndifort)
 "kp" = (
-/obj/machinery/light/directional/west,
+/obj/machinery/light{
+	dir = 8
+	},
 /obj/structure/table,
 /obj/item/grenade/smokebomb,
 /obj/item/grenade/smokebomb,
@@ -463,20 +455,14 @@
 	},
 /area/ruin/jungle/syndifort)
 "oi" = (
-/obj/machinery/light/small/directional/north,
+/obj/machinery/light/small{
+	dir = 1
+	},
 /turf/open/floor/plating{
 	icon_state = "panelscorched";
 	initial_gas_mix = "ws_atmos"
 	},
 /area/ruin/jungle/syndifort)
-"oq" = (
-/obj/machinery/door/poddoor/shutters/preopen{
-	name = "Base Gates";
-	id = "jsyngate";
-	dir = 4
-	},
-/turf/open/floor/plating,
-/area/ruin/jungle/syndifort/jerry)
 "pr" = (
 /obj/structure/cable{
 	icon_state = "2-4"
@@ -545,8 +531,7 @@
 "rk" = (
 /obj/machinery/door/poddoor/shutters/preopen{
 	name = "Gear Room Shutters";
-	id = "jsyngear";
-	dir = 8
+	id = "jsyngear"
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
@@ -558,7 +543,7 @@
 /turf/open/floor/mineral/plastitanium/red,
 /area/ruin/jungle/syndifort/jerry)
 "sq" = (
-/obj/machinery/power/apc/auto_name/directional/north,
+/obj/machinery/power/apc/auto_name/north,
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
@@ -619,8 +604,7 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/door/poddoor/shutters/preopen{
 	name = "Base Gates";
-	id = "jsyngate";
-	dir = 4
+	id = "jsyngate"
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -639,7 +623,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/machinery/light/small/directional/south,
+/obj/machinery/light/small,
 /turf/open/floor/plating,
 /area/ruin/jungle/syndifort)
 "uh" = (
@@ -647,7 +631,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/machinery/light/small/directional/south,
+/obj/machinery/light/small,
 /turf/open/floor/plating{
 	icon_state = "panelscorched";
 	initial_gas_mix = "ws_atmos"
@@ -721,16 +705,14 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/door/poddoor/shutters/preopen{
 	name = "Base Gates";
-	id = "jsyngate";
-	dir = 8
+	id = "jsyngate"
 	},
 /turf/open/floor/plating,
 /area/ruin/jungle/syndifort/jerry)
 "wu" = (
 /obj/machinery/door/poddoor/shutters/preopen{
 	name = "Command Room Shutters";
-	id = "jsynbridge";
-	dir = 8
+	id = "jsynbridge"
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -771,7 +753,9 @@
 	icon_state = "2-8"
 	},
 /obj/machinery/camera/autoname,
-/obj/machinery/light/small/directional/north,
+/obj/machinery/light/small{
+	dir = 1
+	},
 /turf/open/floor/plating,
 /area/ruin/jungle/syndifort)
 "xv" = (
@@ -783,8 +767,7 @@
 "xC" = (
 /obj/machinery/door/poddoor/shutters/preopen{
 	name = "Command Room Shutters";
-	id = "jsynbridge";
-	dir = 4
+	id = "jsynbridge"
 	},
 /turf/open/floor/plasteel/stairs{
 	dir = 4
@@ -830,15 +813,6 @@
 	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/ruin/jungle/syndifort)
-"yL" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/door/poddoor/shutters/preopen{
-	name = "Window Shutters";
-	id = "jsynwin";
-	dir = 4
-	},
-/turf/open/floor/plating,
-/area/ruin/jungle/syndifort)
 "yM" = (
 /obj/structure/spacevine,
 /obj/structure/flora/junglebush,
@@ -876,23 +850,16 @@
 /area/ruin/jungle/syndifort/jerry)
 "Al" = (
 /obj/structure/cable,
-/obj/machinery/power/apc/auto_name/directional/south,
-/obj/machinery/light/directional/west,
+/obj/machinery/power/apc/auto_name/south,
+/obj/machinery/light{
+	dir = 8
+	},
 /obj/structure/table,
 /obj/item/grenade/frag,
 /obj/item/grenade/frag,
 /obj/item/grenade/frag,
 /turf/open/floor/plating/rust,
 /area/ruin/jungle/syndifort)
-"Ao" = (
-/obj/machinery/door/poddoor/shutters/preopen{
-	name = "Window Shutters";
-	id = "jsynwin";
-	dir = 8
-	},
-/obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plating,
-/area/ruin/jungle/syndifort/jerry)
 "At" = (
 /obj/structure/flora/grass/jungle,
 /obj/structure/flora/junglebush/c,
@@ -942,7 +909,9 @@
 /area/ruin/jungle)
 "BC" = (
 /obj/structure/chair/plastic,
-/obj/machinery/light/small/directional/north,
+/obj/machinery/light/small{
+	dir = 1
+	},
 /turf/open/floor/plating/rust,
 /area/ruin/jungle/syndifort)
 "BH" = (
@@ -950,7 +919,7 @@
 /turf/open/floor/plating,
 /area/ruin/jungle/syndifort)
 "BK" = (
-/obj/machinery/power/apc/auto_name/directional/north,
+/obj/machinery/power/apc/auto_name/north,
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
@@ -960,7 +929,7 @@
 /obj/structure/cable{
 	icon_state = "0-5"
 	},
-/obj/machinery/power/apc/auto_name/directional/south,
+/obj/machinery/power/apc/auto_name/south,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
 /area/ruin/jungle/syndifort)
@@ -1013,8 +982,7 @@
 "ET" = (
 /obj/machinery/door/poddoor/shutters/preopen{
 	name = "Gear Room Shutters";
-	id = "jsyngear";
-	dir = 4
+	id = "jsyngear"
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -1202,7 +1170,7 @@
 /turf/open/floor/plating/rust,
 /area/ruin/jungle/syndifort/jerry)
 "Lu" = (
-/obj/machinery/light/small/directional/south,
+/obj/machinery/light/small,
 /turf/open/floor/plating,
 /area/ruin/jungle/syndifort)
 "LG" = (
@@ -1221,7 +1189,7 @@
 "Mo" = (
 /obj/structure/rack,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/light/small/directional/south,
+/obj/machinery/light/small,
 /obj/item/ammo_box/magazine/m10mm,
 /obj/item/ammo_box/magazine/m10mm,
 /turf/open/floor/plating,
@@ -1229,7 +1197,9 @@
 "My" = (
 /obj/structure/rack,
 /obj/item/storage/toolbox/syndicate,
-/obj/machinery/light/directional/north,
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/open/floor/plating,
 /area/ruin/jungle/syndifort)
 "ML" = (
@@ -1368,7 +1338,9 @@
 /mob/living/simple_animal/hostile/syndicate{
 	unsuitable_atmos_damage = 0
 	},
-/obj/machinery/light/directional/north,
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/open/floor/plating,
 /area/ruin/jungle/syndifort)
 "Qx" = (
@@ -1403,7 +1375,7 @@
 /area/ruin/jungle)
 "Rw" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/light/small/directional/south,
+/obj/machinery/light/small,
 /turf/open/floor/plating,
 /area/ruin/jungle/syndifort)
 "RD" = (
@@ -1477,7 +1449,7 @@
 /area/ruin/jungle/syndifort)
 "TC" = (
 /obj/item/trash/syndi_cakes,
-/obj/machinery/power/apc/auto_name/directional/west,
+/obj/machinery/power/apc/auto_name/west,
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
@@ -1657,7 +1629,7 @@
 /obj/structure/cable{
 	icon_state = "5-8"
 	},
-/obj/machinery/light/small/directional/south,
+/obj/machinery/light/small,
 /turf/open/floor/plating{
 	icon_state = "panelscorched";
 	initial_gas_mix = "ws_atmos"
@@ -1692,7 +1664,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/machinery/light/small/directional/south,
+/obj/machinery/light/small,
 /turf/open/floor/plating,
 /area/ruin/jungle/syndifort)
 "ZF" = (
@@ -1854,8 +1826,8 @@ At
 eX
 eX
 zM
-bC
-Ao
+ER
+ER
 zM
 zM
 eX
@@ -2021,7 +1993,7 @@ wu
 nH
 nH
 tZ
-oq
+Uc
 vt
 vt
 eX
@@ -2464,8 +2436,8 @@ Uu
 fZ
 eX
 fe
-yL
-bt
+NM
+NM
 fe
 Aa
 mO

@@ -81,7 +81,9 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
 	dir = 4
 	},
-/obj/machinery/light/small/directional/west,
+/obj/machinery/light/small{
+	dir = 8
+	},
 /turf/open/floor/plasteel/grimy,
 /area/ruin/space/has_grav/corporatemine/crewquarters)
 "cX" = (
@@ -147,8 +149,7 @@
 /area/ruin/space/has_grav/corporatemine/hall)
 "eV" = (
 /obj/machinery/door/airlock/alarmlock{
-	name = "Cargo";
-	dir = 4
+	name = "Cargo"
 	},
 /obj/machinery/door/firedoor/border_only{
 	dir = 4
@@ -160,8 +161,7 @@
 /area/ruin/space/has_grav/corporatemine/hall)
 "fa" = (
 /obj/machinery/door/airlock/command{
-	name = "Bridge";
-	dir = 4
+	name = "Bridge"
 	},
 /obj/machinery/door/firedoor/border_only{
 	dir = 8
@@ -225,7 +225,9 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/machinery/light/small/directional/east,
+/obj/machinery/light/small{
+	dir = 4
+	},
 /turf/open/floor/plasteel/airless,
 /area/ruin/space/has_grav/corporatemine/hall)
 "gf" = (
@@ -235,7 +237,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 9
 	},
-/obj/machinery/light/directional/south,
+/obj/machinery/light,
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/corporatemine/crewquarters)
 "gj" = (
@@ -298,13 +300,17 @@
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
-/obj/machinery/power/apc/auto_name/directional/south,
+/obj/machinery/power/apc/auto_name/south,
 /obj/structure/cable,
-/obj/machinery/light/small/directional/east,
+/obj/machinery/light/small{
+	dir = 4
+	},
 /turf/open/floor/plating/airless,
 /area/ruin/space/has_grav/corporatemine/hall)
 "hF" = (
-/obj/machinery/airalarm/directional/north,
+/obj/machinery/airalarm/all_access{
+	pixel_y = 24
+	},
 /turf/open/floor/plasteel/grimy,
 /area/ruin/space/has_grav/corporatemine/crewquarters)
 "iu" = (
@@ -346,7 +352,9 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/machinery/light/small/directional/west,
+/obj/machinery/light/small{
+	dir = 8
+	},
 /turf/open/floor/plating/airless,
 /area/ruin/space/has_grav/corporatemine/hall)
 "je" = (
@@ -361,7 +369,7 @@
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/corporatemine/hall)
 "jl" = (
-/obj/machinery/power/apc/auto_name/directional/west,
+/obj/machinery/power/apc/auto_name/west,
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
@@ -380,7 +388,7 @@
 /turf/open/floor/plating/asteroid/airless,
 /area/ruin/space)
 "jH" = (
-/obj/machinery/power/apc/auto_name/directional/south,
+/obj/machinery/power/apc/auto_name/south,
 /obj/machinery/atmospherics/pipe/simple/scrubbers{
 	dir = 4
 	},
@@ -399,7 +407,7 @@
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/corporatemine/hall)
 "jN" = (
-/obj/machinery/power/apc/auto_name/directional/south,
+/obj/machinery/power/apc/auto_name/south,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
 	},
@@ -519,7 +527,10 @@
 /obj/structure/closet/crate,
 /obj/item/stack/ore/gold,
 /obj/item/stack/ore/gold,
-/obj/machinery/airalarm/directional/east,
+/obj/machinery/airalarm/all_access{
+	dir = 8;
+	pixel_x = 24
+	},
 /obj/effect/turf_decal/industrial/outline,
 /turf/open/floor/plasteel/tech/grid,
 /area/ruin/space/has_grav/corporatemine/hall)
@@ -622,7 +633,9 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/layer2{
 	dir = 4
 	},
-/obj/machinery/light/broken/directional/north,
+/obj/machinery/light/broken{
+	dir = 1
+	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/corporatemine)
@@ -679,8 +692,7 @@
 /area/ruin/space/has_grav/corporatemine/hall)
 "qu" = (
 /obj/machinery/door/airlock/wood/glass{
-	name = "Corporate's Office";
-	dir = 4
+	name = "Corporate's Office"
 	},
 /obj/machinery/door/firedoor/border_only{
 	dir = 8
@@ -809,7 +821,10 @@
 /turf/open/floor/plating/asteroid/airless,
 /area/ruin/space)
 "sd" = (
-/obj/machinery/airalarm/directional/west,
+/obj/machinery/airalarm/all_access{
+	dir = 4;
+	pixel_x = -24
+	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 6
 	},
@@ -902,8 +917,13 @@
 /obj/effect/decal/cleanable/oil/slippery,
 /obj/item/trash/can/food/peaches/maint,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4,
-/obj/machinery/airalarm/directional/west,
-/obj/machinery/light/broken/directional/west,
+/obj/machinery/airalarm/all_access{
+	dir = 4;
+	pixel_x = -24
+	},
+/obj/machinery/light/broken{
+	dir = 8
+	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/corporatemine/bridge)
 "vW" = (
@@ -913,7 +933,9 @@
 /obj/effect/turf_decal/spline/fancy/opaque/lightgrey{
 	dir = 8
 	},
-/obj/machinery/light/small/directional/west,
+/obj/machinery/light/small{
+	dir = 8
+	},
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/corporatemine/crewquarters)
 "wa" = (
@@ -985,7 +1007,9 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
 	dir = 8
 	},
-/obj/machinery/light/small/directional/east,
+/obj/machinery/light/small{
+	dir = 4
+	},
 /obj/effect/turf_decal/spline/fancy/opaque/lightgrey{
 	dir = 4
 	},
@@ -1033,7 +1057,9 @@
 /area/ruin/space)
 "yT" = (
 /obj/structure/closet/crate/engineering,
-/obj/machinery/light/small/directional/east,
+/obj/machinery/light/small{
+	dir = 4
+	},
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/corporatemine/hall)
 "yX" = (
@@ -1090,7 +1116,9 @@
 "zy" = (
 /obj/structure/table/wood,
 /obj/item/flashlight/lamp/green,
-/obj/machinery/light/directional/north,
+/obj/machinery/light{
+	dir = 1
+	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/siding/wood{
 	dir = 4
@@ -1139,7 +1167,9 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
 	dir = 8
 	},
-/obj/machinery/light/small/directional/east,
+/obj/machinery/light/small{
+	dir = 4
+	},
 /turf/open/floor/plasteel/grimy,
 /area/ruin/space/has_grav/corporatemine/crewquarters)
 "Aw" = (
@@ -1344,8 +1374,7 @@
 /area/ruin/space/has_grav/corporatemine/hall)
 "Dz" = (
 /obj/machinery/door/airlock/engineering{
-	name = "Solar Control";
-	dir = 4
+	name = "Solar Control"
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -1363,7 +1392,9 @@
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/corporatemine/crewquarters)
 "DW" = (
-/obj/machinery/light/broken/directional/west,
+/obj/machinery/light/broken{
+	dir = 8
+	},
 /turf/open/floor/plating/airless,
 /area/ruin/space/has_grav/corporatemine)
 "Ek" = (
@@ -1438,7 +1469,9 @@
 /obj/machinery/shower{
 	pixel_y = 16
 	},
-/obj/machinery/light/small/directional/east,
+/obj/machinery/light/small{
+	dir = 4
+	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet,
 /area/ruin/space/has_grav/corporatemine/crewquarters)
@@ -1477,8 +1510,7 @@
 /area/ruin/space)
 "Gc" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Bathroom";
-	dir = 8
+	name = "Bathroom"
 	},
 /turf/open/floor/plasteel/tech,
 /area/ruin/space/has_grav/corporatemine/crewquarters)
@@ -1503,8 +1535,7 @@
 "GV" = (
 /obj/effect/decal/cleanable/oil/slippery,
 /obj/machinery/door/airlock/alarmlock{
-	name = "Cargo";
-	dir = 8
+	name = "Cargo"
 	},
 /obj/machinery/door/firedoor/border_only{
 	dir = 4
@@ -1531,9 +1562,9 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
 	dir = 1
 	},
-/obj/machinery/power/apc/auto_name/directional/south,
+/obj/machinery/power/apc/auto_name/south,
 /obj/structure/cable,
-/obj/machinery/light/directional/south,
+/obj/machinery/light,
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/corporatemine/hall)
 "Ht" = (
@@ -1688,7 +1719,10 @@
 /area/ruin/space/has_grav/corporatemine/crewquarters)
 "Lp" = (
 /obj/effect/decal/cleanable/blood/splatter,
-/obj/machinery/airalarm/directional/west,
+/obj/machinery/airalarm/all_access{
+	dir = 4;
+	pixel_x = -24
+	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 1
@@ -1701,7 +1735,9 @@
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/corporatemine/bridge)
 "LF" = (
-/obj/machinery/light/small/directional/east,
+/obj/machinery/light/small{
+	dir = 4
+	},
 /turf/open/floor/plating/asteroid/airless,
 /area/ruin/space)
 "LQ" = (
@@ -1712,7 +1748,9 @@
 /obj/effect/turf_decal/spline/fancy/opaque/lightgrey{
 	dir = 4
 	},
-/obj/machinery/light/small/directional/east,
+/obj/machinery/light/small{
+	dir = 4
+	},
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/corporatemine/crewquarters)
 "LY" = (
@@ -1740,7 +1778,9 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
 	dir = 1
 	},
-/obj/machinery/light/broken/directional/west,
+/obj/machinery/light/broken{
+	dir = 8
+	},
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
@@ -1768,14 +1808,18 @@
 /area/ruin/space/has_grav/corporatemine)
 "Nb" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4,
-/obj/machinery/light/broken/directional/north,
+/obj/machinery/light/broken{
+	dir = 1
+	},
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/corporatemine/hall)
 "Nx" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers{
 	dir = 5
 	},
-/obj/machinery/light/small/broken/directional/west,
+/obj/machinery/light/small/broken{
+	dir = 8
+	},
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/corporatemine/hall)
 "NH" = (
@@ -1868,14 +1912,18 @@
 /obj/structure/railing{
 	dir = 1
 	},
-/obj/machinery/light/small/directional/west,
+/obj/machinery/light/small{
+	dir = 8
+	},
 /turf/open/floor/plating/asteroid/airless,
 /area/ruin/space/has_grav/corporatemine/hall)
 "PK" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/layer4{
 	dir = 8
 	},
-/obj/machinery/light/broken/directional/north,
+/obj/machinery/light/broken{
+	dir = 1
+	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/airless,
 /area/ruin/space/has_grav/corporatemine)
@@ -1895,8 +1943,10 @@
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
-/obj/machinery/power/apc/auto_name/directional/north,
-/obj/machinery/light/directional/east,
+/obj/machinery/power/apc/auto_name/north,
+/obj/machinery/light{
+	dir = 4
+	},
 /turf/open/floor/plasteel/grimy,
 /area/ruin/space/has_grav/corporatemine/crewquarters)
 "Qu" = (
@@ -1952,7 +2002,10 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
 	},
-/obj/machinery/airalarm/directional/south,
+/obj/machinery/airalarm/all_access{
+	dir = 1;
+	pixel_y = -24
+	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
 	},
@@ -2029,7 +2082,9 @@
 /area/ruin/space/has_grav/corporatemine/hall)
 "SM" = (
 /obj/structure/closet/secure_closet/personal,
-/obj/machinery/airalarm/directional/north,
+/obj/machinery/airalarm/all_access{
+	pixel_y = 24
+	},
 /obj/effect/turf_decal/spline/fancy/opaque/lightgrey{
 	dir = 5
 	},
@@ -2288,7 +2343,7 @@
 /turf/open/floor/plasteel/tech,
 /area/ruin/space/has_grav/corporatemine/hall)
 "Zp" = (
-/obj/machinery/power/apc/auto_name/directional/west,
+/obj/machinery/power/apc/auto_name/west,
 /obj/structure/cable,
 /obj/structure/table,
 /turf/open/floor/plasteel,

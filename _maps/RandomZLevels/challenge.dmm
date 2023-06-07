@@ -164,7 +164,9 @@
 /turf/open/floor/plating/airless,
 /area/awaymission/challenge/main)
 "aJ" = (
-/obj/machinery/light/directional/west,
+/obj/machinery/light{
+	dir = 8
+	},
 /turf/open/floor/plasteel/airless,
 /area/awaymission/challenge/main)
 "aK" = (
@@ -176,7 +178,9 @@
 /turf/open/floor/plasteel/airless,
 /area/awaymission/challenge/main)
 "aM" = (
-/obj/machinery/light/directional/east,
+/obj/machinery/light{
+	dir = 4
+	},
 /turf/open/floor/plasteel/airless,
 /area/awaymission/challenge/main)
 "aN" = (
@@ -216,7 +220,9 @@
 /turf/open/floor/plating/airless,
 /area/awaymission/challenge/main)
 "aU" = (
-/obj/machinery/light/directional/north,
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/open/floor/plasteel/airless,
 /area/awaymission/challenge/main)
 "aV" = (
@@ -326,14 +332,14 @@
 /turf/open/floor/plating,
 /area/awaymission/challenge/main)
 "bj" = (
-/obj/machinery/light/directional/south,
+/obj/machinery/light,
 /turf/open/floor/plating,
 /area/awaymission/challenge/main)
 "bk" = (
 /obj/machinery/power/emitter/ctf{
 	dir = 1
 	},
-/obj/machinery/light/directional/south,
+/obj/machinery/light,
 /turf/open/floor/plating,
 /area/awaymission/challenge/main)
 "bl" = (
@@ -368,7 +374,9 @@
 /turf/open/floor/plating,
 /area/awaymission/challenge/main)
 "bp" = (
-/obj/machinery/light/directional/north,
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/open/floor/plating,
 /area/awaymission/challenge/main)
 "bq" = (
@@ -436,12 +444,16 @@
 /turf/open/floor/plating/airless,
 /area/awaymission/challenge/main)
 "by" = (
-/obj/machinery/light/directional/west,
+/obj/machinery/light{
+	dir = 8
+	},
 /obj/effect/turf_decal/industrial/warning,
 /turf/open/floor/plasteel,
 /area/awaymission/challenge/main)
 "bz" = (
-/obj/machinery/light/directional/east,
+/obj/machinery/light{
+	dir = 4
+	},
 /obj/effect/turf_decal/industrial/warning,
 /turf/open/floor/plasteel,
 /area/awaymission/challenge/main)
@@ -569,7 +581,9 @@
 /area/awaymission/challenge/main)
 "bR" = (
 /obj/structure/table/reinforced,
-/obj/machinery/light/directional/north,
+/obj/machinery/light{
+	dir = 1
+	},
 /obj/machinery/recharger{
 	pixel_y = 4
 	},
@@ -589,7 +603,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/machinery/light/directional/south,
+/obj/machinery/light,
 /turf/open/floor/plating/airless,
 /area/awaymission/challenge/main)
 "bU" = (
@@ -602,11 +616,13 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/machinery/light/directional/south,
+/obj/machinery/light,
 /turf/open/floor/plating/airless,
 /area/awaymission/challenge/main)
 "bW" = (
-/obj/machinery/light/directional/north,
+/obj/machinery/light{
+	dir = 1
+	},
 /obj/structure/filingcabinet,
 /turf/open/floor/carpet,
 /area/awaymission/challenge/end)
@@ -629,7 +645,9 @@
 /turf/open/floor/wood,
 /area/awaymission/challenge/end)
 "ca" = (
-/obj/machinery/light/directional/north,
+/obj/machinery/light{
+	dir = 1
+	},
 /obj/structure/rack,
 /obj/item/clothing/suit/armor/heavy,
 /turf/open/floor/wood,
@@ -641,7 +659,7 @@
 /obj/structure/chair{
 	dir = 1
 	},
-/obj/item/radio/intercom/directional/north{
+/obj/item/radio/intercom{
 	name = "Station Intercom (General)";
 	pixel_y = 28
 	},
@@ -663,7 +681,7 @@
 /turf/open/floor/plating,
 /area/awaymission/challenge/end)
 "cg" = (
-/obj/item/radio/intercom/directional/north{
+/obj/item/radio/intercom{
 	name = "Station Intercom (General)";
 	pixel_x = -27
 	},
@@ -804,11 +822,15 @@
 /turf/open/floor/circuit,
 /area/awaymission/challenge/end)
 "cD" = (
-/obj/machinery/light/directional/north,
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/open/floor/circuit,
 /area/awaymission/challenge/end)
 "cE" = (
-/obj/machinery/light/directional/west,
+/obj/machinery/light{
+	dir = 8
+	},
 /turf/open/floor/circuit,
 /area/awaymission/challenge/end)
 "cF" = (
@@ -816,7 +838,9 @@
 /turf/open/floor/plasteel/dark,
 /area/awaymission/challenge/end)
 "cG" = (
-/obj/machinery/light/directional/east,
+/obj/machinery/light{
+	dir = 4
+	},
 /turf/open/floor/circuit,
 /area/awaymission/challenge/end)
 "cH" = (
@@ -1110,7 +1134,7 @@
 /turf/open/floor/plasteel/dark,
 /area/awaymission/challenge/end)
 "do" = (
-/obj/machinery/light/directional/south,
+/obj/machinery/light,
 /turf/open/floor/circuit,
 /area/awaymission/challenge/end)
 "dp" = (

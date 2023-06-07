@@ -55,7 +55,9 @@
 "gk" = (
 /obj/structure/rack,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/light/directional/west,
+/obj/machinery/light{
+	dir = 8
+	},
 /obj/structure/windoor_assembly{
 	dir = 2
 	},
@@ -133,7 +135,10 @@
 /turf/open/floor/plasteel,
 /area/ruin/unpowered/crashsite/pinnance)
 "oT" = (
-/obj/machinery/airalarm/directional/south,
+/obj/machinery/airalarm{
+	dir = 1;
+	pixel_y = -24
+	},
 /obj/effect/turf_decal/corner_techfloor_grid,
 /obj/effect/turf_decal/corner_techfloor_grid{
 	dir = 8
@@ -188,7 +193,9 @@
 	dir = 9
 	},
 /obj/item/light/tube/broken,
-/obj/structure/light_construct/directional/west,
+/obj/structure/light_construct{
+	dir = 8
+	},
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/tech/techmaint,
 /area/ruin/unpowered/crashsite/pinnance)
@@ -199,7 +206,9 @@
 "vH" = (
 /obj/structure/rack,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/light/broken/directional/west,
+/obj/machinery/light/broken{
+	dir = 8
+	},
 /obj/structure/windoor_assembly,
 /turf/open/floor/plating/rust,
 /area/ruin/unpowered/crashsite/pinnance)
@@ -218,7 +227,7 @@
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/item/shard,
-/obj/machinery/power/apc/auto_name/directional/south{
+/obj/machinery/power/apc/auto_name/south{
 	start_charge = 0
 	},
 /turf/open/floor/plasteel/mono/dark,
@@ -438,7 +447,9 @@
 /area/ruin/unpowered/crashsite/pinnance)
 "Jg" = (
 /obj/structure/frame/machine,
-/obj/machinery/light/small/broken/directional/west,
+/obj/machinery/light/small/broken{
+	dir = 8
+	},
 /turf/open/floor/plating,
 /area/ruin/unpowered/crashsite/pinnance)
 "JS" = (
@@ -470,7 +481,7 @@
 	pixel_y = -32
 	},
 /obj/effect/decal/cleanable/ash/large,
-/obj/machinery/light/small/broken/directional/south,
+/obj/machinery/light/small/broken,
 /obj/item/shard,
 /obj/structure/table_frame,
 /turf/open/floor/plasteel/mono/dark,
@@ -545,7 +556,9 @@
 /area/ruin/unpowered/crashsite)
 "Rw" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/light/small/broken/directional/east,
+/obj/machinery/light/small/broken{
+	dir = 4
+	},
 /turf/open/floor/plating,
 /area/ruin/unpowered/crashsite/pinnance)
 "SD" = (
@@ -598,9 +611,14 @@
 /turf/open/floor/plasteel/mono/dark,
 /area/ruin/unpowered/crashsite/pinnance)
 "VS" = (
-/obj/machinery/airalarm/directional/west,
+/obj/machinery/airalarm{
+	dir = 4;
+	pixel_x = -24
+	},
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/light/small/broken/directional/west,
+/obj/machinery/light/small/broken{
+	dir = 8
+	},
 /obj/item/bedsheet/rd,
 /turf/open/floor/plating,
 /area/ruin/unpowered/crashsite/pinnance)

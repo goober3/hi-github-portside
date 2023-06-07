@@ -11,8 +11,6 @@
 	icon = 'icons/obj/monitors.dmi'
 	icon_state = "fire_bitem"
 	result_path = /obj/machinery/firealarm
-	pixel_shift = 32
-	inverse_pixel_shift = TRUE
 
 /obj/machinery/firealarm
 	name = "fire alarm"
@@ -40,13 +38,23 @@
 	var/last_alarm = 0
 	var/area/myarea = null
 
+	FASTDMM_PROP(\
+		set_instance_vars(\
+			pixel_x = dir == EAST ? 26 : (dir == WEST ? -26 : INSTANCE_VAR_DEFAULT),\
+			pixel_y = dir == NORTH ? 26 : (dir == SOUTH ? -26 : INSTANCE_VAR_DEFAULT)\
+		),\
+		dir_amount = 4\
+	)
+
 /obj/machinery/firealarm/Initialize(mapload, dir, building)
 	. = ..()
+	if(dir)
+		src.setDir(dir)
 	if(building)
 		buildstage = 0
 		panel_open = TRUE
-		if(dir)
-			setDir(dir)
+		pixel_x = (dir & 3)? 0 : (dir == 4 ? -24 : 24)
+		pixel_y = (dir & 3)? (dir ==1 ? -24 : 24) : 0
 	update_icon()
 	myarea = get_area(src)
 	LAZYADD(myarea.firealarms, src)
@@ -315,8 +323,6 @@
 		set_light(l_power = 0.8)
 	else
 		set_light(l_power = 0)
-
-MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/firealarm, 32)
 
 /*
  * Return of Party button

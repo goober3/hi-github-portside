@@ -242,5 +242,6 @@ Maintenance panel is [open ? "opened" : "closed"]"}
 		A.wash(CLEAN_WASH)
 
 
+
 /obj/machinery/bot_core/hygienebot
 	req_one_access = list(ACCESS_JANITOR, ACCESS_ROBOTICS)

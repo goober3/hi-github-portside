@@ -30,13 +30,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/dark,
 /area/ruin/powered)
-"bd" = (
-/obj/machinery/door/airlock/maintenance_hatch{
-	dir = 4
-	},
-/obj/effect/mapping_helpers/airlock/locked,
-/turf/open/floor/plating,
-/area/ruin/powered)
 "bx" = (
 /obj/machinery/computer/operating,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -69,27 +62,15 @@
 /turf/open/floor/plasteel,
 /area/ruin/powered)
 "cc" = (
-/obj/machinery/door/airlock/research{
-	dir = 4
-	},
+/obj/machinery/door/airlock/research,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/door/poddoor/shutters{
-	id = "rd4";
-	dir = 8
+	id = "rd4"
 	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/powered)
 "cd" = (
 /obj/effect/spawner/structure/window/plasma/reinforced,
-/turf/open/floor/plating,
-/area/ruin/powered)
-"cl" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/door/poddoor/shutters{
-	id = "rd1";
-	dir = 4
-	},
-/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
 /area/ruin/powered)
 "cy" = (
@@ -130,8 +111,7 @@
 "dj" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/shutters{
-	id = "celock";
-	dir = 4
+	id = "celock"
 	},
 /turf/open/floor/plating,
 /area/ruin/powered)
@@ -149,12 +129,10 @@
 "dS" = (
 /obj/machinery/door/airlock/command/glass{
 	id_tag = list(103);
-	name = "Chief Engineer's Office";
-	dir = 4
+	name = "Chief Engineer's Office"
 	},
 /obj/machinery/door/poddoor/shutters{
-	id = "celock";
-	dir = 4
+	id = "celock"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
@@ -177,12 +155,6 @@
 /obj/machinery/door/airlock/maintenance_hatch,
 /turf/open/floor/plating,
 /area/ruin/powered)
-"eJ" = (
-/obj/machinery/door/airlock/maintenance_hatch{
-	dir = 4
-	},
-/turf/open/floor/plating,
-/area/ruin/powered)
 "eP" = (
 /obj/effect/gibspawner/human,
 /obj/item/bodypart/head,
@@ -199,12 +171,11 @@
 /turf/open/floor/carpet/royalblue,
 /area/ruin/powered)
 "eX" = (
+/obj/machinery/door/poddoor{
+	id = "medical_lock_medlock"
+	},
 /obj/effect/turf_decal/industrial/warning/cee,
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/door/poddoor{
-	id = "medical_lock_medlock";
-	dir = 8
-	},
 /turf/open/floor/plasteel/white,
 /area/ruin/powered)
 "fd" = (
@@ -245,12 +216,9 @@
 /turf/open/floor/plasteel/dark,
 /area/ruin/powered)
 "fq" = (
-/obj/machinery/door/airlock/medical/glass{
-	dir = 4
-	},
+/obj/machinery/door/airlock/medical/glass,
 /obj/machinery/door/poddoor/shutters{
-	id = "medical_lock_lobby";
-	dir = 8
+	id = "medical_lock_lobby"
 	},
 /turf/open/floor/plasteel/white,
 /area/ruin/powered)
@@ -295,8 +263,12 @@
 /turf/open/floor/plasteel/white,
 /area/ruin/powered)
 "gk" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters{
+	id = "rd4"
+	},
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/closed/wall/r_wall/rust,
+/turf/open/floor/plating,
 /area/ruin/powered)
 "gE" = (
 /obj/structure/table,
@@ -312,25 +284,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/dark,
 /area/ruin/powered)
-"gL" = (
-/obj/item/shard{
-	icon_state = "tiny"
-	},
-/obj/item/shard{
-	icon_state = "medium"
-	},
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/door/poddoor/shutters/preopen{
-	id = "rd3";
-	dir = 8
-	},
-/obj/machinery/door/poddoor/shutters/preopen{
-	id = "rd3";
-	dir = 8
-	},
-/turf/open/floor/plating,
-/area/ruin/powered)
 "gP" = (
 /obj/item/shard{
 	icon_state = "tiny"
@@ -339,12 +292,11 @@
 /obj/item/shard{
 	icon_state = "small"
 	},
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "rd3"
+	},
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/door/poddoor/shutters/preopen{
-	id = "rd3";
-	dir = 8
-	},
 /turf/open/floor/plating,
 /area/ruin/powered)
 "gY" = (
@@ -353,26 +305,15 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/white,
 /area/ruin/powered)
-"hi" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/door/poddoor/shutters{
-	id = "celock";
-	dir = 8
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating,
-/area/ruin/powered)
 "hk" = (
-/obj/machinery/door/airlock/maintenance_hatch{
-	dir = 8
-	},
+/obj/machinery/door/airlock/maintenance_hatch,
 /obj/effect/decal/cleanable/blood/tracks{
 	dir = 8
 	},
 /turf/open/floor/plating,
 /area/ruin/powered)
 "hC" = (
-/obj/machinery/light/small/directional/south,
+/obj/machinery/light/small,
 /obj/machinery/door/poddoor/preopen,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt,
@@ -411,9 +352,7 @@
 /turf/open/floor/carpet/blue,
 /area/ruin/powered)
 "it" = (
-/obj/machinery/door/poddoor/preopen{
-	dir = 4
-	},
+/obj/machinery/door/poddoor/preopen,
 /obj/effect/spawner/lootdrop/maintenance/five,
 /obj/structure/closet/crate,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -427,15 +366,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/dark,
 /area/ruin/powered)
-"ix" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/door/poddoor/shutters{
-	id = "rd4";
-	dir = 8
-	},
-/turf/open/floor/plating,
-/area/ruin/powered)
 "iA" = (
 /obj/machinery/atmospherics/components/unary/portables_connector,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -448,29 +378,14 @@
 /obj/machinery/door/window,
 /turf/open/floor/carpet/blue,
 /area/ruin/powered)
-"iR" = (
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/door/poddoor/preopen{
-	dir = 4
-	},
-/turf/open/floor/plating,
-/area/ruin/powered)
 "jq" = (
 /obj/structure/table/wood/reinforced,
 /obj/item/cigbutt/cigarbutt,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/carpet/royalblue,
 /area/ruin/powered)
-"jx" = (
-/obj/machinery/door/airlock/maintenance_hatch{
-	dir = 8
-	},
-/turf/open/floor/plating,
-/area/ruin/powered)
 "jA" = (
-/obj/machinery/door/airlock/external/glass{
-	dir = 4
-	},
+/obj/machinery/door/airlock/external/glass,
 /obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/ruin/powered)
@@ -533,25 +448,10 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/carpet/blue,
 /area/ruin/powered)
-"kT" = (
-/obj/machinery/door/poddoor/ert{
-	id = "c";
-	dir = 4
-	},
-/turf/open/floor/plating,
-/area/ruin/powered)
 "kX" = (
 /obj/effect/gibspawner/human,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/dark,
-/area/ruin/powered)
-"le" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/door/poddoor/shutters{
-	id = "medical_lock_lobby";
-	dir = 8
-	},
-/turf/open/floor/plating,
 /area/ruin/powered)
 "lu" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -559,10 +459,7 @@
 /turf/open/floor/plasteel/dark,
 /area/ruin/powered)
 "lL" = (
-/obj/machinery/door/airlock/engineering/glass/critical{
-	dir = 8
-	},
-/obj/effect/mapping_helpers/airlock/locked,
+/obj/machinery/door/airlock/engineering/glass/critical,
 /turf/open/floor/plating,
 /area/ruin/powered)
 "lR" = (
@@ -593,9 +490,12 @@
 /obj/item/shard{
 	icon_state = "tiny"
 	},
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "rd3"
+	},
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt,
-/turf/closed/wall/r_wall/rust,
+/turf/open/floor/plating,
 /area/ruin/powered)
 "ng" = (
 /obj/effect/gibspawner/human,
@@ -633,15 +533,10 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
 /area/ruin/powered)
-"oN" = (
-/obj/machinery/door/airlock/maintenance_hatch{
-	dir = 8
-	},
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plating,
-/area/ruin/powered)
 "oP" = (
-/obj/machinery/light/small/directional/north,
+/obj/machinery/light/small{
+	dir = 1
+	},
 /obj/machinery/door/poddoor/preopen,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt,
@@ -660,16 +555,6 @@
 /obj/machinery/door/airlock/maintenance_hatch,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
-/area/ruin/powered)
-"pI" = (
-/obj/machinery/door/poddoor/preopen{
-	dir = 4
-	},
-/obj/structure/closet/crate,
-/obj/effect/spawner/lootdrop/maintenance/five,
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/vault,
 /area/ruin/powered)
 "pM" = (
 /turf/closed/wall/mineral/titanium/nodiagonal,
@@ -691,10 +576,10 @@
 /turf/open/floor/plasteel/white,
 /area/ruin/powered)
 "qm" = (
-/obj/machinery/light/small/directional/east,
-/obj/machinery/door/poddoor/preopen{
+/obj/machinery/light/small{
 	dir = 4
 	},
+/obj/machinery/door/poddoor/preopen,
 /obj/effect/decal/cleanable/blood/splatter,
 /obj/structure/sign/poster/retro/nanotrasen_logo_70s{
 	pixel_x = 32
@@ -704,21 +589,11 @@
 /turf/open/floor/vault,
 /area/ruin/powered)
 "qs" = (
-/obj/machinery/door/airlock/research{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/door/airlock/research,
 /obj/machinery/door/poddoor/shutters{
-	id = "rd1";
-	dir = 4
+	id = "rd1"
 	},
-/turf/open/floor/plasteel/dark,
-/area/ruin/powered)
-"qU" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/door/poddoor/preopen{
-	dir = 4
-	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/powered)
 "qW" = (
@@ -731,16 +606,13 @@
 /turf/closed/wall/mineral/titanium,
 /area/ruin/powered)
 "rO" = (
-/obj/machinery/door/airlock/research{
-	dir = 8
-	},
+/obj/machinery/door/airlock/research,
 /obj/effect/mapping_helpers/airlock/abandoned,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "rd3"
+	},
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/door/poddoor/shutters/preopen{
-	id = "rd3";
-	dir = 8
-	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/powered)
 "rS" = (
@@ -751,9 +623,7 @@
 /turf/open/floor/engine,
 /area/ruin/powered)
 "rX" = (
-/obj/machinery/door/poddoor{
-	dir = 8
-	},
+/obj/machinery/door/poddoor,
 /turf/open/floor/plating/airless,
 /area/ruin/powered)
 "rY" = (
@@ -778,14 +648,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/ruin/powered)
-"sn" = (
-/obj/machinery/door/poddoor/preopen{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/vault,
-/area/ruin/powered)
 "so" = (
 /obj/machinery/computer/card{
 	dir = 8
@@ -804,17 +666,8 @@
 /turf/open/floor/plating,
 /area/ruin/powered)
 "tv" = (
-/obj/machinery/door/airlock/external/glass{
-	dir = 4
-	},
+/obj/machinery/door/airlock/external/glass,
 /turf/open/floor/mineral/titanium/blue,
-/area/ruin/powered)
-"tF" = (
-/obj/machinery/door/poddoor/preopen{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plating,
 /area/ruin/powered)
 "tQ" = (
 /obj/effect/turf_decal/corner/opaque/blue{
@@ -826,9 +679,7 @@
 /turf/open/floor/plasteel/white,
 /area/ruin/powered)
 "tW" = (
-/obj/machinery/door/airlock/external/glass{
-	dir = 4
-	},
+/obj/machinery/door/airlock/external/glass,
 /obj/effect/decal/cleanable/blood/tracks{
 	dir = 8
 	},
@@ -849,15 +700,22 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/dark,
 /area/ruin/powered)
+"uq" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters{
+	id = "rd1"
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/plating,
+/area/ruin/powered)
 "uF" = (
 /obj/structure/table/optable,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/dark,
 /area/ruin/powered)
 "uG" = (
-/obj/machinery/door/airlock/engineering/glass/critical{
-	dir = 4
-	},
+/obj/machinery/door/airlock/engineering/glass/critical,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/engine,
 /area/ruin/powered)
@@ -928,20 +786,11 @@
 /turf/open/floor/engine,
 /area/ruin/powered)
 "xf" = (
-/obj/machinery/door/poddoor/preopen{
-	dir = 8
-	},
+/obj/machinery/door/poddoor/preopen,
 /obj/effect/decal/cleanable/blood/splatter,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/vault,
-/area/ruin/powered)
-"xx" = (
-/obj/machinery/door/poddoor/ert{
-	id = "b";
-	dir = 4
-	},
-/turf/open/floor/plating,
 /area/ruin/powered)
 "xO" = (
 /obj/effect/decal/cleanable/dirt,
@@ -1010,14 +859,11 @@
 /turf/open/floor/carpet/blue,
 /area/ruin/powered)
 "zn" = (
-/obj/machinery/door/airlock/research{
-	dir = 4
+/obj/machinery/door/airlock/research,
+/obj/machinery/door/poddoor/shutters{
+	id = "rd2"
 	},
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/door/poddoor/shutters{
-	id = "rd2";
-	dir = 8
-	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/powered)
 "zx" = (
@@ -1056,19 +902,6 @@
 /area/ruin/powered)
 "As" = (
 /obj/effect/spawner/structure/window/reinforced/shutters,
-/turf/open/floor/plating,
-/area/ruin/powered)
-"AI" = (
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/closed/wall/r_wall,
-/area/ruin/powered)
-"AQ" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/door/poddoor/shutters{
-	id = "rd1";
-	dir = 4
-	},
 /turf/open/floor/plating,
 /area/ruin/powered)
 "AR" = (
@@ -1180,13 +1013,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/carpet/royalblue,
 /area/ruin/powered)
-"DK" = (
-/obj/machinery/door/poddoor/ert{
-	id = "a";
-	dir = 4
-	},
-/turf/open/floor/plating,
-/area/ruin/powered)
 "DU" = (
 /obj/structure/window/plasma/reinforced/spawner{
 	dir = 1
@@ -1199,8 +1025,7 @@
 "DW" = (
 /obj/machinery/door/airlock/vault,
 /obj/machinery/door/poddoor{
-	id = "medical_lock_medlock";
-	dir = 4
+	id = "medical_lock_medlock"
 	},
 /obj/effect/turf_decal/corner/opaque/black{
 	dir = 1
@@ -1315,11 +1140,10 @@
 /turf/open/floor/plasteel/dark,
 /area/ruin/powered)
 "FQ" = (
-/obj/machinery/door/poddoor/preopen{
+/obj/machinery/door/poddoor/preopen,
+/obj/machinery/light/small{
+	brightness = 3;
 	dir = 8
-	},
-/obj/machinery/light/small/directional/west{
-	brightness = 3
 	},
 /obj/structure/sign/poster/retro/nanotrasen_logo_70s{
 	pixel_x = -32
@@ -1341,9 +1165,7 @@
 /turf/open/floor/plasteel,
 /area/ruin/powered)
 "Gf" = (
-/obj/machinery/door/poddoor/preopen{
-	dir = 8
-	},
+/obj/machinery/door/poddoor/preopen,
 /turf/open/floor/plating/airless,
 /area/ruin/powered)
 "Gx" = (
@@ -1402,8 +1224,7 @@
 /area/ruin/powered)
 "Hf" = (
 /obj/machinery/door/poddoor{
-	id = "medical_lock_medlock";
-	dir = 8
+	id = "medical_lock_medlock"
 	},
 /obj/effect/turf_decal/industrial/warning/cee{
 	dir = 1
@@ -1425,8 +1246,7 @@
 /area/ruin/powered)
 "Ib" = (
 /obj/machinery/door/poddoor/shutters{
-	id = "medical_lock_lobby";
-	dir = 8
+	id = "medical_lock_lobby"
 	},
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -1452,6 +1272,9 @@
 /turf/open/floor/vault,
 /area/ruin/powered)
 "IH" = (
+/obj/machinery/door/poddoor{
+	id = "medical_lock_medlock"
+	},
 /obj/effect/turf_decal/industrial/warning{
 	dir = 4
 	},
@@ -1459,10 +1282,6 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/door/poddoor{
-	id = "medical_lock_medlock";
-	dir = 8
-	},
 /turf/open/floor/plasteel/white,
 /area/ruin/powered)
 "IM" = (
@@ -1684,20 +1503,10 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/white,
 /area/ruin/powered)
-"Mb" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/door/poddoor/shutters{
-	id = "rd2";
-	dir = 8
-	},
-/turf/open/floor/plating,
-/area/ruin/powered)
 "Mk" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/shutters{
-	id = "celock";
-	dir = 4
+	id = "celock"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
@@ -1709,20 +1518,6 @@
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/dark,
-/area/ruin/powered)
-"Mx" = (
-/obj/machinery/door/poddoor/preopen{
-	dir = 4
-	},
-/obj/machinery/light/small/directional/west{
-	brightness = 3
-	},
-/obj/structure/sign/poster/retro/nanotrasen_logo_70s{
-	pixel_x = -32
-	},
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/vault,
 /area/ruin/powered)
 "ML" = (
 /obj/machinery/door/poddoor/preopen,
@@ -1746,9 +1541,7 @@
 /turf/open/floor/engine,
 /area/ruin/powered)
 "NM" = (
-/obj/machinery/door/poddoor{
-	dir = 8
-	},
+/obj/machinery/door/poddoor,
 /turf/open/floor/plasteel/airless,
 /area/ruin/powered)
 "NU" = (
@@ -1813,9 +1606,7 @@
 /turf/open/floor/vault,
 /area/ruin/powered)
 "PC" = (
-/obj/machinery/door/airlock/maintenance_hatch{
-	dir = 4
-	},
+/obj/machinery/door/airlock/maintenance_hatch,
 /obj/effect/decal/cleanable/blood/tracks{
 	dir = 8
 	},
@@ -1873,10 +1664,10 @@
 /turf/open/floor/plating,
 /area/ruin/powered)
 "Rs" = (
-/obj/machinery/light/small/directional/east,
-/obj/machinery/door/poddoor/preopen{
+/obj/machinery/light/small{
 	dir = 4
 	},
+/obj/machinery/door/poddoor/preopen,
 /obj/structure/sign/poster/retro/nanotrasen_logo_70s{
 	pixel_x = 32
 	},
@@ -1921,15 +1712,6 @@
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/dark,
-/area/ruin/powered)
-"Tf" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/door/poddoor/shutters{
-	id = "rd2";
-	dir = 8
-	},
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plating,
 /area/ruin/powered)
 "Tr" = (
 /obj/machinery/computer/crew{
@@ -2059,8 +1841,7 @@
 /obj/item/shard,
 /obj/effect/gibspawner/human,
 /obj/machinery/door/poddoor/shutters/preopen{
-	id = "rd3";
-	dir = 8
+	id = "rd3"
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt,
@@ -2135,12 +1916,10 @@
 "XC" = (
 /obj/machinery/door/airlock/command/glass{
 	id_tag = list(103);
-	name = "Captain's Office";
-	dir = 4
+	name = "Captain's Office"
 	},
 /obj/machinery/door/poddoor/shutters{
-	id = "captain_lock";
-	dir = 4
+	id = "captain_lock"
 	},
 /turf/open/floor/carpet/blue,
 /area/ruin/powered)
@@ -2362,7 +2141,7 @@ FI
 FI
 FI
 EH
-le
+Ib
 fq
 fq
 Ib
@@ -2776,7 +2555,7 @@ Dp
 Vj
 EH
 An
-DK
+yC
 An
 EH
 EH
@@ -2817,7 +2596,7 @@ Vj
 If
 If
 Vj
-xx
+vb
 An
 If
 If
@@ -2846,7 +2625,7 @@ EH
 Vj
 EH
 Vj
-hi
+Mk
 dS
 Mk
 dj
@@ -2858,7 +2637,7 @@ If
 An
 An
 An
-kT
+YM
 An
 An
 An
@@ -2898,10 +2677,10 @@ Vj
 If
 An
 ML
-Mx
+FQ
 xf
 FQ
-pI
+ML
 An
 If
 Vj
@@ -2933,8 +2712,8 @@ dV
 dV
 dV
 EH
-iR
-qU
+lR
+Hx
 Vj
 An
 An
@@ -2946,8 +2725,8 @@ hC
 An
 An
 An
-iR
-qU
+lR
+Hx
 EH
 TB
 dv
@@ -3015,8 +2794,8 @@ dV
 dV
 Xc
 EH
-tF
-qU
+lR
+Hx
 An
 Vj
 An
@@ -3028,8 +2807,8 @@ hC
 An
 Vj
 An
-qU
-iR
+Hx
+lR
 EH
 TB
 TB
@@ -3063,7 +2842,7 @@ If
 An
 it
 qm
-sn
+yQ
 Rs
 Rw
 An
@@ -3104,7 +2883,7 @@ If
 An
 An
 An
-kT
+YM
 An
 An
 An
@@ -3145,7 +2924,7 @@ Vj
 If
 If
 Vj
-xx
+vb
 An
 If
 If
@@ -3160,7 +2939,7 @@ XC
 EH
 Vj
 Vj
-jx
+eD
 EH
 FI
 FI
@@ -3186,7 +2965,7 @@ Vk
 EH
 Vj
 An
-DK
+yC
 Vj
 Vj
 EH
@@ -3379,7 +3158,7 @@ Vj
 Vj
 EH
 EH
-bd
+eD
 Vj
 EH
 wx
@@ -3402,7 +3181,7 @@ EH
 Vj
 Vj
 EH
-eJ
+eD
 EH
 EH
 WU
@@ -3467,18 +3246,18 @@ WU
 Vj
 If
 Vj
-AQ
-AQ
+gg
+gg
 qs
-cl
-gk
+gg
+uq
 LI
 LI
 IV
 nc
 Wl
 rO
-gL
+Ea
 gP
 EH
 Dp
@@ -3631,19 +3410,19 @@ Vj
 Dp
 If
 EH
-Mb
-Tf
+Zt
+Zt
 zn
-Mb
-AI
+Zt
+Zt
 LI
 LI
 LI
 gk
-ix
+BO
 cc
-ix
-ix
+BO
+BO
 EH
 FI
 FI
@@ -3667,7 +3446,7 @@ FI
 Vj
 Dp
 EH
-oN
+po
 EH
 Dp
 If

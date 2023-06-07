@@ -20,9 +20,7 @@
 /turf/open/floor/plating,
 /area/ruin/unpowered)
 "aO" = (
-/obj/machinery/door/airlock/maintenance_hatch{
-	dir = 4
-	},
+/obj/machinery/door/airlock/maintenance_hatch,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -47,9 +45,7 @@
 /area/ruin/unpowered)
 "cY" = (
 /obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/door/poddoor/shutters{
-	dir = 4
-	},
+/obj/machinery/door/poddoor/shutters,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/white,
 /area/ruin/unpowered)
@@ -121,7 +117,9 @@
 "jk" = (
 /obj/effect/turf_decal/industrial/warning,
 /obj/machinery/aug_manipulator,
-/obj/machinery/light/directional/east,
+/obj/machinery/light{
+	dir = 4
+	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/white,
 /area/ruin/unpowered)
@@ -133,9 +131,7 @@
 /area/ruin/unpowered)
 "kz" = (
 /obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/door/poddoor/shutters{
-	dir = 8
-	},
+/obj/machinery/door/poddoor/shutters,
 /turf/open/floor/plasteel/white,
 /area/ruin/unpowered)
 "lv" = (
@@ -232,9 +228,7 @@
 /turf/open/floor/plasteel/white,
 /area/ruin/unpowered)
 "rB" = (
-/obj/structure/door_assembly/door_assembly_com{
-	dir = 8
-	},
+/obj/structure/door_assembly/door_assembly_com,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/dark,
 /area/ruin/unpowered)
@@ -255,12 +249,12 @@
 /turf/open/floor/plating,
 /area/ruin/unpowered)
 "sO" = (
-/obj/machinery/light/broken/directional/south,
+/obj/machinery/light/broken,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/rust,
 /area/ruin/unpowered)
 "sR" = (
-/obj/machinery/light/directional/south,
+/obj/machinery/light,
 /obj/structure/table,
 /obj/item/storage/toolbox/mechanical,
 /obj/item/crowbar,
@@ -303,13 +297,6 @@
 /obj/effect/turf_decal/industrial/warning,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
-"uR" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/door/poddoor/shutters{
-	dir = 8
-	},
-/turf/open/floor/plating,
 /area/ruin/unpowered)
 "vc" = (
 /obj/structure/table,
@@ -369,20 +356,6 @@
 /obj/machinery/door/poddoor/shutters,
 /turf/open/floor/plasteel/white,
 /area/ruin/unpowered)
-"BI" = (
-/obj/effect/spawner/structure/window,
-/obj/machinery/door/poddoor/shutters{
-	dir = 4
-	},
-/turf/open/floor/plating,
-/area/ruin/unpowered)
-"BV" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/door/poddoor{
-	dir = 8
-	},
-/turf/open/floor/engine,
-/area/ruin/unpowered)
 "Cq" = (
 /turf/template_noop,
 /area/template_noop)
@@ -429,9 +402,7 @@
 /area/ruin/unpowered)
 "Gk" = (
 /obj/machinery/door/airlock/research,
-/obj/machinery/door/poddoor/shutters{
-	dir = 4
-	},
+/obj/machinery/door/poddoor/shutters,
 /turf/open/floor/plasteel/white,
 /area/ruin/unpowered)
 "Hp" = (
@@ -490,8 +461,9 @@
 /turf/open/floor/circuit/red/telecomms,
 /area/ruin/unpowered)
 "LN" = (
-/obj/machinery/light/small/directional/west{
-	brightness = 3
+/obj/machinery/light/small{
+	brightness = 3;
+	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/dark,
@@ -503,13 +475,6 @@
 /obj/machinery/conveyor_switch/oneway,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
-"Mm" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/door/poddoor/shutters{
-	dir = 4
-	},
-/turf/open/floor/plating,
 /area/ruin/unpowered)
 "My" = (
 /obj/structure/table,
@@ -573,9 +538,7 @@
 /turf/open/floor/plasteel/white,
 /area/ruin/unpowered)
 "Qi" = (
-/obj/machinery/door/airlock/research{
-	dir = 4
-	},
+/obj/machinery/door/airlock/research,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -608,13 +571,6 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
-/area/ruin/unpowered)
-"SS" = (
-/obj/structure/table/reinforced,
-/obj/machinery/door/poddoor/shutters{
-	dir = 4
-	},
-/turf/open/floor/plating,
 /area/ruin/unpowered)
 "Tl" = (
 /obj/structure/window/reinforced/spawner/west,
@@ -650,7 +606,9 @@
 /obj/effect/turf_decal/trimline/opaque/red/filled/line{
 	dir = 8
 	},
-/obj/machinery/light/built/directional/west,
+/obj/machinery/light/built{
+	dir = 8
+	},
 /turf/open/floor/plasteel,
 /area/ruin/unpowered)
 "VO" = (
@@ -665,7 +623,9 @@
 /turf/open/floor/plasteel/white,
 /area/ruin/unpowered)
 "WJ" = (
-/obj/machinery/light/small/broken/directional/east,
+/obj/machinery/light/small/broken{
+	dir = 4
+	},
 /turf/open/floor/plating,
 /area/ruin/unpowered)
 "WO" = (
@@ -781,7 +741,7 @@ MQ
 MQ
 MQ
 Ts
-BV
+hK
 "}
 (4,1,1) = {"
 AX
@@ -881,7 +841,7 @@ MQ
 rW
 MQ
 Ts
-BV
+hK
 "}
 (8,1,1) = {"
 Ts
@@ -1066,16 +1026,16 @@ NV
 NV
 NV
 Ts
-BI
-SS
+oY
+JY
 NV
 NV
 Cu
 oa
-NV
-Mm
-Mm
-uR
+aI
+aI
+aI
+aI
 Cq
 Cq
 Cq

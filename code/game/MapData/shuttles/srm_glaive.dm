@@ -28,8 +28,7 @@
 	req_access = list(ACCESS_SECURITY)
 
 /obj/structure/closet/secure_closet/montagnes
-	name = "\proper Hunter Montagnes Locker"
-	desc = "The posessions of the owning Hunter Montagnes."
+	name = "\proper head of security's locker"
 	req_access = list(ACCESS_HOS)
 	icon_state = "hos"
 
@@ -37,6 +36,19 @@
 	name = "mining equipment locker"
 	desc = "The closet of mining equipment."
 	icon_state = "mining"
+
+/turf/open/floor/plating/dirt/jungle/dark/actuallydark
+	light_range = 0
+	light_power = 0
+	slowdown = 0
+
+/turf/open/floor/plating/grass/jungle/actuallydark
+	light_range = 0
+	light_power = 0
+
+/turf/open/water/jungle/actuallydark
+	light_range = 0
+	light_power = 0
 
 /area/ship/external/dark
 	name = "Dark External"

@@ -21,7 +21,6 @@
 	icon_keyboard = null
 	circuit = /obj/item/circuitboard/computer/libraryconsole
 	desc = "Checked out books MUST be returned on time."
-	unique_icon = TRUE
 	var/screenstate = 0
 	var/title
 	var/category = "Any"
@@ -204,7 +203,6 @@ GLOBAL_LIST(cachedbooks) // List of our cached book datums
 	icon_screen = "oldcomp_library"
 	icon_keyboard = null
 	circuit = /obj/item/circuitboard/computer/libraryconsole
-	unique_icon = TRUE
 
 	var/screenstate = 0 // 0 - Main Menu, 1 - Inventory, 2 - Checked Out, 3 - Check Out a Book
 

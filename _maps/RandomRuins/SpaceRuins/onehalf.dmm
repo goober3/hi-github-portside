@@ -154,11 +154,28 @@
 	},
 /turf/open/space/basic,
 /area/space/nearstation)
+"aB" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/table/wood,
+/obj/effect/turf_decal/siding/wood{
+	dir = 6
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/carpet/nanoweave/beige,
+/area/ruin/space/has_grav/onehalf)
 "aC" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/airless{
 	icon_state = "wood-broken6"
 	},
+/area/ruin/space/has_grav/onehalf)
+"aD" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/open/floor/plating,
 /area/ruin/space/has_grav/onehalf)
 "aE" = (
 /obj/structure/disposalpipe/trunk,
@@ -464,9 +481,7 @@
 /obj/machinery/door/firedoor/border_only/closed{
 	dir = 8
 	},
-/obj/machinery/door/airlock/public/glass{
-	dir = 4
-	},
+/obj/machinery/door/airlock/public/glass,
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/onehalf)
 "bo" = (
@@ -486,15 +501,23 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/door/airlock/maintenance_hatch{
-	dir = 4
-	},
+/obj/machinery/door/airlock/maintenance_hatch,
 /obj/machinery/door/firedoor/border_only{
 	dir = 8
 	},
 /obj/machinery/door/firedoor/border_only{
 	dir = 4
 	},
+/turf/open/floor/plasteel,
+/area/ruin/space/has_grav/onehalf)
+"bs" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/onehalf)
 "bt" = (
@@ -568,15 +591,20 @@
 /obj/machinery/door/firedoor/border_only/closed{
 	dir = 8
 	},
-/obj/machinery/door/airlock/public/glass{
-	dir = 4
-	},
+/obj/machinery/door/airlock/public/glass,
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/onehalf)
 "bD" = (
 /obj/structure/disposalpipe/junction{
 	dir = 8
 	},
+/turf/open/floor/plasteel,
+/area/ruin/space/has_grav/onehalf)
+"bE" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/light,
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/onehalf)
 "bF" = (
@@ -661,14 +689,6 @@
 "bU" = (
 /turf/closed/wall/r_wall,
 /area/ruin/space/has_grav/onehalf)
-"bV" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/machinery/light/directional/south,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel,
-/area/ruin/space/has_grav/onehalf)
 "bW" = (
 /turf/open/floor/plating/airless{
 	icon_state = "platingdmg1"
@@ -689,12 +709,11 @@
 /turf/open/floor/plating/airless,
 /area/ruin/space/has_grav/onehalf)
 "bZ" = (
-/obj/structure/grille,
 /obj/machinery/door/poddoor/preopen{
 	id = "bridge_onehalf";
-	name = "Bridge Blast Door";
-	dir = 4
+	name = "Bridge Blast Door"
 	},
+/obj/structure/grille,
 /obj/structure/window/reinforced/fulltile,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/onehalf)
@@ -713,6 +732,13 @@
 /obj/structure/closet/emcloset,
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/onehalf)
+"cd" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/frame/computer,
+/turf/open/floor/plasteel,
+/area/ruin/space/has_grav/onehalf)
 "ce" = (
 /obj/structure/frame/computer,
 /turf/open/floor/plasteel,
@@ -727,6 +753,17 @@
 	pixel_y = 25;
 	start_charge = 0
 	},
+/turf/open/floor/plasteel,
+/area/ruin/space/has_grav/onehalf)
+"cg" = (
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/structure/table/reinforced,
+/obj/item/spacecash/bundle/c500{
+	pixel_y = 8
+	},
+/obj/item/spacecash/bundle/c1000,
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/onehalf)
 "ch" = (
@@ -750,13 +787,12 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/grille,
-/obj/structure/window/reinforced/fulltile,
 /obj/machinery/door/poddoor/preopen{
 	id = "bridge_onehalf";
-	name = "Bridge Blast Door";
-	dir = 4
+	name = "Bridge Blast Door"
 	},
+/obj/structure/grille,
+/obj/structure/window/reinforced/fulltile,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/onehalf)
 "cl" = (
@@ -805,13 +841,12 @@
 /obj/structure/cable{
 	icon_state = "0-8"
 	},
-/obj/structure/grille,
-/obj/structure/window/reinforced/fulltile,
 /obj/machinery/door/poddoor/preopen{
 	id = "bridge_onehalf";
-	name = "Bridge Blast Door";
-	dir = 4
+	name = "Bridge Blast Door"
 	},
+/obj/structure/grille,
+/obj/structure/window/reinforced/fulltile,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/onehalf)
 "cr" = (
@@ -847,18 +882,22 @@
 /obj/item/stack/tile/plasteel,
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/onehalf)
+"cy" = (
+/obj/machinery/light/small,
+/obj/effect/rune/blood_boil,
+/turf/open/floor/plasteel/cult,
+/area/ruin/space/has_grav/onehalf)
 "cz" = (
 /obj/structure/cable,
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
-/obj/structure/grille,
-/obj/structure/window/reinforced/fulltile,
 /obj/machinery/door/poddoor/preopen{
 	id = "bridge_onehalf";
-	name = "Bridge Blast Door";
-	dir = 4
+	name = "Bridge Blast Door"
 	},
+/obj/structure/grille,
+/obj/structure/window/reinforced/fulltile,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/onehalf)
 "cA" = (
@@ -883,8 +922,7 @@
 "cC" = (
 /obj/machinery/door/poddoor/preopen{
 	id = "bridge_onehalf";
-	name = "Bridge Blast Door";
-	dir = 4
+	name = "Bridge Blast Door"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
@@ -896,8 +934,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/command/glass{
-	name = "Bridge";
-	dir = 4
+	name = "Bridge"
 	},
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/onehalf)
@@ -950,6 +987,13 @@
 	icon_state = "platingdmg2"
 	},
 /area/ruin/space/has_grav/onehalf)
+"cM" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/machinery/vending/sovietsoda,
+/turf/open/floor/plasteel,
+/area/ruin/space/has_grav/onehalf)
 "cN" = (
 /obj/item/reagent_containers/food/drinks/sillycup,
 /turf/open/space/basic,
@@ -986,13 +1030,12 @@
 	icon_state = "0-4"
 	},
 /obj/structure/cable,
-/obj/structure/grille,
-/obj/structure/window/reinforced/fulltile,
 /obj/machinery/door/poddoor/preopen{
 	id = "bridge_onehalf";
-	name = "Bridge Blast Door";
-	dir = 4
+	name = "Bridge Blast Door"
 	},
+/obj/structure/grille,
+/obj/structure/window/reinforced/fulltile,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/onehalf)
 "cW" = (
@@ -1025,6 +1068,12 @@
 /area/ruin/space/has_grav/onehalf)
 "da" = (
 /obj/structure/closet/firecloset/full,
+/turf/open/floor/plasteel,
+/area/ruin/space/has_grav/onehalf)
+"db" = (
+/obj/machinery/light,
+/obj/structure/table/reinforced,
+/obj/item/storage/firstaid/regular,
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/onehalf)
 "dc" = (
@@ -1089,6 +1138,13 @@
 "dh" = (
 /turf/open/space/basic,
 /area/template_noop)
+"di" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/chair,
+/turf/open/floor/plasteel/cult/airless,
+/area/ruin/space/has_grav/onehalf)
 "dj" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -1265,11 +1321,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/onehalf)
-"kH" = (
-/obj/machinery/light/directional/north,
-/obj/structure/frame/computer,
-/turf/open/floor/plasteel,
-/area/ruin/space/has_grav/onehalf)
 "lA" = (
 /obj/effect/turf_decal/industrial/warning/corner{
 	dir = 1
@@ -1416,13 +1467,6 @@
 /mob/living/simple_animal/hostile/construct/proteon/hostile,
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/onehalf)
-"qC" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/machinery/light/directional/south,
-/turf/open/floor/plasteel,
-/area/ruin/space/has_grav/onehalf)
 "rd" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/siding/wood,
@@ -1495,16 +1539,6 @@
 /obj/item/storage/toolbox/syndicate,
 /turf/open/floor/plasteel/cult/airless,
 /area/ruin/space/has_grav/onehalf)
-"tX" = (
-/obj/machinery/light/directional/east,
-/obj/structure/table,
-/obj/item/storage/firstaid/brute{
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/obj/item/storage/firstaid/regular,
-/turf/open/floor/plasteel/tech,
-/area/ruin/space/has_grav/onehalf)
 "tY" = (
 /obj/effect/turf_decal/solarpanel,
 /obj/machinery/power/solar,
@@ -1516,11 +1550,6 @@
 	},
 /turf/open/floor/plating/airless,
 /area/space/nearstation)
-"un" = (
-/obj/machinery/light/directional/north,
-/obj/structure/chair,
-/turf/open/floor/plasteel/cult/airless,
-/area/ruin/space/has_grav/onehalf)
 "uZ" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -1584,11 +1613,11 @@
 	icon_state = "wood-broken4"
 	},
 /area/ruin/space/has_grav/onehalf)
-"xS" = (
+"xR" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/light/small/directional/north,
+/obj/machinery/light,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/onehalf)
@@ -1619,10 +1648,25 @@
 /obj/effect/turf_decal/siding/wood,
 /turf/open/floor/wood/airless,
 /area/ruin/space/has_grav/onehalf)
+"zd" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/wood/airless,
+/area/ruin/space/has_grav/onehalf)
 "zh" = (
 /obj/structure/disposalpipe/trunk,
 /obj/item/stack/ore/diamond,
 /turf/open/floor/plating/airless,
+/area/ruin/space/has_grav/onehalf)
+"zP" = (
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/plasteel/airless,
 /area/ruin/space/has_grav/onehalf)
 "zQ" = (
 /obj/effect/turf_decal/solarpanel,
@@ -1657,13 +1701,6 @@
 	},
 /turf/open/floor/plasteel/cult/airless,
 /area/ruin/space/has_grav/onehalf)
-"AE" = (
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
-/obj/machinery/light/directional/east,
-/turf/open/floor/plasteel/airless,
-/area/ruin/space/has_grav/onehalf)
 "AH" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -1675,16 +1712,6 @@
 	icon_state = "1-8"
 	},
 /turf/open/floor/plasteel,
-/area/ruin/space/has_grav/onehalf)
-"BA" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/fulltile,
-/obj/machinery/door/poddoor/preopen{
-	id = "bridge_onehalf";
-	name = "Bridge Blast Door";
-	dir = 4
-	},
-/turf/open/floor/plating,
 /area/ruin/space/has_grav/onehalf)
 "BD" = (
 /obj/item/stack/sheet/runed_metal,
@@ -1848,11 +1875,6 @@
 	},
 /turf/open/floor/plating/airless,
 /area/ruin/space/has_grav/onehalf)
-"Id" = (
-/obj/machinery/light/small/directional/south,
-/obj/effect/rune/blood_boil,
-/turf/open/floor/plasteel/cult,
-/area/ruin/space/has_grav/onehalf)
 "Ix" = (
 /obj/item/stack/cable_coil/cut/red{
 	amount = 2
@@ -1866,11 +1888,6 @@
 	},
 /turf/open/space/basic,
 /area/space/nearstation)
-"Jf" = (
-/obj/machinery/light/directional/west,
-/obj/machinery/vending/sovietsoda,
-/turf/open/floor/plasteel,
-/area/ruin/space/has_grav/onehalf)
 "Jl" = (
 /obj/effect/turf_decal/solarpanel,
 /obj/machinery/power/solar,
@@ -1921,19 +1938,6 @@
 /obj/structure/railing/corner,
 /turf/open/space/basic,
 /area/space/nearstation)
-"KR" = (
-/obj/machinery/light/small/directional/west,
-/turf/open/floor/plating,
-/area/ruin/space/has_grav/onehalf)
-"LJ" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/table/wood,
-/obj/effect/turf_decal/siding/wood{
-	dir = 6
-	},
-/obj/machinery/light/directional/west,
-/turf/open/floor/carpet/nanoweave/beige,
-/area/ruin/space/has_grav/onehalf)
 "LL" = (
 /obj/structure/disposalpipe/segment{
 	dir = 6
@@ -2014,6 +2018,12 @@
 /mob/living/simple_animal/hostile/construct/proteon/hostile,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/airless,
+/area/ruin/space/has_grav/onehalf)
+"OJ" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/carpet/nanoweave/beige,
 /area/ruin/space/has_grav/onehalf)
 "OW" = (
 /obj/effect/turf_decal/industrial/warning{
@@ -2128,17 +2138,6 @@
 	icon_state = "platingdmg3"
 	},
 /area/ruin/space/has_grav/onehalf)
-"UM" = (
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
-/obj/structure/table/reinforced,
-/obj/item/spacecash/bundle/c500{
-	pixel_y = 8
-	},
-/obj/item/spacecash/bundle/c1000,
-/turf/open/floor/plasteel,
-/area/ruin/space/has_grav/onehalf)
 "Vb" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -2194,10 +2193,6 @@
 /mob/living/simple_animal/hostile/construct/wraith/hostile,
 /turf/open/floor/plasteel/cult,
 /area/ruin/space/has_grav/onehalf)
-"Wh" = (
-/obj/machinery/light/directional/north,
-/turf/open/floor/wood/airless,
-/area/ruin/space/has_grav/onehalf)
 "Wk" = (
 /obj/structure/catwalk,
 /turf/open/space,
@@ -2237,11 +2232,17 @@
 /obj/structure/catwalk,
 /turf/open/space,
 /area/space/nearstation)
-"YE" = (
-/obj/machinery/light/directional/south,
-/obj/structure/table/reinforced,
+"XU" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/structure/table,
+/obj/item/storage/firstaid/brute{
+	pixel_x = 3;
+	pixel_y = 3
+	},
 /obj/item/storage/firstaid/regular,
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/tech,
 /area/ruin/space/has_grav/onehalf)
 "YQ" = (
 /obj/structure/disposalpipe/junction{
@@ -2256,10 +2257,6 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/chair,
 /turf/open/floor/wood/airless,
-/area/ruin/space/has_grav/onehalf)
-"YW" = (
-/obj/machinery/light/directional/west,
-/turf/open/floor/carpet/nanoweave/beige,
 /area/ruin/space/has_grav/onehalf)
 "Zn" = (
 /obj/structure/disposalpipe/segment{
@@ -2596,7 +2593,7 @@ Cw
 eK
 ak
 an
-LJ
+aB
 aM
 bj
 bx
@@ -2667,7 +2664,7 @@ ak
 PL
 pT
 Mc
-Wh
+zd
 aC
 ao
 bj
@@ -2736,7 +2733,7 @@ md
 An
 uZ
 An
-AE
+zP
 vD
 cA
 nD
@@ -2883,7 +2880,7 @@ ak
 ak
 Mc
 Mc
-un
+di
 wY
 aM
 WP
@@ -2988,7 +2985,7 @@ aa
 aW
 ak
 ek
-tX
+XU
 fX
 ak
 ap
@@ -3027,7 +3024,7 @@ ak
 ak
 ak
 Mc
-Wh
+zd
 PD
 hY
 YQ
@@ -3060,7 +3057,7 @@ aa
 aW
 ak
 sQ
-YW
+OJ
 sQ
 ak
 cs
@@ -3108,7 +3105,7 @@ bU
 aa
 wr
 bU
-Id
+cy
 bU
 cE
 aa
@@ -3141,12 +3138,12 @@ Mc
 Gf
 JF
 bU
-BA
+bZ
 ck
 bU
 cC
 bU
-BA
+bZ
 bZ
 bU
 aW
@@ -3181,7 +3178,7 @@ ca
 cl
 cw
 cn
-Jf
+cM
 cR
 cY
 bU
@@ -3204,14 +3201,14 @@ aa
 JB
 Wk
 aq
-KR
+aD
 ct
 aX
 lA
 ha
 fR
 AH
-qC
+bE
 bU
 cb
 cm
@@ -3285,7 +3282,7 @@ wK
 bF
 bu
 bU
-kH
+cd
 co
 cn
 cG
@@ -3355,7 +3352,7 @@ wK
 NH
 cn
 bF
-bV
+xR
 bU
 cf
 MC
@@ -3393,13 +3390,13 @@ Zn
 jX
 vT
 bU
-UM
+cg
 cp
 ZX
 Gv
 Ra
 cU
-YE
+db
 bU
 aW
 aa
@@ -3606,7 +3603,7 @@ ak
 lU
 bG
 ak
-xS
+bs
 bH
 ak
 cF

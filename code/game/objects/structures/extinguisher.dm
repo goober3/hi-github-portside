@@ -1,8 +1,8 @@
 /obj/structure/extinguisher_cabinet
 	name = "extinguisher cabinet"
 	desc = "A small wall mounted cabinet designed to hold a fire extinguisher."
-	icon = 'icons/obj/wallmounts.dmi'
-	icon_state = "extinguisher"
+	icon = 'icons/obj/wallmounts.dmi' //WS Edit - Better Icons
+	icon_state = "extinguisher_closed"
 	anchored = TRUE
 	density = FALSE
 	max_integrity = 200
@@ -18,16 +18,16 @@
 		dir_amount = 4\
 	)
 
-MAPPING_DIRECTIONAL_HELPERS(/obj/structure/extinguisher_cabinet, 28)
-
 /obj/structure/extinguisher_cabinet/Initialize(mapload, ndir, building)
 	. = ..()
 	if(building)
 		setDir(ndir)
+		pixel_x = (dir & 3)? 0 : (dir == 4 ? -27 : 27)
+		pixel_y = (dir & 3)? (dir ==1 ? -30 : 30) : 0
 		opened = TRUE
+		icon_state = "extinguisher_empty"
 	else
 		stored_extinguisher = new /obj/item/extinguisher(src)
-	update_icon()
 
 /obj/structure/extinguisher_cabinet/examine(mob/user)
 	. = ..()
@@ -128,17 +128,16 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/extinguisher_cabinet, 28)
 		opened = !opened
 		update_icon()
 
-/obj/structure/extinguisher_cabinet/update_overlays()
-	. = ..()
-	if(stored_extinguisher)
-		if(istype(stored_extinguisher, /obj/item/extinguisher/mini))
-			. += "extinguisher_mini"
-		else
-			. += "extinguisher_regular"
+/obj/structure/extinguisher_cabinet/update_icon_state()
 	if(!opened)
-		. += "extinguisher_doorclosed"
+		icon_state = "extinguisher_closed"
+	else if(stored_extinguisher)
+		if(istype(stored_extinguisher, /obj/item/extinguisher/mini))
+			icon_state = "extinguisher_mini"
+		else
+			icon_state = "extinguisher_full"
 	else
-		. += "extinguisher_dooropen"
+		icon_state = "extinguisher_empty"
 
 /obj/structure/extinguisher_cabinet/obj_break(damage_flag)
 	if(!broken && !(flags_1 & NODECONSTRUCT_1))
@@ -166,6 +165,3 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/extinguisher_cabinet, 28)
 	desc = "Used for building wall-mounted extinguisher cabinets."
 	icon_state = "extinguisher"
 	result_path = /obj/structure/extinguisher_cabinet
-	pixel_shift = 28
-	inverse_pixel_shift = TRUE
-	inverse = TRUE

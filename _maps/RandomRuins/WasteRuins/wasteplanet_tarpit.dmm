@@ -145,7 +145,9 @@
 /obj/effect/turf_decal/siding/white{
 	dir = 4
 	},
-/obj/machinery/light/dim/directional/west,
+/obj/machinery/light/dim{
+	dir = 8
+	},
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/concrete,
@@ -167,7 +169,7 @@
 /turf/open/floor/concrete/pavement,
 /area/ruin/unpowered)
 "my" = (
-/obj/machinery/light/dim/directional/south,
+/obj/machinery/light/dim,
 /turf/open/floor/concrete,
 /area/ruin/unpowered)
 "mM" = (
@@ -361,7 +363,9 @@
 /turf/open/floor/concrete/pavement,
 /area/ruin/unpowered)
 "yW" = (
-/obj/machinery/light/dim/directional/east,
+/obj/machinery/light/dim{
+	dir = 4
+	},
 /turf/open/floor/concrete,
 /area/ruin/unpowered)
 "zu" = (
@@ -377,7 +381,9 @@
 /turf/open/floor/plating/asteroid/wasteplanet,
 /area/ruin/unpowered)
 "AO" = (
-/obj/machinery/light/dim/directional/west,
+/obj/machinery/light/dim{
+	dir = 8
+	},
 /turf/open/floor/concrete,
 /area/ruin/unpowered)
 "Bk" = (
@@ -609,7 +615,9 @@
 "UZ" = (
 /obj/structure/table,
 /obj/item/pickaxe/drill,
-/obj/machinery/light/dim/directional/east,
+/obj/machinery/light/dim{
+	dir = 4
+	},
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/concrete,
 /area/ruin/unpowered)

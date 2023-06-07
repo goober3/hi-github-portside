@@ -360,6 +360,7 @@
 	dir = 8
 	},
 /obj/machinery/portable_atmospherics/canister/water_vapor,
+/obj/effect/turf_decal/number,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
 /area/whitesands/surface/outdoors)
@@ -450,9 +451,7 @@
 /turf/open/floor/plating,
 /area/whitesands/surface/outdoors)
 "mj" = (
-/obj/machinery/door/airlock/security/glass{
-	dir = 4
-	},
+/obj/machinery/door/airlock/security/glass,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
@@ -554,15 +553,16 @@
 /turf/open/floor/plasteel,
 /area/whitesands/surface/outdoors)
 "op" = (
+/obj/machinery/door/airlock/security/glass,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
-/obj/machinery/door/airlock/security/glass{
 	dir = 4
 	},
 /turf/open/floor/plasteel,
 /area/whitesands/surface/outdoors)
 "oq" = (
+/obj/effect/turf_decal/number{
+	dir = 8
+	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel,
@@ -634,6 +634,7 @@
 /area/whitesands/surface/outdoors)
 "qi" = (
 /obj/machinery/atmospherics/components/binary/volume_pump,
+/obj/effect/turf_decal/number,
 /turf/open/floor/plasteel,
 /area/whitesands/surface/outdoors)
 "qn" = (
@@ -650,8 +651,7 @@
 /area/whitesands/surface/outdoors)
 "qs" = (
 /obj/machinery/door/airlock/security/glass{
-	name = "Break Room";
-	dir = 4
+	name = "Break Room"
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 8
@@ -853,9 +853,7 @@
 /turf/open/floor/carpet,
 /area/whitesands/surface/outdoors)
 "uL" = (
-/obj/machinery/door/airlock/public/glass{
-	dir = 4
-	},
+/obj/machinery/door/airlock/public/glass,
 /obj/structure/fans/tiny,
 /turf/open/floor/plasteel,
 /area/whitesands/surface/outdoors)
@@ -866,9 +864,7 @@
 /turf/open/floor/plasteel,
 /area/whitesands/surface/outdoors)
 "uZ" = (
-/obj/machinery/door/airlock/public/glass{
-	dir = 8
-	},
+/obj/machinery/door/airlock/public/glass,
 /obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/whitesands/surface/outdoors)
@@ -1034,9 +1030,7 @@
 /turf/open/floor/plasteel,
 /area/whitesands/surface/outdoors)
 "zq" = (
-/obj/machinery/door/airlock/engineering{
-	dir = 4
-	},
+/obj/machinery/door/airlock/engineering,
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
 	dir = 4
 	},
@@ -1306,13 +1300,6 @@
 /obj/structure/chair,
 /turf/open/floor/plasteel,
 /area/whitesands/surface/outdoors)
-"GL" = (
-/obj/machinery/door/poddoor/shutters{
-	dir = 4
-	},
-/obj/structure/fans/tiny,
-/turf/open/floor/plating,
-/area/whitesands/surface/outdoors)
 "Hc" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
@@ -1323,8 +1310,7 @@
 "Hm" = (
 /obj/machinery/door/airlock/security/glass{
 	name = "Cell 2";
-	req_access_txt = "2";
-	dir = 4
+	req_access_txt = "2"
 	},
 /turf/open/floor/plasteel,
 /area/whitesands/surface/outdoors)
@@ -1416,6 +1402,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/whitesands/surface/outdoors)
+"Jg" = (
+/obj/effect/turf_decal/number{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/whitesands/surface/outdoors)
 "Jv" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
@@ -1477,9 +1469,7 @@
 /area/whitesands/surface/outdoors)
 "LK" = (
 /obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/door/poddoor/shutters{
-	dir = 8
-	},
+/obj/machinery/door/poddoor/shutters,
 /turf/open/floor/plating,
 /area/whitesands/surface/outdoors)
 "LM" = (
@@ -1542,6 +1532,9 @@
 /turf/template_noop,
 /area/template_noop)
 "Nk" = (
+/obj/effect/turf_decal/number{
+	dir = 8
+	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 5
 	},
@@ -1641,9 +1634,7 @@
 /turf/open/floor/plasteel,
 /area/whitesands/surface/outdoors)
 "Pm" = (
-/obj/machinery/door/airlock/security/glass{
-	dir = 4
-	},
+/obj/machinery/door/airlock/security/glass,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 8
 	},
@@ -1675,14 +1666,14 @@
 /obj/machinery/atmospherics/components/trinary/filter/on{
 	dir = 1
 	},
+/obj/effect/turf_decal/number,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
 /area/whitesands/surface/outdoors)
 "Qh" = (
 /obj/machinery/door/airlock/security/glass{
 	name = "Cell 1";
-	req_access_txt = "2";
-	dir = 8
+	req_access_txt = "2"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -1725,8 +1716,7 @@
 "QK" = (
 /obj/machinery/door/airlock/security/glass{
 	name = "Cell 3";
-	req_access_txt = "2";
-	dir = 4
+	req_access_txt = "2"
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 8
@@ -1847,12 +1837,6 @@
 	},
 /turf/open/floor/plating,
 /area/whitesands/surface/outdoors)
-"Te" = (
-/obj/machinery/door/airlock/security/glass{
-	dir = 4
-	},
-/turf/open/floor/plasteel,
-/area/whitesands/surface/outdoors)
 "Ty" = (
 /obj/structure/chair{
 	dir = 4
@@ -1876,8 +1860,7 @@
 /area/whitesands/surface/outdoors)
 "TG" = (
 /obj/machinery/door/airlock/security/glass{
-	req_access_txt = "3";
-	dir = 4
+	req_access_txt = "3"
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 8
@@ -1895,11 +1878,9 @@
 /turf/open/floor/engine/vacuum,
 /area/whitesands/surface/outdoors)
 "TO" = (
+/obj/machinery/door/airlock/security/glass,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 8
-	},
-/obj/machinery/door/airlock/security/glass{
-	dir = 4
 	},
 /turf/open/floor/plasteel,
 /area/whitesands/surface/outdoors)
@@ -1973,17 +1954,8 @@
 /turf/open/floor/plasteel,
 /area/whitesands/surface/outdoors)
 "VP" = (
+/obj/machinery/door/poddoor/shutters,
 /obj/structure/fans/tiny,
-/obj/machinery/door/poddoor/shutters{
-	dir = 4
-	},
-/turf/open/floor/plating,
-/area/whitesands/surface/outdoors)
-"VS" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/door/poddoor/shutters{
-	dir = 4
-	},
 /turf/open/floor/plating,
 /area/whitesands/surface/outdoors)
 "VT" = (
@@ -2049,9 +2021,7 @@
 /turf/open/floor/plating,
 /area/whitesands/surface/outdoors)
 "XA" = (
-/obj/machinery/door/airlock/security/glass{
-	dir = 4
-	},
+/obj/machinery/door/airlock/security/glass,
 /obj/effect/turf_decal/corner/opaque/red{
 	dir = 1
 	},
@@ -2291,7 +2261,7 @@ Va
 Va
 Va
 kG
-GL
+VP
 VP
 VP
 VP
@@ -2409,7 +2379,7 @@ aU
 MQ
 oq
 Nk
-rX
+Jg
 SE
 cl
 Va
@@ -2751,7 +2721,7 @@ op
 It
 It
 It
-Te
+KB
 It
 cl
 cl
@@ -2869,7 +2839,7 @@ It
 cl
 It
 It
-VS
+LK
 LK
 It
 It

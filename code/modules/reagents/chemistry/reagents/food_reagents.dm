@@ -717,9 +717,10 @@
 	color = "#eef442" // rgb: 238, 244, 66
 	taste_description = "mournful honking"
 
+
 /datum/reagent/consumable/liquidelectricity
 	name = "Liquid Electricity"
-	description = "A glowing, viscous substance that radiates pure energy." //this is no longer Elzousa blood
+	description = "The blood of elzuosa, and the stuff that keeps them going. Great for them, horrid for anyone else."
 	nutriment_factor = 5 * REAGENTS_METABOLISM
 	color = "#97ee63"
 	taste_description = "pure electricity"

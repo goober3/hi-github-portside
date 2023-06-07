@@ -65,17 +65,22 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/ruin/powered)
-"aE" = (
+"aD" = (
 /obj/machinery/door/airlock/maintenance{
-	name = "Funny Creature Storage";
+	name = "The Throneroom"
+	},
+/obj/effect/decal/cleanable/blood,
+/obj/item/assembly/mousetrap/armed,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
 	},
-/obj/structure/barricade/wooden,
-/obj/item/restraints/legcuffs/beartrap{
-	armed = 1;
-	trap_damage = 1
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 4
 	},
-/turf/open/floor/plating,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/open/floor/carpet/royalblack,
 /area/ruin/powered)
 "aH" = (
 /obj/effect/decal/cleanable/dirt,
@@ -138,10 +143,10 @@
 	},
 /turf/open/floor/carpet/royalblack,
 /area/ruin/powered)
-"br" = (
+"bp" = (
 /obj/effect/mob_spawn/human/corpse/assistant,
 /obj/effect/decal/cleanable/blood,
-/obj/machinery/light/directional/south,
+/obj/machinery/light,
 /turf/open/floor/plating/rust,
 /area/ruin/powered)
 "bs" = (
@@ -153,22 +158,6 @@
 "bt" = (
 /obj/structure/sign/poster/contraband/rip_badger,
 /turf/closed/wall/r_wall/rust,
-/area/ruin/powered)
-"bv" = (
-/obj/machinery/door/airlock/maintenance{
-	name = "The Grey Fortress";
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
-	dir = 4
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/open/floor/plating/rust,
 /area/ruin/powered)
 "bz" = (
 /obj/effect/decal/cleanable/blood/splatter,
@@ -356,7 +345,7 @@
 "dp" = (
 /obj/structure/headpike,
 /obj/effect/decal/cleanable/generic,
-/turf/open/floor/plating/asteroid/wasteplanet,
+/turf/open/floor/plating/asteroid/lowpressure,
 /area/overmap_encounter/planetoid/rockplanet/explored)
 "dv" = (
 /obj/structure/reagent_dispensers/water_cooler,
@@ -410,12 +399,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
 /area/ruin/powered)
-"dY" = (
-/obj/effect/decal/cleanable/blood/old,
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/light/small/directional/west,
-/turf/open/floor/plating/rust,
-/area/ruin/powered)
 "ec" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
@@ -442,23 +425,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/rust,
 /area/ruin/powered)
-"ej" = (
-/obj/machinery/door/airlock/maintenance{
-	name = "The Throneroom";
-	dir = 4
+"ei" = (
+/obj/effect/decal/cleanable/blood/old,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/light/small{
+	dir = 8
 	},
-/obj/effect/decal/cleanable/blood,
-/obj/item/assembly/mousetrap/armed,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
-	dir = 4
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/open/floor/carpet/royalblack,
+/turf/open/floor/plating/rust,
 /area/ruin/powered)
 "ep" = (
 /obj/effect/spawner/lootdrop/maintenance/two,
@@ -577,14 +550,6 @@
 /obj/effect/decal/cleanable/glass,
 /turf/open/floor/plating/rust,
 /area/ruin/powered)
-"fk" = (
-/obj/machinery/door/airlock/bananium{
-	name = "Clown Embassy";
-	dir = 4
-	},
-/obj/item/grown/bananapeel,
-/turf/open/floor/mineral/bananium,
-/area/ruin/powered)
 "fn" = (
 /obj/effect/gibspawner/human,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
@@ -597,6 +562,12 @@
 	icon_state = "2-8"
 	},
 /turf/open/floor/plating/rust,
+/area/ruin/powered)
+"fo" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/plating,
 /area/ruin/powered)
 "fr" = (
 /obj/structure/table,
@@ -673,6 +644,12 @@
 	},
 /turf/open/floor/plating/rust,
 /area/ruin/powered)
+"fU" = (
+/obj/machinery/door/airlock/maintenance{
+	name = "The Barracks Part 4"
+	},
+/turf/open/floor/plating,
+/area/ruin/powered)
 "ga" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -693,10 +670,6 @@
 /obj/item/clothing/gloves/color/fyellow,
 /turf/open/floor/plating,
 /area/ruin/powered)
-"go" = (
-/obj/machinery/light/small/directional/west,
-/turf/open/floor/mineral/bananium,
-/area/ruin/powered)
 "gp" = (
 /mob/living/simple_animal/hostile/rat,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -710,16 +683,6 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/plating/rust,
-/area/ruin/powered)
-"gq" = (
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/rack,
-/obj/effect/spawner/lootdrop/maintenance,
-/obj/item/coin,
-/obj/machinery/light/small/directional/south,
-/turf/open/floor/plating,
 /area/ruin/powered)
 "gr" = (
 /obj/structure/rack,
@@ -809,12 +772,6 @@
 	},
 /turf/open/floor/plating/rust,
 /area/ruin/powered)
-"hV" = (
-/obj/effect/mob_spawn/human/corpse/assistant,
-/obj/effect/decal/cleanable/blood,
-/obj/machinery/light/directional/west,
-/turf/open/floor/plating,
-/area/ruin/powered)
 "hW" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
@@ -882,6 +839,17 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/plating/rust,
+/area/ruin/powered)
+"iE" = (
+/obj/machinery/door/airlock/maintenance{
+	name = "Funny Creature Storage"
+	},
+/obj/structure/barricade/wooden,
+/obj/item/restraints/legcuffs/beartrap{
+	armed = 1;
+	trap_damage = 1
+	},
+/turf/open/floor/plating,
 /area/ruin/powered)
 "iH" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -1009,10 +977,6 @@
 /obj/item/evidencebag,
 /turf/open/floor/plating,
 /area/ruin/powered)
-"jH" = (
-/obj/machinery/light/directional/north,
-/turf/open/floor/plating/rust,
-/area/ruin/powered)
 "jM" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -1040,17 +1004,6 @@
 "jU" = (
 /obj/structure/sign/poster/contraband/space_cube,
 /turf/closed/wall/r_wall/rust,
-/area/ruin/powered)
-"jY" = (
-/obj/machinery/door/airlock/maintenance{
-	name = "Armoire";
-	dir = 4
-	},
-/obj/item/restraints/legcuffs/beartrap{
-	armed = 1;
-	trap_damage = 1
-	},
-/turf/open/floor/plating/rust,
 /area/ruin/powered)
 "kb" = (
 /obj/machinery/door/airlock/maintenance{
@@ -1108,6 +1061,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/ruin/powered)
+"kv" = (
+/obj/machinery/door/airlock/maintenance{
+	name = "Chirurgeon's Theatre"
+	},
+/turf/open/floor/plating,
+/area/ruin/powered)
 "kw" = (
 /obj/machinery/vending/sovietsoda,
 /turf/open/floor/wood,
@@ -1120,6 +1079,13 @@
 "kE" = (
 /obj/structure/sign/poster/contraband/xenofauna_parasite,
 /turf/closed/wall/r_wall/rust,
+/area/ruin/powered)
+"kF" = (
+/mob/living/simple_animal/hostile/rat{
+	dir = 8
+	},
+/obj/machinery/light,
+/turf/open/floor/plating,
 /area/ruin/powered)
 "kK" = (
 /obj/effect/decal/cleanable/blood,
@@ -1194,8 +1160,22 @@
 /area/ruin/powered)
 "ll" = (
 /obj/structure/headpike,
-/turf/open/floor/plating/asteroid/wasteplanet,
+/turf/open/floor/plating/asteroid/lowpressure,
 /area/overmap_encounter/planetoid/rockplanet/explored)
+"lm" = (
+/obj/machinery/door/airlock/maintenance,
+/obj/item/assembly/mousetrap/armed,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/open/floor/plating,
+/area/ruin/powered)
 "lp" = (
 /obj/effect/decal/cleanable/blood/old,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
@@ -1238,13 +1218,6 @@
 	},
 /obj/effect/decal/cleanable/blood,
 /obj/effect/decal/cleanable/cobweb/cobweb2,
-/turf/open/floor/plating,
-/area/ruin/powered)
-"lK" = (
-/mob/living/simple_animal/hostile/rat{
-	dir = 8
-	},
-/obj/machinery/light/directional/south,
 /turf/open/floor/plating,
 /area/ruin/powered)
 "lL" = (
@@ -1316,13 +1289,6 @@
 	pixel_y = 3
 	},
 /turf/open/floor/plating/rust,
-/area/ruin/powered)
-"mo" = (
-/obj/item/spear,
-/obj/structure/sign/poster/contraband/random{
-	pixel_y = 28
-	},
-/turf/open/floor/plating,
 /area/ruin/powered)
 "mv" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -1482,34 +1448,11 @@
 	},
 /turf/open/floor/plating,
 /area/ruin/powered)
-"nF" = (
-/obj/machinery/door/airlock/maintenance{
-	dir = 4
-	},
-/obj/item/assembly/mousetrap/armed,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
-	dir = 4
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/open/floor/plating,
-/area/ruin/powered)
 "nH" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/generic,
 /obj/effect/decal/cleanable/ash,
 /turf/open/floor/plating/rust,
-/area/ruin/powered)
-"nJ" = (
-/obj/structure/rack,
-/obj/item/pneumatic_cannon/pie,
-/obj/item/reagent_containers/spray/waterflower/lube,
-/obj/machinery/light/small/directional/east,
-/turf/open/floor/mineral/bananium,
 /area/ruin/powered)
 "nK" = (
 /obj/structure/table,
@@ -1640,10 +1583,10 @@
 /obj/item/trash/waffles,
 /turf/open/floor/plating,
 /area/ruin/powered)
-"oS" = (
-/obj/structure/bed,
-/obj/item/bedsheet/random,
-/obj/machinery/light/small/directional/east,
+"oR" = (
+/obj/machinery/door/airlock/maintenance{
+	name = "Throneroom Desk"
+	},
 /turf/open/floor/plating/rust,
 /area/ruin/powered)
 "oU" = (
@@ -1663,7 +1606,7 @@
 /area/ruin/powered)
 "oW" = (
 /obj/structure/flora/rock,
-/turf/open/floor/plating/asteroid/wasteplanet,
+/turf/open/floor/plating/asteroid/lowpressure,
 /area/overmap_encounter/planetoid/rockplanet/explored)
 "oX" = (
 /obj/structure/sign/poster/contraband/pgf,
@@ -1814,12 +1757,6 @@
 /obj/item/assembly/mousetrap/armed,
 /turf/open/floor/plating,
 /area/ruin/powered)
-"qx" = (
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/decal/cleanable/glass,
-/obj/machinery/light/directional/south,
-/turf/open/floor/plating,
-/area/ruin/powered)
 "qE" = (
 /obj/effect/decal/cleanable/oil/streak,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
@@ -1878,6 +1815,12 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/ruin/powered)
+"qS" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/plating/rust,
+/area/ruin/powered)
 "qT" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/manifold4w/scrubbers/hidden/layer4,
@@ -1890,13 +1833,6 @@
 	},
 /obj/structure/cable{
 	icon_state = "1-8"
-	},
-/turf/open/floor/plating/rust,
-/area/ruin/powered)
-"ra" = (
-/obj/effect/decal/cleanable/generic,
-/obj/structure/sign/poster/contraband/random{
-	pixel_y = -28
 	},
 /turf/open/floor/plating/rust,
 /area/ruin/powered)
@@ -1977,10 +1913,6 @@
 /obj/item/trash/tray,
 /turf/open/floor/plating,
 /area/ruin/powered)
-"rR" = (
-/obj/machinery/light/directional/south,
-/turf/open/floor/plating/rust,
-/area/ruin/powered)
 "rU" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/oil,
@@ -1993,11 +1925,27 @@
 	},
 /turf/open/floor/plating/rust,
 /area/ruin/powered)
+"rY" = (
+/obj/structure/bed,
+/obj/item/bedsheet/random,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/open/floor/plating/rust,
+/area/ruin/powered)
 "sg" = (
 /mob/living/simple_animal/hostile/rat{
 	dir = 1
 	},
 /turf/open/floor/plating/rust,
+/area/ruin/powered)
+"sk" = (
+/obj/effect/mob_spawn/human/corpse/assistant,
+/obj/effect/decal/cleanable/blood,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/plating,
 /area/ruin/powered)
 "sl" = (
 /mob/living/simple_animal/hostile/rat,
@@ -2052,6 +2000,12 @@
 	dir = 1
 	},
 /turf/open/floor/plating,
+/area/ruin/powered)
+"sG" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/open/floor/mineral/bananium,
 /area/ruin/powered)
 "sH" = (
 /obj/effect/decal/cleanable/blood,
@@ -2144,14 +2098,9 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
 /area/ruin/powered)
-"tP" = (
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/light/directional/north,
-/turf/open/floor/plating/rust,
-/area/ruin/powered)
 "tR" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/asteroid/wasteplanet,
+/turf/open/floor/plating/asteroid/lowpressure,
 /area/overmap_encounter/planetoid/rockplanet/explored)
 "tT" = (
 /obj/machinery/door/airlock/maintenance{
@@ -2220,13 +2169,6 @@
 /obj/item/toy/figure/warden{
 	pixel_x = -4;
 	pixel_y = -1
-	},
-/turf/open/floor/plating,
-/area/ruin/powered)
-"uP" = (
-/obj/machinery/door/airlock/maintenance{
-	name = "The Laboratorium";
-	dir = 4
 	},
 /turf/open/floor/plating,
 /area/ruin/powered)
@@ -2407,15 +2349,6 @@
 /obj/effect/decal/cleanable/greenglow/filled,
 /turf/open/floor/plating,
 /area/ruin/powered)
-"wg" = (
-/obj/machinery/door/airlock/maintenance{
-	name = "The Galley";
-	dir = 4
-	},
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/item/grown/bananapeel,
-/turf/open/floor/plating,
-/area/ruin/powered)
 "wi" = (
 /obj/structure/window/spawner/north,
 /mob/living/carbon/monkey,
@@ -2484,21 +2417,6 @@
 /obj/item/photo,
 /turf/open/floor/plating/rust,
 /area/ruin/powered)
-"wJ" = (
-/obj/machinery/door/airlock/maintenance{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
-	dir = 4
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/open/floor/plating,
-/area/ruin/powered)
 "wM" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 1
@@ -2557,12 +2475,6 @@
 	},
 /turf/open/floor/plating,
 /area/ruin/powered)
-"xW" = (
-/obj/effect/decal/cleanable/blood,
-/obj/item/storage/toolbox/mechanical,
-/obj/machinery/light/directional/south,
-/turf/open/floor/plating/rust,
-/area/ruin/powered)
 "yb" = (
 /obj/item/nullrod/hypertool,
 /obj/effect/decal/cleanable/blood/old,
@@ -2585,6 +2497,15 @@
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/plating/rust,
 /area/ruin/powered)
+"yj" = (
+/obj/structure/closet/cardboard,
+/mob/living/simple_animal/hostile/retaliate/poison/snake,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/ruin/powered)
 "yl" = (
 /obj/structure/falsewall/gold,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
@@ -2595,12 +2516,6 @@
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
-	},
-/turf/open/floor/plating,
-/area/ruin/powered)
-"yp" = (
-/obj/structure/sign/poster/contraband/random{
-	pixel_y = 28
 	},
 /turf/open/floor/plating,
 /area/ruin/powered)
@@ -2653,6 +2568,15 @@
 	icon_state = "2-8"
 	},
 /turf/open/floor/plating/rust,
+/area/ruin/powered)
+"yX" = (
+/obj/structure/rack,
+/obj/item/pneumatic_cannon/pie,
+/obj/item/reagent_containers/spray/waterflower/lube,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/open/floor/mineral/bananium,
 /area/ruin/powered)
 "yZ" = (
 /obj/structure/sign/poster/contraband/tools,
@@ -2707,34 +2631,6 @@
 /obj/structure/statue/sandstone/assistant,
 /turf/open/floor/plating/rust,
 /area/ruin/powered)
-"zy" = (
-/obj/effect/decal/cleanable/ash,
-/obj/effect/decal/cleanable/ash/large,
-/obj/item/cigbutt,
-/obj/item/cigbutt{
-	pixel_x = -8;
-	pixel_y = 2
-	},
-/obj/item/cigbutt{
-	pixel_x = 11
-	},
-/obj/item/cigbutt{
-	pixel_y = 15
-	},
-/obj/item/cigbutt{
-	pixel_y = -8
-	},
-/obj/item/cigbutt{
-	pixel_x = -12;
-	pixel_y = 7
-	},
-/obj/item/cigbutt{
-	pixel_x = 8;
-	pixel_y = -8
-	},
-/obj/machinery/light/small/directional/east,
-/turf/open/floor/plating/rust,
-/area/ruin/powered)
 "zC" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood/drip,
@@ -2749,6 +2645,12 @@
 	},
 /turf/open/floor/plating/rust,
 /area/ruin/powered)
+"zD" = (
+/obj/machinery/door/airlock/maintenance{
+	name = "The Barracks Part 2"
+	},
+/turf/open/floor/plating,
+/area/ruin/powered)
 "zE" = (
 /obj/item/mecha_parts/mecha_equipment/weapon/energy/laser,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -2756,7 +2658,7 @@
 /area/ruin/powered)
 "zG" = (
 /obj/item/gun/ballistic/automatic/pistol/commander,
-/turf/open/floor/plating/asteroid/wasteplanet,
+/turf/open/floor/plating/asteroid/lowpressure,
 /area/overmap_encounter/planetoid/rockplanet/explored)
 "zK" = (
 /turf/closed/indestructible/reinforced,
@@ -2991,24 +2893,6 @@
 	icon_state = "wood-broken6"
 	},
 /area/ruin/powered)
-"By" = (
-/obj/machinery/door/airlock/maintenance{
-	name = "The Gauntlet";
-	dir = 4
-	},
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/item/assembly/mousetrap/armed,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
-	dir = 4
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/open/floor/plating,
-/area/ruin/powered)
 "BA" = (
 /obj/machinery/door/airlock/maintenance{
 	name = "The Other Serpentorium"
@@ -3092,6 +2976,7 @@
 /area/ruin/powered)
 "Ce" = (
 /obj/effect/decal/cleanable/blood/old,
+/obj/structure/sign/poster/contraband/random,
 /turf/closed/wall/r_wall/rust,
 /area/ruin/powered)
 "Cf" = (
@@ -3133,13 +3018,6 @@
 /obj/structure/closet/cardboard,
 /obj/item/coin/bananium,
 /obj/item/reagent_containers/food/snacks/soup/clownstears,
-/turf/open/floor/plating,
-/area/ruin/powered)
-"CE" = (
-/obj/machinery/door/airlock/maintenance{
-	name = "Chirurgeon's Theatre";
-	dir = 4
-	},
 /turf/open/floor/plating,
 /area/ruin/powered)
 "CF" = (
@@ -3269,6 +3147,21 @@
 	},
 /turf/open/floor/plating/rust,
 /area/ruin/powered)
+"DZ" = (
+/obj/machinery/door/airlock/maintenance{
+	name = "The Grey Fortress"
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/open/floor/plating/rust,
+/area/ruin/powered)
 "Eb" = (
 /obj/item/spear,
 /turf/open/floor/plating,
@@ -3303,10 +3196,6 @@
 	},
 /turf/open/floor/plating,
 /area/ruin/powered)
-"Eg" = (
-/obj/machinery/light/directional/west,
-/turf/open/floor/plating,
-/area/ruin/powered)
 "Ei" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/blood/old,
@@ -3325,6 +3214,29 @@
 /obj/effect/decal/cleanable/oil/streak,
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/plating/rust,
+/area/ruin/powered)
+"Es" = (
+/obj/effect/mob_spawn/human/corpse/whitesands/survivor,
+/obj/effect/decal/cleanable/blood,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/ruin/powered)
+"Et" = (
+/obj/machinery/door/airlock/maintenance/glass{
+	name = "Waiting Lobby"
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/open/floor/plating,
 /area/ruin/powered)
 "Ex" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer4{
@@ -3405,21 +3317,13 @@
 /obj/item/cigbutt,
 /turf/open/floor/plating,
 /area/ruin/powered)
-"Fc" = (
-/mob/living/simple_animal/hostile/rat{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/oil/streak,
-/obj/machinery/light/directional/north,
-/turf/open/floor/plating/rust,
-/area/ruin/powered)
 "Fh" = (
 /obj/effect/decal/remains/human,
 /obj/item/clothing/head/helmet{
 	pixel_y = 1
 	},
 /obj/effect/decal/cleanable/blood/old,
-/turf/open/floor/plating/asteroid/wasteplanet,
+/turf/open/floor/plating/asteroid/lowpressure,
 /area/overmap_encounter/planetoid/rockplanet/explored)
 "Fl" = (
 /obj/effect/decal/cleanable/robot_debris,
@@ -3570,24 +3474,6 @@
 	},
 /turf/open/floor/plating/rust,
 /area/ruin/powered)
-"GP" = (
-/obj/machinery/door/airlock/maintenance_hatch{
-	name = "The Reliquary";
-	dir = 8
-	},
-/obj/effect/mapping_helpers/airlock/locked,
-/obj/item/assembly/mousetrap/armed,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
-	dir = 4
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/open/floor/plating,
-/area/ruin/powered)
 "GR" = (
 /obj/effect/decal/cleanable/blood,
 /obj/effect/decal/cleanable/glass,
@@ -3668,6 +3554,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/ruin/powered)
+"Ik" = (
+/obj/machinery/door/airlock/maintenance{
+	name = "The Galley"
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/item/grown/bananapeel,
+/turf/open/floor/plating,
+/area/ruin/powered)
 "Im" = (
 /obj/structure/closet/crate/trashcart,
 /obj/item/toy/plush/among{
@@ -3675,7 +3569,7 @@
 	pixel_y = -1
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/asteroid/wasteplanet,
+/turf/open/floor/plating/asteroid/lowpressure,
 /area/overmap_encounter/planetoid/rockplanet/explored)
 "In" = (
 /obj/effect/decal/cleanable/blood/tracks{
@@ -3697,6 +3591,22 @@
 /obj/item/storage/fancy/donut_box,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
+/area/ruin/powered)
+"Iu" = (
+/obj/machinery/door/airlock/maintenance{
+	name = "Throneroom Reception"
+	},
+/obj/item/assembly/mousetrap/armed,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/open/floor/plating/rust,
 /area/ruin/powered)
 "Iv" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -3726,7 +3636,7 @@
 /turf/open/floor/plating/rust,
 /area/ruin/powered)
 "IA" = (
-/turf/open/floor/plating/asteroid/wasteplanet,
+/turf/open/floor/plating/asteroid/lowpressure,
 /area/overmap_encounter/planetoid/rockplanet/explored)
 "IB" = (
 /obj/item/storage/fancy/cigarettes/cigpack_robustgold,
@@ -3771,6 +3681,12 @@
 "IO" = (
 /obj/structure/kitchenspike,
 /obj/effect/decal/cleanable/blood/old,
+/turf/open/floor/plating,
+/area/ruin/powered)
+"IP" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/glass,
+/obj/machinery/light,
 /turf/open/floor/plating,
 /area/ruin/powered)
 "IU" = (
@@ -4005,11 +3921,12 @@
 	},
 /turf/open/floor/plating,
 /area/ruin/powered)
-"Lb" = (
-/obj/machinery/door/airlock/maintenance{
-	name = "The Grey Fortress";
-	dir = 4
+"KY" = (
+/obj/machinery/door/airlock/maintenance_hatch{
+	name = "The Reliquary"
 	},
+/obj/effect/mapping_helpers/airlock/locked,
+/obj/item/assembly/mousetrap/armed,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
 	},
@@ -4019,7 +3936,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/open/floor/plating/rust,
+/turf/open/floor/plating,
 /area/ruin/powered)
 "Lc" = (
 /obj/effect/gibspawner/robot,
@@ -4039,12 +3956,35 @@
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/open/floor/plating,
 /area/ruin/powered)
-"Lu" = (
-/obj/machinery/door/airlock/maintenance{
-	name = "The Barracks Part 4";
-	dir = 8
+"Ls" = (
+/obj/effect/decal/cleanable/ash,
+/obj/effect/decal/cleanable/ash/large,
+/obj/item/cigbutt,
+/obj/item/cigbutt{
+	pixel_x = -8;
+	pixel_y = 2
 	},
-/turf/open/floor/plating,
+/obj/item/cigbutt{
+	pixel_x = 11
+	},
+/obj/item/cigbutt{
+	pixel_y = 15
+	},
+/obj/item/cigbutt{
+	pixel_y = -8
+	},
+/obj/item/cigbutt{
+	pixel_x = -12;
+	pixel_y = 7
+	},
+/obj/item/cigbutt{
+	pixel_x = 8;
+	pixel_y = -8
+	},
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/open/floor/plating/rust,
 /area/ruin/powered)
 "Lv" = (
 /obj/effect/decal/cleanable/blood/old,
@@ -4137,13 +4077,6 @@
 "MC" = (
 /obj/structure/filingcabinet/medical,
 /obj/effect/decal/cleanable/cobweb,
-/turf/open/floor/plating/rust,
-/area/ruin/powered)
-"Nc" = (
-/obj/effect/decal/cleanable/blood/old,
-/obj/structure/sign/poster/contraband/random{
-	pixel_y = -28
-	},
 /turf/open/floor/plating/rust,
 /area/ruin/powered)
 "Nd" = (
@@ -4324,13 +4257,6 @@
 /obj/effect/decal/cleanable/blood/drip,
 /turf/open/floor/plating/rust,
 /area/ruin/powered)
-"Oq" = (
-/obj/structure/closet/cardboard,
-/mob/living/simple_animal/hostile/retaliate/poison/snake,
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/light/small/directional/west,
-/turf/open/floor/plating,
-/area/ruin/powered)
 "Or" = (
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/wood,
@@ -4359,6 +4285,16 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/spawner/lootdrop/grille_or_trash,
+/turf/open/floor/plating/rust,
+/area/ruin/powered)
+"OA" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/ruin/powered)
+"OB" = (
+/obj/machinery/light,
 /turf/open/floor/plating/rust,
 /area/ruin/powered)
 "OE" = (
@@ -4402,6 +4338,21 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
+/area/ruin/powered)
+"OY" = (
+/obj/machinery/door/airlock/maintenance{
+	name = "The Grey Fortress"
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/open/floor/plating/rust,
 /area/ruin/powered)
 "Pb" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -4474,22 +4425,6 @@
 	},
 /turf/open/floor/plating/rust,
 /area/ruin/powered)
-"PJ" = (
-/obj/machinery/door/airlock/maintenance/glass{
-	name = "Waiting Lobby";
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
-	dir = 4
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/open/floor/plating,
-/area/ruin/powered)
 "PM" = (
 /obj/structure/closet/cardboard,
 /mob/living/simple_animal/hostile/retaliate/poison/snake,
@@ -4514,6 +4449,16 @@
 "Qc" = (
 /obj/effect/gibspawner/generic,
 /turf/open/floor/plating/rust,
+/area/ruin/powered)
+"Qd" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/rack,
+/obj/effect/spawner/lootdrop/maintenance,
+/obj/item/coin,
+/obj/machinery/light/small,
+/turf/open/floor/plating,
 /area/ruin/powered)
 "Qf" = (
 /obj/structure/table/wood,
@@ -4623,6 +4568,16 @@
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/plating,
 /area/ruin/powered)
+"QU" = (
+/mob/living/simple_animal/hostile/rat{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/oil/streak,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/plating/rust,
+/area/ruin/powered)
 "Rc" = (
 /obj/effect/decal/cleanable/blood/old,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -4675,8 +4630,7 @@
 /area/ruin/powered)
 "RG" = (
 /obj/machinery/door/airlock/maintenance{
-	name = "The Serpentorium";
-	dir = 4
+	name = "The Serpentorium"
 	},
 /turf/open/floor/plating,
 /area/ruin/powered)
@@ -4688,6 +4642,13 @@
 "RU" = (
 /mob/living/carbon/monkey/punpun,
 /turf/open/floor/plating,
+/area/ruin/powered)
+"RV" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/plating/rust,
 /area/ruin/powered)
 "RX" = (
 /obj/effect/spawner/lootdrop/maintenance/four,
@@ -4735,12 +4696,10 @@
 "Sy" = (
 /obj/structure/headpike,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/asteroid/wasteplanet,
+/turf/open/floor/plating/asteroid/lowpressure,
 /area/overmap_encounter/planetoid/rockplanet/explored)
 "SC" = (
-/obj/machinery/door/airlock/maintenance{
-	dir = 4
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
@@ -4821,6 +4780,23 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
 /area/ruin/powered)
+"Th" = (
+/obj/machinery/door/airlock/maintenance{
+	name = "The Gauntlet"
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/item/assembly/mousetrap/armed,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/open/floor/plating,
+/area/ruin/powered)
 "Ti" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/cobweb,
@@ -4892,12 +4868,6 @@
 	},
 /turf/open/floor/plating/rust,
 /area/ruin/powered)
-"TD" = (
-/obj/structure/sign/poster/contraband/random{
-	pixel_y = 28
-	},
-/turf/open/floor/plating/rust,
-/area/ruin/powered)
 "TE" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/glass,
@@ -4954,6 +4924,14 @@
 	},
 /turf/open/floor/plating/rust,
 /area/ruin/powered)
+"TV" = (
+/obj/effect/decal/cleanable/blood,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/ruin/powered)
 "TX" = (
 /obj/structure/table/reinforced,
 /obj/effect/mob_spawn/human/corpse/damaged,
@@ -4990,18 +4968,16 @@
 /obj/structure/sign/poster/contraband/the_griffin,
 /turf/closed/wall/r_wall/rust,
 /area/ruin/powered)
+"Uo" = (
+/obj/item/spear,
+/obj/machinery/light,
+/turf/open/floor/plating/rust,
+/area/ruin/powered)
 "Uq" = (
 /obj/structure/rack,
 /obj/item/clothing/gloves/color/fyellow,
 /obj/item/clothing/gloves/color/fyellow,
 /obj/item/clothing/gloves/color/fyellow,
-/turf/open/floor/plating/rust,
-/area/ruin/powered)
-"Uv" = (
-/obj/machinery/door/airlock/maintenance{
-	name = "Throneroom Desk";
-	dir = 4
-	},
 /turf/open/floor/plating/rust,
 /area/ruin/powered)
 "UA" = (
@@ -5047,27 +5023,6 @@
 	},
 /turf/open/floor/plating,
 /area/ruin/powered)
-"UK" = (
-/obj/machinery/light/directional/north,
-/turf/open/floor/plating,
-/area/ruin/powered)
-"UM" = (
-/obj/machinery/door/airlock/maintenance{
-	name = "Throneroom Reception";
-	dir = 4
-	},
-/obj/item/assembly/mousetrap/armed,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
-	dir = 4
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/open/floor/plating/rust,
-/area/ruin/powered)
 "UR" = (
 /obj/structure/falsewall/reinforced,
 /turf/open/floor/plating,
@@ -5088,11 +5043,6 @@
 /area/ruin/powered)
 "UU" = (
 /obj/effect/decal/cleanable/cobweb/cobweb2,
-/turf/open/floor/plating/rust,
-/area/ruin/powered)
-"UW" = (
-/obj/item/spear,
-/obj/machinery/light/directional/south,
 /turf/open/floor/plating/rust,
 /area/ruin/powered)
 "Vd" = (
@@ -5151,13 +5101,6 @@
 /obj/effect/mob_spawn/human/corpse/pirate,
 /turf/open/floor/plating/rust,
 /area/ruin/powered)
-"VH" = (
-/obj/machinery/door/airlock/maintenance{
-	name = "The Barracks Part 2";
-	dir = 4
-	},
-/turf/open/floor/plating,
-/area/ruin/powered)
 "VJ" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/item/restraints/legcuffs/beartrap{
@@ -5178,23 +5121,22 @@
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/plating/rust,
 /area/ruin/powered)
-"Wl" = (
-/obj/machinery/door/airlock/maintenance_hatch{
-	name = "The Reliquary";
-	dir = 4
+"VN" = (
+/obj/machinery/door/airlock/bananium{
+	name = "Clown Embassy"
 	},
-/obj/effect/mapping_helpers/airlock/locked,
-/obj/item/assembly/mousetrap/armed,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
-	dir = 4
+/obj/item/grown/bananapeel,
+/turf/open/floor/mineral/bananium,
+/area/ruin/powered)
+"VO" = (
+/obj/machinery/door/airlock/maintenance{
+	name = "Armoire"
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
-	dir = 4
+/obj/item/restraints/legcuffs/beartrap{
+	armed = 1;
+	trap_damage = 1
 	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/rust,
 /area/ruin/powered)
 "Wn" = (
 /obj/vehicle/ridden/wheelchair,
@@ -5357,11 +5299,17 @@
 	},
 /turf/open/floor/plating,
 /area/ruin/powered)
-"XL" = (
-/obj/effect/decal/cleanable/blood,
-/obj/machinery/light/directional/north,
-/obj/effect/mob_spawn/human/corpse/damaged/whitesands/survivor,
-/obj/effect/decal/cleanable/blood,
+"XQ" = (
+/obj/machinery/door/airlock/maintenance,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
 /turf/open/floor/plating,
 /area/ruin/powered)
 "XR" = (
@@ -5399,6 +5347,12 @@
 /area/ruin/powered)
 "Yb" = (
 /obj/item/storage/toolbox/mechanical,
+/turf/open/floor/plating/rust,
+/area/ruin/powered)
+"Yc" = (
+/obj/effect/decal/cleanable/blood,
+/obj/item/storage/toolbox/mechanical,
+/obj/machinery/light,
 /turf/open/floor/plating/rust,
 /area/ruin/powered)
 "Yd" = (
@@ -5509,12 +5463,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/rust,
 /area/ruin/powered)
-"YS" = (
-/obj/effect/decal/cleanable/blood,
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/light/directional/north,
-/turf/open/floor/plating,
-/area/ruin/powered)
 "YT" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 1
@@ -5566,6 +5514,12 @@
 /obj/effect/spawner/lootdrop/maintenance,
 /obj/item/assembly/igniter,
 /obj/item/flashlight/glowstick,
+/turf/open/floor/plating,
+/area/ruin/powered)
+"Zi" = (
+/obj/machinery/door/airlock/maintenance{
+	name = "The Laboratorium"
+	},
 /turf/open/floor/plating,
 /area/ruin/powered)
 "Zo" = (
@@ -5766,7 +5720,7 @@ xx
 BK
 xx
 xx
-UM
+Iu
 xx
 xx
 xx
@@ -5791,7 +5745,7 @@ dn
 xx
 xx
 bC
-fk
+VN
 bC
 xx
 bG
@@ -5923,7 +5877,7 @@ xx
 rJ
 xx
 xx
-fk
+VN
 bC
 Xe
 Xe
@@ -5949,7 +5903,7 @@ SF
 bG
 UU
 sH
-oS
+rY
 TJ
 YO
 xx
@@ -5965,7 +5919,7 @@ XF
 dT
 bC
 OE
-go
+sG
 Hp
 av
 zh
@@ -5991,13 +5945,13 @@ bG
 ee
 pR
 RY
-Lu
+fU
 bG
 Xe
 So
 xx
 xx
-VH
+zD
 xx
 Xe
 PT
@@ -6071,13 +6025,13 @@ in
 "}
 (11,1,1) = {"
 xx
-jY
+VO
 dn
 xx
-PJ
+Et
 xx
 RY
-Uv
+oR
 MA
 kO
 av
@@ -6137,7 +6091,7 @@ xx
 hW
 xx
 Fb
-zy
+Ls
 Jc
 xx
 cX
@@ -6145,7 +6099,7 @@ we
 VK
 nt
 Pr
-nJ
+yX
 xx
 zV
 HY
@@ -6250,13 +6204,13 @@ xx
 xx
 bG
 xx
-ej
+aD
 xx
 xx
 xx
 bG
 bG
-wJ
+XQ
 xx
 xx
 xx
@@ -6273,7 +6227,7 @@ Xe
 Xe
 xx
 xx
-wJ
+XQ
 fi
 xx
 xx
@@ -6293,9 +6247,9 @@ in
 xx
 Hp
 tY
-hV
+sk
 vG
-Eg
+OA
 tY
 av
 bG
@@ -6335,13 +6289,13 @@ in
 "}
 (17,1,1) = {"
 xx
-XL
+Es
 Ol
 av
 ec
 kS
 vl
-qx
+IP
 bG
 cE
 JW
@@ -6378,7 +6332,7 @@ in
 in
 "}
 (18,1,1) = {"
-xx
+fi
 Xm
 Qm
 XF
@@ -6387,7 +6341,7 @@ XF
 Qm
 QT
 bG
-wJ
+XQ
 bG
 xx
 Xe
@@ -6423,7 +6377,7 @@ in
 "}
 (19,1,1) = {"
 xx
-mo
+Eb
 Ou
 av
 Vd
@@ -6467,13 +6421,13 @@ in
 "}
 (20,1,1) = {"
 xx
-YS
+TV
 kD
 Xt
 iZ
 Yb
 wx
-UW
+Uo
 xx
 YF
 xx
@@ -6517,7 +6471,7 @@ Hp
 vG
 av
 Mv
-ra
+lz
 Ce
 vD
 xx
@@ -6599,13 +6553,13 @@ in
 "}
 (23,1,1) = {"
 xx
-tP
+RV
 Pq
 HC
 AN
 av
 iK
-rR
+OB
 bG
 TH
 Vp
@@ -6643,7 +6597,7 @@ in
 "}
 (24,1,1) = {"
 xx
-TD
+av
 bs
 XF
 In
@@ -6699,7 +6653,7 @@ jM
 BA
 av
 zv
-gq
+Qd
 xx
 CF
 RY
@@ -6719,7 +6673,7 @@ Hp
 Ub
 Xs
 xx
-bv
+OY
 RY
 xx
 zs
@@ -6730,14 +6684,14 @@ IA
 IA
 "}
 (26,1,1) = {"
-xx
-UK
+fi
+fo
 IE
 wq
 dP
 XF
 kD
-lK
+kF
 xx
 jM
 xx
@@ -6752,7 +6706,7 @@ dn
 bG
 RY
 dg
-aE
+iE
 et
 bN
 xx
@@ -6781,8 +6735,8 @@ mP
 zL
 av
 nM
-Nc
-xx
+pR
+fi
 vD
 dI
 av
@@ -6795,7 +6749,7 @@ dC
 fh
 xx
 IO
-dY
+ei
 oq
 FH
 SM
@@ -6819,7 +6773,7 @@ IA
 "}
 (28,1,1) = {"
 xx
-yp
+Hp
 kD
 eS
 Dl
@@ -6863,13 +6817,13 @@ IA
 "}
 (29,1,1) = {"
 xx
-jH
+qS
 PS
 Ky
 bj
 Db
 rO
-br
+bp
 xx
 CF
 xx
@@ -6906,7 +6860,7 @@ IA
 ll
 "}
 (30,1,1) = {"
-xx
+fi
 CT
 tY
 av
@@ -6921,7 +6875,7 @@ oQ
 iI
 mV
 xx
-nF
+lm
 xx
 xx
 dn
@@ -6929,7 +6883,7 @@ xx
 xx
 Xe
 Xe
-wg
+Ik
 xx
 xx
 et
@@ -6939,7 +6893,7 @@ xx
 Xe
 Xe
 xx
-Lb
+DZ
 xx
 hD
 Im
@@ -6995,13 +6949,13 @@ IA
 "}
 (32,1,1) = {"
 xx
-Fc
+QU
 hZ
 av
 hW
 Eb
 av
-xW
+Yc
 xx
 PE
 IY
@@ -7059,7 +7013,7 @@ xx
 bG
 xx
 xx
-uP
+Zi
 xx
 SG
 xx
@@ -7068,7 +7022,7 @@ xx
 Xe
 Xe
 Xe
-CE
+kv
 xx
 xx
 xx
@@ -7087,7 +7041,7 @@ xx
 xx
 xx
 xx
-Wl
+KY
 xx
 xx
 xx
@@ -7096,7 +7050,7 @@ bG
 xx
 YP
 bG
-By
+Th
 RY
 bG
 wz
@@ -7115,7 +7069,7 @@ lA
 Xt
 RY
 OV
-Oq
+yj
 Jp
 xx
 in
@@ -7131,7 +7085,7 @@ zK
 zK
 zK
 xx
-GP
+KY
 xx
 zK
 zK
@@ -7175,7 +7129,7 @@ zK
 xx
 xx
 xx
-Wl
+KY
 xx
 xx
 xx

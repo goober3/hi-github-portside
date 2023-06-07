@@ -1,6 +1,6 @@
 /obj/machinery/computer
 	name = "computer"
-	icon = 'icons/obj/machines/computer.dmi'
+	icon = 'icons/obj/computer.dmi'
 	icon_state = "computer"
 	density = TRUE
 	use_power = IDLE_POWER_USE
@@ -16,10 +16,6 @@
 	var/icon_screen = "generic"
 	var/time_to_screwdrive = 20
 	var/authenticated = 0
-	/// The object that will drop on deconstruction. Mainly used for computer alt skins.
-	var/obj/structure/frame/computer/deconpath = /obj/structure/frame/computer
-	///Does this computer have a unique icon_state? Prevents the changing of icons from alternative computer construction
-	var/unique_icon = FALSE
 
 /obj/machinery/computer/Initialize(mapload, obj/item/circuitboard/C)
 	. = ..()
@@ -101,10 +97,10 @@
 	on_deconstruction()
 	if(!(flags_1 & NODECONSTRUCT_1))
 		if(circuit) //no circuit, no computer frame
-			var/obj/structure/frame/computer/newframe = new deconpath(src.loc)
-			newframe.setDir(dir)
-			newframe.circuit = circuit
-			newframe.set_anchored(TRUE)
+			var/obj/structure/frame/computer/A = new /obj/structure/frame/computer(src.loc)
+			A.setDir(dir)
+			A.circuit = circuit
+			A.set_anchored(TRUE)
 			if(machine_stat & BROKEN)
 				if(user)
 					to_chat(user, "<span class='notice'>The broken glass falls out.</span>")
@@ -112,15 +108,15 @@
 					playsound(src, 'sound/effects/hit_on_shattered_glass.ogg', 70, TRUE)
 				new /obj/item/shard(drop_location())
 				new /obj/item/shard(drop_location())
-				newframe.state = 3
+				A.state = 3
 			else
 				if(user)
 					to_chat(user, "<span class='notice'>You disconnect the monitor.</span>")
-				newframe.state = 4
+				A.state = 4
 			circuit = null
-			newframe.update_icon()
-		for(var/obj/internal_objects in src)
-			internal_objects.forceMove(loc)
+			A.update_icon()
+		for(var/obj/C in src)
+			C.forceMove(loc)
 	qdel(src)
 
 /obj/machinery/computer/AltClick(mob/user)

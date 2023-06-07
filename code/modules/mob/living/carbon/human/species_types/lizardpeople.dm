@@ -26,8 +26,7 @@
 	species_language_holder = /datum/language_holder/lizard
 	digitigrade_customization = DIGITIGRADE_OPTIONAL
 	mutanteyes = /obj/item/organ/eyes/lizard
-	sclera_color = "#fffec4"
-	blush_color = COLOR_BLUSH_TEAL
+	sclera_color = "fffec4"
 
 	species_chest = /obj/item/bodypart/chest/lizard
 	species_head = /obj/item/bodypart/head/lizard

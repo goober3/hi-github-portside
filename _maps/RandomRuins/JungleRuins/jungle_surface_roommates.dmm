@@ -374,11 +374,13 @@
 /obj/structure/chair/wood{
 	dir = 1
 	},
-/obj/machinery/light/small/broken/directional/east,
+/obj/machinery/light/small/broken{
+	dir = 4
+	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/jungle/roommates/shack)
 "R" = (
-/obj/machinery/light/small/broken/directional/south,
+/obj/machinery/light/small/broken,
 /turf/open/floor/carpet/purple,
 /area/ruin/jungle/roommates/shack)
 "S" = (
@@ -410,7 +412,9 @@
 /obj/item/toy/plush/knight{
 	pixel_y = -1
 	},
-/obj/machinery/light/small/broken/directional/north,
+/obj/machinery/light/small/broken{
+	dir = 1
+	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/jungle/roommates/shack)
 "U" = (
@@ -495,7 +499,9 @@
 	},
 /obj/effect/decal/cleanable/generic,
 /obj/effect/decal/cleanable/plastic,
-/obj/machinery/light/small/broken/directional/west,
+/obj/machinery/light/small/broken{
+	dir = 8
+	},
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/dark,
 /area/ruin/jungle/roommates/shack)

@@ -51,7 +51,9 @@
 /obj/effect/turf_decal/industrial/warning{
 	dir = 10
 	},
-/obj/machinery/light/small/directional/south,
+/obj/machinery/light/small{
+	pixel_x = -12
+	},
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/unpowered)
@@ -87,9 +89,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/door_assembly/door_assembly_mhatch{
-	dir = 4
-	},
+/obj/structure/door_assembly/door_assembly_mhatch,
 /turf/open/floor/plating,
 /area/ruin/unpowered)
 "dN" = (
@@ -107,9 +107,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/door_assembly/door_assembly_mhatch{
-	dir = 4
-	},
+/obj/structure/door_assembly/door_assembly_mhatch,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/pod/dark,
 /area/ruin/unpowered)
@@ -136,13 +134,12 @@
 /obj/effect/turf_decal/industrial/warning{
 	dir = 6
 	},
-/obj/structure/table_frame,
-/obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/closet/wall{
 	name = "armory locker";
-	pixel_x = 28;
-	dir = 8
+	pixel_x = 32
 	},
+/obj/structure/table_frame,
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/unpowered)
 "fP" = (
@@ -208,10 +205,13 @@
 /obj/effect/turf_decal/industrial/warning{
 	dir = 5
 	},
+/obj/machinery/light/small{
+	dir = 4;
+	pixel_y = 12
+	},
 /obj/structure/closet/wall{
 	name = "armory locker";
-	pixel_x = 28;
-	dir = 8
+	pixel_x = 32
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/item/gun/ballistic/shotgun/lethal,
@@ -296,7 +296,10 @@
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
-/obj/machinery/airalarm/directional/east,
+/obj/machinery/airalarm/all_access{
+	dir = 8;
+	pixel_x = 25
+	},
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/greenglow,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -319,7 +322,9 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 1
 	},
-/obj/machinery/light/small/directional/west,
+/obj/machinery/light/small{
+	dir = 8
+	},
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/item/stack/cable_coil/cut/red,
 /turf/open/floor/pod/light,
@@ -519,9 +524,7 @@
 /turf/open/floor/pod/light,
 /area/ruin/unpowered)
 "st" = (
-/obj/structure/door_assembly/door_assembly_grunge{
-	dir = 4
-	},
+/obj/structure/door_assembly/door_assembly_grunge,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/atmospherics/pipe/simple/orange{
 	dir = 8
@@ -607,12 +610,15 @@
 /obj/effect/turf_decal/industrial/warning/cee{
 	dir = 1
 	},
-/obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/light/small{
+	dir = 8;
+	pixel_y = 12
+	},
 /obj/structure/closet/wall{
 	name = "suit locker";
-	pixel_x = -28;
-	dir = 4
+	pixel_x = -32
 	},
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/unpowered)
 "vs" = (
@@ -634,13 +640,15 @@
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/unpowered)
 "vJ" = (
-/obj/machinery/power/apc/auto_name/directional/east,
+/obj/machinery/power/apc/auto_name/east,
 /obj/machinery/atmospherics/components/binary/pump/layer2,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
 /area/ruin/unpowered)
 "vR" = (
-/obj/machinery/light/small/directional/west,
+/obj/machinery/light/small{
+	dir = 8
+	},
 /obj/effect/decal/cleanable/oil/streak,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/item/stack/cable_coil/cut/red,
@@ -756,7 +764,9 @@
 /area/ruin/unpowered)
 "zt" = (
 /obj/effect/decal/cleanable/oil/streak,
-/obj/machinery/light/small/broken/directional/east,
+/obj/machinery/light/small/broken{
+	dir = 4
+	},
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/pod/light,
 /area/ruin/unpowered)
@@ -791,15 +801,13 @@
 	icon_state = "6-8"
 	},
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/light/small/directional/north,
 /turf/open/floor/pod/light,
 /area/ruin/unpowered)
 "zY" = (
 /obj/structure/grille,
 /obj/machinery/door/poddoor/shutters{
 	id = "pirateshutters";
-	name = "Blast Shutters";
-	dir = 4
+	name = "Blast Shutters"
 	},
 /obj/structure/window/plasma/reinforced/plastitanium,
 /turf/open/floor/plating,
@@ -874,8 +882,7 @@
 /area/ruin/unpowered)
 "CZ" = (
 /obj/machinery/door/airlock/hatch{
-	name = "External Access Hatch";
-	dir = 4
+	name = "External Access Hatch"
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
@@ -964,9 +971,7 @@
 /obj/machinery/door/firedoor/border_only{
 	dir = 8
 	},
-/obj/structure/door_assembly/door_assembly_mhatch{
-	dir = 4
-	},
+/obj/structure/door_assembly/door_assembly_mhatch,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating{
 	broken = 1;
@@ -1040,7 +1045,9 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/light/small/broken/directional/west,
+/obj/machinery/light/small/broken{
+	dir = 8
+	},
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/unpowered)
@@ -1206,9 +1213,7 @@
 /turf/open/floor/pod/light,
 /area/ruin/unpowered)
 "Pa" = (
-/obj/structure/door_assembly/door_assembly_hatch{
-	dir = 4
-	},
+/obj/structure/door_assembly/door_assembly_hatch,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating{
 	broken = 1;
@@ -1272,14 +1277,13 @@
 /obj/effect/turf_decal/industrial/warning{
 	dir = 4
 	},
+/obj/structure/closet/wall{
+	name = "armory locker";
+	pixel_x = 32
+	},
 /obj/effect/decal/cleanable/oil,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/item/reagent_containers/food/drinks/bottle/rum,
-/obj/structure/closet/wall{
-	name = "armory locker";
-	pixel_x = 28;
-	dir = 8
-	},
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/unpowered)
 "Rt" = (
@@ -1319,9 +1323,7 @@
 /obj/machinery/atmospherics/pipe/simple/orange{
 	dir = 8
 	},
-/obj/structure/door_assembly/door_assembly_mhatch{
-	dir = 4
-	},
+/obj/structure/door_assembly/door_assembly_mhatch,
 /turf/open/floor/plating/airless,
 /area/ruin/unpowered)
 "Sw" = (
@@ -1413,8 +1415,7 @@
 	},
 /obj/structure/closet/wall{
 	name = "suit locker";
-	pixel_x = -28;
-	dir = 4
+	pixel_x = -32
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/mineral/plastitanium,
@@ -1469,7 +1470,6 @@
 	icon_state = "4-6"
 	},
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/light/small/directional/north,
 /turf/open/floor/pod/light,
 /area/ruin/unpowered)
 "WA" = (

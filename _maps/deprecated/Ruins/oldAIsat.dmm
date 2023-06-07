@@ -54,7 +54,9 @@
 /turf/open/floor/plating/airless,
 /area/tcommsat/oldaisat)
 "al" = (
-/obj/machinery/light/small/directional/north,
+/obj/machinery/light/small{
+	dir = 1
+	},
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
@@ -77,7 +79,9 @@
 /turf/open/floor/plasteel/airless,
 /area/tcommsat/oldaisat)
 "aq" = (
-/obj/machinery/light/small/directional/north,
+/obj/machinery/light/small{
+	dir = 1
+	},
 /turf/open/floor/plasteel/airless,
 /area/tcommsat/oldaisat)
 "ar" = (
@@ -137,7 +141,9 @@
 /obj/structure/table,
 /obj/item/paper_bin,
 /obj/item/pen/blue,
-/obj/machinery/light/small/directional/north,
+/obj/machinery/light/small{
+	dir = 1
+	},
 /turf/open/floor/plasteel/airless,
 /area/tcommsat/oldaisat)
 "aC" = (
@@ -253,7 +259,9 @@
 /turf/closed/wall/r_wall,
 /area/tcommsat/oldaisat)
 "aV" = (
-/obj/machinery/light/small/directional/west,
+/obj/machinery/light/small{
+	dir = 8
+	},
 /turf/open/floor/plasteel/airless,
 /area/tcommsat/oldaisat)
 "aW" = (
@@ -586,7 +594,9 @@
 /turf/open/floor/plasteel/dark/airless,
 /area/tcommsat/oldaisat)
 "bY" = (
-/obj/machinery/light/small/directional/east,
+/obj/machinery/light/small{
+	dir = 4
+	},
 /turf/open/floor/plasteel/airless,
 /area/tcommsat/oldaisat)
 "bZ" = (
@@ -728,7 +738,7 @@
 /turf/open/floor/plasteel/airless,
 /area/tcommsat/oldaisat)
 "cw" = (
-/obj/machinery/light/small/directional/south,
+/obj/machinery/light/small,
 /obj/item/paper,
 /obj/effect/turf_decal/industrial/warning/corner{
 	dir = 8
@@ -808,7 +818,9 @@
 /turf/open/floor/plasteel,
 /area/tcommsat/oldaisat)
 "cK" = (
-/obj/machinery/light/small/directional/west,
+/obj/machinery/light/small{
+	dir = 8
+	},
 /turf/open/floor/plasteel,
 /area/tcommsat/oldaisat)
 "cL" = (
@@ -879,7 +891,9 @@
 /turf/open/floor/plasteel,
 /area/tcommsat/oldaisat)
 "cX" = (
-/obj/machinery/light/small/directional/east,
+/obj/machinery/light/small{
+	dir = 4
+	},
 /obj/effect/turf_decal/industrial/warning{
 	dir = 6
 	},

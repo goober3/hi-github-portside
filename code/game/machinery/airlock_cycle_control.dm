@@ -59,7 +59,6 @@
 	icon = 'icons/obj/monitors.dmi'
 	icon_state = "aac_bitem"
 	result_path = /obj/machinery/advanced_airlock_controller
-	inverse = FALSE
 
 /obj/machinery/advanced_airlock_controller
 	name = "advanced airlock controller"

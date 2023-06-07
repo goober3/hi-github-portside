@@ -139,7 +139,9 @@
 /obj/item/kitchen/spoon/plastic,
 /obj/item/kitchen/spoon/plastic,
 /obj/item/kitchen/spoon/plastic,
-/obj/machinery/light/broken/directional/north,
+/obj/machinery/light/broken{
+	dir = 1
+	},
 /turf/open/floor/plastic,
 /area/ruin/powered)
 "hs" = (
@@ -334,7 +336,9 @@
 "ys" = (
 /obj/structure/rack,
 /obj/item/stack/sheet/plastic/five,
-/obj/machinery/light/broken/directional/north,
+/obj/machinery/light/broken{
+	dir = 1
+	},
 /turf/open/floor/plastic,
 /area/ruin/powered)
 "zb" = (
@@ -435,7 +439,9 @@
 /obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/item/clothing/glasses/regular,
-/obj/machinery/light/broken/directional/west,
+/obj/machinery/light/broken{
+	dir = 8
+	},
 /turf/open/floor/material,
 /area/ruin/powered)
 "EC" = (
@@ -498,7 +504,7 @@
 /turf/closed/wall/rust,
 /area/ruin/powered)
 "Jb" = (
-/obj/machinery/light/broken/directional/south,
+/obj/machinery/light/broken,
 /turf/open/floor/plastic,
 /area/ruin/powered)
 "Jm" = (
@@ -514,7 +520,9 @@
 /area/ruin/powered)
 "Ke" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/light/broken/directional/east,
+/obj/machinery/light/broken{
+	dir = 4
+	},
 /turf/open/floor/plastic,
 /area/ruin/powered)
 "KY" = (
@@ -576,7 +584,9 @@
 /area/ruin/powered)
 "Oo" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/light/broken/directional/west,
+/obj/machinery/light/broken{
+	dir = 8
+	},
 /turf/open/floor/plastic,
 /area/ruin/powered)
 "OJ" = (
@@ -714,7 +724,9 @@
 /area/ruin/powered)
 "XL" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/light/broken/directional/north,
+/obj/machinery/light/broken{
+	dir = 1
+	},
 /turf/open/floor/plastic,
 /area/ruin/powered)
 "Ze" = (

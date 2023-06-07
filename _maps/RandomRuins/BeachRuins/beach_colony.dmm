@@ -11,22 +11,30 @@
 /area/ruin/unpowered)
 "bt" = (
 /obj/structure/flora/ausbushes/leafybush,
-/turf/open/floor/plating/grass/beach/lit,
+/turf/open/floor/plating/grass/beach{
+	light_range = 2
+	},
 /area/ruin/unpowered)
 "bO" = (
 /turf/closed/wall/mineral/sandstone,
 /area/ruin/unpowered)
 "cr" = (
 /obj/item/reagent_containers/food/snacks/kebab/rat/double,
-/turf/open/floor/plating/grass/beach/lit,
+/turf/open/floor/plating/grass/beach{
+	light_range = 2
+	},
 /area/ruin/unpowered)
 "cC" = (
 /obj/structure/flora/ausbushes/brflowers,
-/turf/open/floor/plating/grass/beach/lit,
+/turf/open/floor/plating/grass/beach{
+	light_range = 2
+	},
 /area/ruin/unpowered)
 "cS" = (
 /obj/structure/flora/ausbushes/fernybush,
-/turf/open/floor/plating/grass/beach/lit,
+/turf/open/floor/plating/grass/beach{
+	light_range = 2
+	},
 /area/ruin/unpowered)
 "dE" = (
 /obj/item/seeds/cocoapod,
@@ -38,7 +46,9 @@
 /obj/structure/fence{
 	icon_state = "corner"
 	},
-/turf/open/floor/plating/grass/beach/lit,
+/turf/open/floor/plating/grass/beach{
+	light_range = 2
+	},
 /area/ruin/unpowered)
 "fd" = (
 /obj/item/cultivator/rake,
@@ -58,7 +68,9 @@
 /area/ruin/unpowered)
 "gn" = (
 /obj/structure/flora/ausbushes/sparsegrass,
-/turf/open/floor/plating/grass/beach/lit,
+/turf/open/floor/plating/grass/beach{
+	light_range = 2
+	},
 /area/ruin/unpowered)
 "gv" = (
 /obj/structure/fluff/beach_umbrella/cap,
@@ -73,18 +85,24 @@
 	dir = 5;
 	icon_state = "corner"
 	},
-/turf/open/floor/plating/grass/beach/lit,
+/turf/open/floor/plating/grass/beach{
+	light_range = 2
+	},
 /area/ruin/unpowered)
 "iJ" = (
 /obj/structure/railing{
 	dir = 1
 	},
 /obj/item/melee/roastingstick,
-/turf/open/floor/plating/grass/beach/lit,
+/turf/open/floor/plating/grass/beach{
+	light_range = 2
+	},
 /area/ruin/unpowered)
 "kd" = (
 /obj/effect/mob_spawn/human/corpse/pirate,
-/turf/open/floor/plating/grass/beach/lit,
+/turf/open/floor/plating/grass/beach{
+	light_range = 2
+	},
 /area/ruin/unpowered)
 "kV" = (
 /obj/effect/decal/cleanable/crayon{
@@ -100,7 +118,9 @@
 /area/ruin/unpowered)
 "lD" = (
 /obj/structure/fence,
-/turf/open/floor/plating/grass/beach/lit,
+/turf/open/floor/plating/grass/beach{
+	light_range = 2
+	},
 /area/ruin/unpowered)
 "mt" = (
 /turf/open/floor/wood,
@@ -124,11 +144,15 @@
 /obj/structure/fence{
 	icon_state = "door_closed"
 	},
-/turf/open/floor/plating/grass/beach/lit,
+/turf/open/floor/plating/grass/beach{
+	light_range = 2
+	},
 /area/ruin/unpowered)
 "nB" = (
 /obj/structure/flora/ausbushes/ppflowers,
-/turf/open/floor/plating/grass/beach/lit,
+/turf/open/floor/plating/grass/beach{
+	light_range = 2
+	},
 /area/ruin/unpowered)
 "on" = (
 /obj/structure/table/wood,
@@ -144,7 +168,9 @@
 /obj/structure/chair/plastic{
 	dir = 4
 	},
-/turf/open/floor/plating/grass/beach/lit,
+/turf/open/floor/plating/grass/beach{
+	light_range = 2
+	},
 /area/ruin/unpowered)
 "pv" = (
 /turf/open/floor/plating/asteroid/sand/lit{
@@ -158,11 +184,15 @@
 /area/ruin/unpowered)
 "pU" = (
 /obj/structure/fluff/fokoff_sign,
-/turf/open/floor/plating/grass/beach/lit,
+/turf/open/floor/plating/grass/beach{
+	light_range = 2
+	},
 /area/ruin/unpowered)
 "pY" = (
 /obj/structure/bonfire/prelit,
-/turf/open/floor/plating/grass/beach/lit,
+/turf/open/floor/plating/grass/beach{
+	light_range = 2
+	},
 /area/ruin/unpowered)
 "qq" = (
 /obj/effect/overlay/coconut,
@@ -170,7 +200,9 @@
 /area/ruin/unpowered)
 "qG" = (
 /obj/item/clothing/suit/space/hardsuit/carp/old,
-/turf/open/floor/plating/grass/beach/lit,
+/turf/open/floor/plating/grass/beach{
+	light_range = 2
+	},
 /area/ruin/unpowered)
 "qP" = (
 /obj/structure/window/reinforced{
@@ -247,7 +279,9 @@
 /area/ruin/unpowered)
 "xK" = (
 /obj/structure/chair/plastic,
-/turf/open/floor/plating/grass/beach/lit,
+/turf/open/floor/plating/grass/beach{
+	light_range = 2
+	},
 /area/ruin/unpowered)
 "xT" = (
 /obj/item/stack/sheet/sandblock,
@@ -279,6 +313,12 @@
 	light_range = 2
 	},
 /area/ruin/unpowered)
+"Dl" = (
+/obj/structure/mineral_door/sandstone,
+/turf/open/floor/plating/grass/beach{
+	light_range = 2
+	},
+/area/ruin/unpowered)
 "Dx" = (
 /obj/item/toy/crayon/spraycan{
 	pixel_x = -5;
@@ -299,7 +339,9 @@
 /obj/structure/fence{
 	dir = 4
 	},
-/turf/open/floor/plating/grass/beach/lit,
+/turf/open/floor/plating/grass/beach{
+	light_range = 2
+	},
 /area/ruin/unpowered)
 "EC" = (
 /obj/item/toy/beach_ball/holoball/dodgeball,
@@ -315,14 +357,18 @@
 /area/ruin/unpowered)
 "FW" = (
 /mob/living/simple_animal/hostile/carp,
-/turf/open/floor/plating/grass/beach/lit,
+/turf/open/floor/plating/grass/beach{
+	light_range = 2
+	},
 /area/ruin/unpowered)
 "Gh" = (
 /obj/structure/fence{
 	dir = 9;
 	icon_state = "corner"
 	},
-/turf/open/floor/plating/grass/beach/lit,
+/turf/open/floor/plating/grass/beach{
+	light_range = 2
+	},
 /area/ruin/unpowered)
 "Hg" = (
 /obj/machinery/hydroponics/soil,
@@ -336,7 +382,9 @@
 /area/ruin/unpowered)
 "Ja" = (
 /obj/structure/flora/tree/jungle/small,
-/turf/open/floor/plating/grass/beach/lit,
+/turf/open/floor/plating/grass/beach{
+	light_range = 2
+	},
 /area/ruin/unpowered)
 "Jb" = (
 /obj/item/seeds/cocoapod/vanillapod,
@@ -345,7 +393,7 @@
 	},
 /area/ruin/unpowered)
 "JX" = (
-/obj/machinery/door/airlock/sandstone,
+/obj/structure/mineral_door/sandstone,
 /turf/open/floor/wood,
 /area/ruin/unpowered)
 "KA" = (
@@ -414,19 +462,25 @@
 	dir = 10;
 	icon_state = "corner"
 	},
-/turf/open/floor/plating/grass/beach/lit,
+/turf/open/floor/plating/grass/beach{
+	light_range = 2
+	},
 /area/ruin/unpowered)
 "Pd" = (
 /obj/item/grown/log/tree,
 /obj/item/grown/log/tree,
 /obj/item/grown/log/tree,
-/turf/open/floor/plating/grass/beach/lit,
+/turf/open/floor/plating/grass/beach{
+	light_range = 2
+	},
 /area/ruin/unpowered)
 "Px" = (
 /obj/structure/chair/plastic{
 	dir = 1
 	},
-/turf/open/floor/plating/grass/beach/lit,
+/turf/open/floor/plating/grass/beach{
+	light_range = 2
+	},
 /area/ruin/unpowered)
 "Qf" = (
 /turf/open/floor/concrete/slab_1{
@@ -448,7 +502,9 @@
 /obj/structure/chair/plastic{
 	dir = 8
 	},
-/turf/open/floor/plating/grass/beach/lit,
+/turf/open/floor/plating/grass/beach{
+	light_range = 2
+	},
 /area/ruin/unpowered)
 "SS" = (
 /turf/open/floor/carpet/red{
@@ -457,7 +513,9 @@
 /area/ruin/unpowered)
 "Te" = (
 /obj/structure/railing,
-/turf/open/floor/plating/grass/beach/lit,
+/turf/open/floor/plating/grass/beach{
+	light_range = 2
+	},
 /area/ruin/unpowered)
 "Tr" = (
 /obj/item/reagent_containers/food/drinks/colocup{
@@ -480,7 +538,9 @@
 /obj/structure/fence{
 	dir = 4
 	},
-/turf/open/floor/plating/grass/beach/lit,
+/turf/open/floor/plating/grass/beach{
+	light_range = 2
+	},
 /area/ruin/unpowered)
 "TZ" = (
 /turf/open/floor/carpet/purple{
@@ -504,7 +564,9 @@
 /obj/item/reagent_containers/food/snacks/kebab/fiesta{
 	pixel_y = 13
 	},
-/turf/open/floor/plating/grass/beach/lit,
+/turf/open/floor/plating/grass/beach{
+	light_range = 2
+	},
 /area/ruin/unpowered)
 "VG" = (
 /obj/item/reagent_containers/spray/cleaner,
@@ -516,24 +578,29 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/turf/open/floor/plating/grass/beach/lit,
-/area/ruin/unpowered)
-"Wq" = (
-/turf/open/floor/plating/grass/beach/lit,
+/turf/open/floor/plating/grass/beach{
+	light_range = 2
+	},
 /area/ruin/unpowered)
 "Ww" = (
 /obj/item/melee/roastingstick,
-/turf/open/floor/plating/grass/beach/lit,
+/turf/open/floor/plating/grass/beach{
+	light_range = 2
+	},
 /area/ruin/unpowered)
 "Xd" = (
 /obj/structure/railing{
 	dir = 4
 	},
-/turf/open/floor/plating/grass/beach/lit,
+/turf/open/floor/plating/grass/beach{
+	light_range = 2
+	},
 /area/ruin/unpowered)
 "Xe" = (
 /obj/item/storage/cans/sixbeer,
-/turf/open/floor/plating/grass/beach/lit,
+/turf/open/floor/plating/grass/beach{
+	light_range = 2
+	},
 /area/ruin/unpowered)
 "Xh" = (
 /obj/item/reagent_containers/glass/bucket,
@@ -577,7 +644,9 @@
 /area/ruin/unpowered)
 "ZA" = (
 /obj/structure/flora/junglebush/large,
-/turf/open/floor/plating/grass/beach/lit,
+/turf/open/floor/plating/grass/beach{
+	light_range = 2
+	},
 /area/ruin/unpowered)
 "ZI" = (
 /turf/open/floor/plating/asteroid/sand/lit,
@@ -590,19 +659,19 @@ KM
 KM
 KM
 KM
-Wq
-Wq
-Wq
-Wq
-Wq
-Wq
 Vn
-Wq
-Wq
-Wq
-Wq
-Wq
-Wq
+Vn
+Vn
+Vn
+Vn
+Vn
+Vn
+Vn
+Vn
+Vn
+Vn
+Vn
+Vn
 KM
 KM
 KM
@@ -625,21 +694,21 @@ bO
 bO
 bO
 bO
-Wq
+Vn
 cC
-Wq
+Vn
 Hg
 Hg
 dE
 Jb
 Hg
 Hg
-Wq
-Wq
+Vn
+Vn
 gn
 nB
-Wq
-Wq
+Vn
+Vn
 KM
 KM
 KM
@@ -657,8 +726,8 @@ Oa
 bO
 mI
 JX
-Wq
-Wq
+Vn
+Vn
 Hg
 KA
 KA
@@ -667,14 +736,14 @@ RM
 KA
 KA
 Hg
-Wq
-Wq
-Wq
-Wq
+Vn
+Vn
+Vn
+Vn
 ZA
-Wq
-Wq
-Wq
+Vn
+Vn
+Vn
 Ja
 KM
 KM
@@ -685,30 +754,30 @@ KM
 bO
 mt
 mt
+mt
 bO
 bO
 bO
-bO
-Wq
-Wq
-Wq
+Vn
+Vn
+Vn
 Hg
 Hg
 KA
 fd
 Hg
 Hg
-Wq
-Wq
-Wq
+Vn
+Vn
+Vn
 cS
-Wq
-Wq
-Wq
-Wq
-Wq
-Wq
-Wq
+Vn
+Vn
+Vn
+Vn
+Vn
+Vn
+Vn
 KM
 "}
 (5,1,1) = {"
@@ -717,30 +786,30 @@ bO
 mt
 mt
 mt
-JX
-Wq
-Wq
-Wq
-Wq
+Dl
+Vn
+Vn
+Vn
+Vn
 gn
-Wq
-Wq
-Wq
-Wq
-Wq
-Wq
-Wq
-Wq
-Wq
+Vn
+Vn
+Vn
+Vn
+Vn
+Vn
+Vn
+Vn
+Vn
 bt
-Wq
+Vn
 gn
-Wq
+Vn
 Xe
 pp
-Wq
+Vn
 cr
-Wq
+Vn
 KM
 "}
 (6,1,1) = {"
@@ -750,41 +819,41 @@ rD
 on
 rD
 bO
-Wq
+Vn
 cC
-Wq
+Vn
 bt
-Wq
+Vn
 ZI
 Xr
 ZI
 ZI
 ZI
-Wq
-Wq
-Wq
-Wq
-Wq
-Wq
-Wq
-Wq
-Wq
+Vn
+Vn
+Vn
+Vn
+Vn
+Vn
+Vn
+Vn
+Vn
 Xd
-Wq
+Vn
 Px
-Wq
+Vn
 KM
 "}
 (7,1,1) = {"
 KM
-bO
+Vn
 bO
 wf
 bO
-bO
-Wq
-Wq
-Wq
+Vn
+Vn
+Vn
+Vn
 ZI
 ZI
 ZI
@@ -795,25 +864,25 @@ ZI
 ZI
 ZI
 ZI
-Wq
-Wq
-Wq
+Vn
+Vn
+Vn
 gn
 xK
 Te
 pY
 iJ
 Pd
-Wq
+Vn
 KM
 "}
 (8,1,1) = {"
 KM
 ZA
-Wq
-Wq
-Wq
-Wq
+Vn
+Vn
+Vn
+Vn
 ZI
 Zz
 ZI
@@ -828,22 +897,22 @@ ZI
 Xr
 ZI
 ZI
-Wq
-Wq
-Wq
-Wq
+Vn
+Vn
+Vn
+Vn
 Ww
 VX
-Wq
+Vn
 Px
-Wq
+Vn
 KM
 "}
 (9,1,1) = {"
-Wq
-Wq
-Wq
-Wq
+Vn
+Vn
+Vn
+Vn
 ZI
 ZI
 ZI
@@ -865,16 +934,16 @@ ZI
 Vn
 Vn
 RV
-Wq
+Vn
 Vx
-Wq
-Wq
+Vn
+Vn
 KM
 "}
 (10,1,1) = {"
-Wq
+Vn
 cS
-Wq
+Vn
 ZI
 ZI
 ZI
@@ -896,17 +965,17 @@ ZI
 Xr
 Vn
 Vn
-Wq
-Wq
-Wq
+Vn
+Vn
+Vn
 gn
-Wq
+Vn
 KM
 "}
 (11,1,1) = {"
 Ja
-Wq
-Wq
+Vn
+Vn
 ZI
 ZI
 ZI
@@ -926,18 +995,18 @@ ZI
 ZI
 ZI
 ZI
-Wq
-Wq
+Vn
+Vn
 cC
 Gh
 lD
 lD
 Om
-Wq
+Vn
 "}
 (12,1,1) = {"
-Wq
-Wq
+Vn
+Vn
 gn
 Zz
 ZI
@@ -958,18 +1027,18 @@ Zz
 ZI
 ZI
 ZI
-Wq
-Wq
-Wq
+Vn
+Vn
+Vn
 TW
 FW
 cS
 TW
-Wq
+Vn
 "}
 (13,1,1) = {"
-Wq
-Wq
+Vn
+Vn
 ZI
 ZI
 ZI
@@ -990,18 +1059,18 @@ ZI
 pv
 IV
 ZI
-Wq
-Wq
-Wq
+Vn
+Vn
+Vn
 TW
-Wq
+Vn
 FW
 TW
 pU
 "}
 (14,1,1) = {"
 ZA
-Wq
+Vn
 ZI
 ZI
 ZI
@@ -1023,17 +1092,17 @@ Xh
 nl
 pv
 ZI
-Wq
-Wq
+Vn
+Vn
 TW
 qG
-Wq
+Vn
 ns
-Wq
+Vn
 "}
 (15,1,1) = {"
 cS
-Wq
+Vn
 Zz
 ZI
 ZI
@@ -1056,16 +1125,16 @@ pv
 IV
 ZI
 nB
-Wq
+Vn
 TW
-Wq
+Vn
 cC
 TW
-Wq
+Vn
 "}
 (16,1,1) = {"
-Wq
-Wq
+Vn
+Vn
 ZI
 ZI
 ZI
@@ -1088,7 +1157,7 @@ xT
 ZI
 ZI
 Xr
-Wq
+Vn
 TW
 FW
 kd
@@ -1096,8 +1165,8 @@ EB
 ZA
 "}
 (17,1,1) = {"
-Wq
-Wq
+Vn
+Vn
 Zz
 ZI
 ZI
@@ -1120,15 +1189,15 @@ ZI
 lr
 ZI
 ZI
-Wq
+Vn
 hQ
 lD
 lD
 dH
-Wq
+Vn
 "}
 (18,1,1) = {"
-Wq
+Vn
 ZI
 ZI
 ZI
@@ -1153,11 +1222,11 @@ ZI
 ZI
 ZI
 gn
-Wq
-Wq
-Wq
-Wq
-Wq
+Vn
+Vn
+Vn
+Vn
+Vn
 "}
 (19,1,1) = {"
 Xr
@@ -1184,12 +1253,12 @@ ZI
 ZI
 EC
 ZI
-Wq
+Vn
 bt
-Wq
-Wq
-Wq
-Wq
+Vn
+Vn
+Vn
+Vn
 "}
 (20,1,1) = {"
 ZI
@@ -1216,12 +1285,12 @@ ZI
 ZI
 ZI
 ZI
-Wq
-Wq
-Wq
-Wq
-Wq
-Wq
+Vn
+Vn
+Vn
+Vn
+Vn
+Vn
 "}
 (21,1,1) = {"
 ZI
@@ -1248,12 +1317,12 @@ hh
 hh
 hh
 ZI
-Wq
-Wq
+Vn
+Vn
 Ja
-Wq
+Vn
 cS
-Wq
+Vn
 "}
 (22,1,1) = {"
 KM
@@ -1407,7 +1476,7 @@ fC
 qq
 ZI
 ZI
-Wq
+Vn
 Qf
 Qf
 Qf
@@ -1439,11 +1508,11 @@ ZI
 ZI
 ZI
 ZI
-Wq
+Vn
 cC
-Wq
-Wq
-Wq
+Vn
+Vn
+Vn
 KM
 KM
 "}
@@ -1470,11 +1539,11 @@ ZI
 ZI
 ZI
 ZI
-Wq
-Wq
-Wq
-Wq
-Wq
+Vn
+Vn
+Vn
+Vn
+Vn
 ZA
 KM
 KM
@@ -1502,11 +1571,11 @@ ZI
 ZI
 ZI
 Xr
-Wq
-Wq
-Wq
-Wq
-Wq
+Vn
+Vn
+Vn
+Vn
+Vn
 KM
 KM
 KM
@@ -1532,9 +1601,9 @@ ZI
 ZI
 ZI
 ZI
-Wq
-Wq
-Wq
+Vn
+Vn
+Vn
 gn
 KM
 KM

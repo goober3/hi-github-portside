@@ -14,8 +14,11 @@
 	slowdown = SHOES_SLOWDOWN
 	strip_delay = 1 SECONDS
 
+	var/blood_state = BLOOD_STATE_NOT_BLOODY
+	var/list/bloody_shoes = list(BLOOD_STATE_HUMAN = 0,BLOOD_STATE_XENO = 0, BLOOD_STATE_OIL = 0, BLOOD_STATE_NOT_BLOODY = 0)
 	var/offset = 0
 	var/equipped_before_drop = FALSE
+	var/can_be_bloody = TRUE
 	///Whether these shoes have laces that can be tied/untied
 	var/can_be_tied = TRUE
 	///Are we currently tied? Can either be SHOES_UNTIED, SHOES_TIED, or SHOES_KNOTTED
@@ -46,13 +49,16 @@
 /obj/item/clothing/shoes/worn_overlays(isinhands = FALSE)
 	. = list()
 	if(!isinhands)
+		var/bloody = FALSE
+		if(HAS_BLOOD_DNA(src))
+			bloody = TRUE
+		else
+			bloody = bloody_shoes[BLOOD_STATE_HUMAN]
+
 		if(damaged_clothes)
 			. += mutable_appearance('icons/effects/item_damage.dmi', "damagedshoe")
-		if(HAS_BLOOD_DNA(src))
-			var/mutable_appearance/bloody_shoes
-			bloody_shoes = mutable_appearance('icons/effects/blood.dmi', "shoeblood")
-			bloody_shoes.color = get_blood_dna_color(return_blood_DNA())
-			. += bloody_shoes
+		if(bloody)
+			. += mutable_appearance('icons/effects/blood.dmi', "shoeblood")
 
 /obj/item/clothing/shoes/examine(mob/user)
 	. = ..()
@@ -97,6 +103,17 @@
 	if(ismob(loc))
 		var/mob/M = loc
 		M.update_inv_shoes()
+
+/obj/item/clothing/shoes/wash(clean_types)
+	. = ..()
+	if(!(clean_types & CLEAN_TYPE_BLOOD) || blood_state == BLOOD_STATE_NOT_BLOODY)
+		return
+	bloody_shoes = list(BLOOD_STATE_HUMAN = 0,BLOOD_STATE_XENO = 0, BLOOD_STATE_OIL = 0, BLOOD_STATE_NOT_BLOODY = 0)
+	blood_state = BLOOD_STATE_NOT_BLOODY
+	if(ismob(loc))
+		var/mob/M = loc
+		M.update_inv_shoes()
+	return TRUE
 
 /obj/item/proc/negates_gravity()
 	return FALSE

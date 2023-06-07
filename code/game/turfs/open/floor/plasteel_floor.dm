@@ -1,7 +1,8 @@
 /turf/open/floor/plasteel
 	icon = 'icons/turf/floors/tiles.dmi'
-	base_icon_state = "tiled_gray"
-	icon_state = "tiled_gray"
+	color = COLOR_FLOORTILE_GRAY
+	base_icon_state = "tiled"
+	icon_state = "tiled"
 	floor_tile = /obj/item/stack/tile/plasteel
 	broken_states = list("broken0", "broken1", "broken2")
 	burnt_states = list("burned0", "burned1", "burned2")
@@ -25,17 +26,16 @@
 	initial_gas_mix = ICEMOON_DEFAULT_ATMOS
 
 /turf/open/floor/plasteel/dark
-	icon_state = "tiled_dark"
-	base_icon_state = "tiled_dark"
+	color = COLOR_TILE_GRAY
 	floor_tile = /obj/item/stack/tile/plasteel/dark
 /turf/open/floor/plasteel/dark/airless
 	initial_gas_mix = AIRLESS_ATMOS
+
 /turf/open/floor/plasteel/dark/telecomms
 	initial_gas_mix = TCOMMS_ATMOS
 
 /turf/open/floor/plasteel/white
-	icon_state = "tiled_light"
-	base_icon_state = "tiled_light"
+	color = COLOR_WHITE
 	floor_tile = /obj/item/stack/tile/plasteel/white
 /turf/open/floor/plasteel/white/airless
 	initial_gas_mix = AIRLESS_ATMOS
@@ -43,20 +43,19 @@
 	initial_gas_mix = TCOMMS_ATMOS
 
 /turf/open/floor/plasteel/mono
-	icon_state = "monotile_gray"
-	base_icon_state = "monotile_gray"
+	icon_state = "monotile"
+	base_icon_state = "monotile"
 /turf/open/floor/plasteel/mono/dark
-	icon_state = "monotile_dark"
-	base_icon_state = "monotile_dark"
+	color = COLOR_TILE_GRAY
 /turf/open/floor/plasteel/mono/white
-	icon_state = "monotile_light"
-	base_icon_state = "monotile_light"
+	color = COLOR_WHITE
 
 /turf/open/floor/plasteel/tech
 	icon = 'icons/turf/floors/techfloor.dmi'
 	icon_state = "techfloor_gray"
 	base_icon_state = "techfloor_gray"
 	floor_tile = /obj/item/stack/tile/plasteel/tech
+	color = null
 
 /turf/open/floor/plasteel/tech/airless
 	initial_gas_mix = AIRLESS_ATMOS
@@ -85,6 +84,7 @@
 /turf/open/floor/plasteel/patterned/monofloor
 	icon_state = "steel_monofloor"
 	base_icon_state = "steel_monofloor"
+	color = null
 /turf/open/floor/plasteel/patterned/grid
 	icon_state = "grid"
 	base_icon_state = "grid"
@@ -92,11 +92,9 @@
 	icon_state = "ridged"
 	base_icon_state = "ridged"
 /turf/open/floor/plasteel/patterned/dirty
-	icon_state = "dirty"
-	base_icon_state = "dirty"
-/turf/open/floor/plasteel/patterned/dirty/lighter
-	icon_state = "dirty_lighter"
-	base_icon_state = "dirty_lighter"
+	icon_state = "steel_dirty"
+	base_icon_state = "steel_dirty"
+	color = "#8D8B8B"
 
 
 /turf/open/floor/plasteel/showroomfloor
@@ -117,6 +115,7 @@
 
 
 /turf/open/floor/plasteel/freezer
+	color = null
 	icon = 'icons/turf/floors.dmi'
 	icon_state = "freezer"
 	base_icon_state = "freezer"
@@ -136,6 +135,7 @@
 
 
 /turf/open/floor/plasteel/grimy
+	color = null
 	icon = 'icons/turf/floors.dmi'
 	icon_state = "lino"
 	base_icon_state = "lino"
@@ -145,9 +145,11 @@
 /turf/open/floor/plasteel/cult
 	icon_state = "cult"
 	base_icon_state = "cult"
+	color = null
 	name = "engraved floor"
 
 /turf/open/floor/plasteel/vaporwave
+	color = null
 	icon = 'icons/turf/floors.dmi'
 	icon_state = "pinkblack"
 	base_icon_state = "pinkblack"
@@ -171,7 +173,6 @@
 	icon_state = "stairs"
 	base_icon_state = "stairs"
 	tiled_dirt = FALSE
-	color = COLOR_FLOORTILE_GRAY
 
 /turf/open/floor/plasteel/stairs/left
 	icon_state = "stairs-l"
@@ -212,15 +213,15 @@
 	icon = 'icons/turf/floors.dmi'
 	icon_state = "elevatorshaft"
 	base_icon_state = "elevatorshaft"
+	color = null
 
 /turf/open/floor/plasteel/bluespace
 	icon = 'icons/turf/floors.dmi'
 	icon_state = "bluespace"
 	base_icon_state = "bluespace"
+	color = null
 
 /turf/open/floor/plasteel/sepia
-	icon_state = "tiled_light"
-	base_icon_state = "tiled_light"
 	color = "#938170"
 
 /turf/open/floor/plasteel/icecropolis

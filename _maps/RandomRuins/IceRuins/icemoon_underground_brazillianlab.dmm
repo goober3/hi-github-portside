@@ -406,6 +406,12 @@
 	initial_gas_mix = "ICEMOON_ATMOS"
 	},
 /area/ruin/unpowered)
+"us" = (
+/obj/structure/barricade/wooden/snowed,
+/turf/open/floor/wood{
+	initial_gas_mix = "ICEMOON_ATMOS"
+	},
+/area/ruin/unpowered)
 "uv" = (
 /turf/open/floor/plasteel/white{
 	initial_gas_mix = "ICEMOON_ATMOS"
@@ -629,6 +635,10 @@
 	initial_gas_mix = "ICEMOON_ATMOS"
 	},
 /area/ruin/unpowered)
+"Ct" = (
+/obj/structure/barricade/sandbags,
+/turf/open/floor/plating/asteroid/snow/icemoon,
+/area/icemoon/surface/outdoors)
 "CI" = (
 /obj/structure/flora/junglebush/c,
 /mob/living/simple_animal/hostile/asteroid/whitesands/ranged/hunter{
@@ -725,6 +735,10 @@
 /turf/open/floor/carpet/orange{
 	initial_gas_mix = "ICEMOON_ATMOS"
 	},
+/area/ruin/unpowered)
+"GX" = (
+/obj/structure/barricade/wooden/crude/snow,
+/turf/open/floor/plating/snowed/smoothed/icemoon,
 /area/ruin/unpowered)
 "Hb" = (
 /turf/open/floor/plating/asteroid/snow/icemoon,
@@ -1260,9 +1274,9 @@ aW
 aW
 Hb
 zi
-cr
-cr
-cr
+Ct
+Ct
+Ct
 Hb
 Hb
 aW
@@ -1292,7 +1306,7 @@ aW
 aW
 aW
 Hb
-cr
+Ct
 zi
 Hb
 kX
@@ -1309,7 +1323,7 @@ aW
 aW
 YV
 Hb
-cr
+Ct
 Hb
 aW
 aW
@@ -1391,7 +1405,7 @@ aW
 aW
 aW
 Hb
-fd
+GX
 Vt
 xI
 Ul
@@ -1432,15 +1446,15 @@ WH
 Iz
 kX
 aW
-cr
-cr
+Ct
+Ct
 Hb
 zi
 Hb
 aW
 zi
 Hb
-cr
+Ct
 aW
 "}
 (7,1,1) = {"
@@ -1465,14 +1479,14 @@ kX
 kX
 Hb
 Hb
-cr
+Ct
 Hb
 Hb
 Hb
 aW
 sE
 lu
-cr
+Ct
 hr
 "}
 (8,1,1) = {"
@@ -1497,7 +1511,7 @@ oR
 kX
 Hb
 zi
-cr
+Ct
 Hb
 Hb
 aW
@@ -1526,10 +1540,10 @@ Jt
 LB
 BL
 mn
-hg
+us
 Hb
 Fh
-cr
+Ct
 Hb
 aW
 aW
@@ -1567,7 +1581,7 @@ aW
 aW
 aW
 xg
-cr
+Ct
 lu
 aW
 "}
@@ -1608,7 +1622,7 @@ aW
 aW
 aW
 Hb
-cr
+Ct
 aW
 aW
 aW
@@ -1626,7 +1640,7 @@ kX
 aW
 Hb
 Hb
-cr
+Ct
 Hb
 hr
 Hb
@@ -1640,7 +1654,7 @@ aW
 aW
 aW
 Hb
-cr
+Ct
 aW
 aW
 aW
@@ -1658,7 +1672,7 @@ kX
 aW
 Hb
 zi
-cr
+Ct
 Hb
 To
 Hb
@@ -1672,7 +1686,7 @@ aW
 aW
 aW
 zi
-cr
+Ct
 aW
 aW
 aW
@@ -1687,10 +1701,10 @@ si
 Tx
 YX
 aW
-cr
+Ct
 Hb
 hA
-cr
+Ct
 Hb
 hr
 YV
@@ -1703,8 +1717,8 @@ aW
 aW
 aW
 aW
-cr
-cr
+Ct
+Ct
 aW
 aW
 MI
@@ -1719,12 +1733,12 @@ hT
 MI
 YX
 CI
-cr
+Ct
 lu
 Hb
 Hb
 NR
-cr
+Ct
 Hb
 aW
 aW
@@ -1735,7 +1749,7 @@ aW
 aW
 aW
 Hb
-cr
+Ct
 zi
 aW
 aW
@@ -1756,7 +1770,7 @@ YV
 aW
 lu
 Hb
-cr
+Ct
 Hb
 Hb
 Hb
@@ -1767,7 +1781,7 @@ aW
 aW
 aW
 Hb
-cr
+Ct
 ht
 aW
 CI
@@ -1799,7 +1813,7 @@ aW
 aW
 aW
 zi
-cr
+Ct
 Hb
 aW
 YX
@@ -1822,8 +1836,8 @@ kX
 aW
 aW
 Hb
-cr
-cr
+Ct
+Ct
 VI
 aW
 "}
@@ -1831,7 +1845,7 @@ aW
 aW
 aW
 Hb
-cr
+Ct
 Hb
 aW
 YX
@@ -1855,7 +1869,7 @@ kX
 Hb
 hA
 Ex
-cr
+Ct
 Hb
 aW
 "}
@@ -1863,7 +1877,7 @@ aW
 aW
 aW
 qD
-cr
+Ct
 Hb
 aW
 YX
@@ -1895,7 +1909,7 @@ aW
 aW
 aW
 Hb
-cr
+Ct
 Hb
 aW
 YX
@@ -1927,7 +1941,7 @@ aW
 aW
 aW
 Hb
-cr
+Ct
 Hb
 aW
 YX
@@ -1951,7 +1965,7 @@ kX
 Ex
 xK
 Ex
-cr
+Ct
 zi
 aW
 "}
@@ -1959,7 +1973,7 @@ aW
 aW
 aW
 zi
-cr
+Ct
 Hb
 aW
 YX
@@ -1983,7 +1997,7 @@ zi
 hA
 Hb
 Hb
-cr
+Ct
 Hb
 aW
 "}
@@ -1991,8 +2005,8 @@ aW
 aW
 aW
 Hb
-cr
-cr
+Ct
+Ct
 aW
 Ux
 MI
@@ -2014,8 +2028,8 @@ aW
 jn
 Hb
 NR
-cr
-cr
+Ct
+Ct
 Hb
 aW
 "}
@@ -2024,7 +2038,7 @@ aW
 aW
 aW
 Hb
-cr
+Ct
 Hb
 aW
 YX
@@ -2045,8 +2059,8 @@ lu
 aW
 aW
 Pu
-cr
-cr
+Ct
+Ct
 Hb
 aW
 aW
@@ -2072,7 +2086,7 @@ YX
 DX
 Ux
 aW
-cr
+Ct
 aW
 aW
 Hb
@@ -2104,10 +2118,10 @@ YX
 YX
 aW
 aW
-cr
+Ct
 zi
 Hb
-cr
+Ct
 Hb
 Hb
 Hb
@@ -2139,7 +2153,7 @@ YV
 aW
 hR
 xK
-cr
+Ct
 Hb
 Hb
 zi
@@ -2239,7 +2253,7 @@ aW
 aW
 Hb
 Hb
-cr
+Ct
 zi
 Hb
 "}
@@ -2270,8 +2284,8 @@ aW
 aW
 aW
 aW
-cr
-cr
+Ct
+Ct
 Hb
 Hb
 "}
@@ -2430,7 +2444,7 @@ aW
 aW
 aW
 zi
-cr
+Ct
 Hb
 aW
 aW
@@ -2461,8 +2475,8 @@ aW
 aW
 Hb
 Hb
-cr
-cr
+Ct
+Ct
 Hb
 aW
 aW
@@ -2492,8 +2506,8 @@ aW
 Hb
 VI
 Hb
-cr
-cr
+Ct
+Ct
 Hb
 aW
 aW

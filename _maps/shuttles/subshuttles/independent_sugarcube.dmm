@@ -16,9 +16,10 @@
 /obj/effect/decal/cleanable/oil/slippery,
 /obj/docking_port/mobile{
 	can_move_docking_ports = 1;
-	preferred_direction = 4;
+	dir = 2;
+	launch_status = 0;
 	port_direction = 8;
-	dir = 2
+	preferred_direction = 4
 	},
 /turf/open/floor/plating,
 /area/ship/storage)
@@ -68,7 +69,7 @@
 	dir = 4
 	},
 /obj/structure/window/reinforced/spawner/west,
-/obj/machinery/power/apc/auto_name/directional/north,
+/obj/machinery/power/apc/auto_name/north,
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
@@ -87,7 +88,9 @@
 	},
 /obj/structure/window/reinforced/spawner/west,
 /obj/structure/window/reinforced/spawner/east,
-/obj/machinery/light/directional/north,
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/open/floor/plating,
 /area/ship/storage)
 "l" = (
@@ -96,7 +99,9 @@
 /area/ship/storage)
 "m" = (
 /obj/structure/window/reinforced/spawner/west,
-/obj/item/radio/intercom/wideband/directional/north,
+/obj/item/radio/intercom/wideband{
+	pixel_y = 26
+	},
 /obj/structure/chair/comfy/shuttle{
 	dir = 4
 	},
@@ -120,7 +125,9 @@
 /turf/open/floor/plating,
 /area/ship/engineering)
 "p" = (
-/obj/machinery/light/small/directional/east,
+/obj/machinery/light/small{
+	dir = 4
+	},
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
@@ -165,7 +172,7 @@
 	pixel_x = -7;
 	pixel_y = 5
 	},
-/obj/machinery/power/apc/auto_name/directional/west,
+/obj/machinery/power/apc/auto_name/west,
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
@@ -186,9 +193,7 @@
 /turf/open/floor/plating,
 /area/ship/engineering)
 "w" = (
-/obj/machinery/door/airlock/maintenance_hatch{
-	dir = 4
-	},
+/obj/machinery/door/airlock/maintenance_hatch,
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
@@ -275,7 +280,7 @@
 	},
 /obj/structure/window/reinforced/spawner/west,
 /obj/structure/window/reinforced/spawner/east,
-/obj/machinery/light/directional/south,
+/obj/machinery/light,
 /turf/open/floor/plating,
 /area/ship/storage)
 "H" = (

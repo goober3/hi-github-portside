@@ -10,8 +10,6 @@
 	unscrewed = FALSE
 	var/obj/item/wallframe/wallframe = /obj/item/wallframe/intercom //WS edit - Wideband Radio
 
-MAPPING_DIRECTIONAL_HELPERS(/obj/item/radio/intercom, 31)
-
 /obj/item/radio/intercom/unscrewed
 	unscrewed = TRUE
 
@@ -140,8 +138,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/item/radio/intercom, 31)
 	desc = "A ready-to-go intercom. Just slap it on a wall and screw it in!"
 	icon_state = "intercom"
 	result_path = /obj/item/radio/intercom/unscrewed
-	pixel_shift = 31
-	inverse = FALSE
+	pixel_shift = 24
+	inverse = TRUE
 	custom_materials = list(/datum/material/iron = 75, /datum/material/glass = 25)
 
 //wideband radio
@@ -165,12 +163,6 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/item/radio/intercom, 31)
 /obj/item/radio/intercom/wideband/unscrewed
 	unscrewed = TRUE
 
-MAPPING_DIRECTIONAL_HELPERS(/obj/item/radio/intercom/wideband, 26)
-
-/obj/item/radio/intercom/wideband/table
-	icon_state = "intercom-wideband-table"
-	wallframe = /obj/item/wallframe/intercom/wideband/table
-
 /obj/item/radio/intercom/wideband/recalculateChannels()
 	. = ..()
 	independent = TRUE
@@ -180,9 +172,6 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/item/radio/intercom/wideband, 26)
 	desc = "A detached wideband relay. Attach to a wall and screw it in to use."
 	icon_state = "intercom-wideband"
 	result_path = /obj/item/radio/intercom/wideband/unscrewed
-	pixel_shift = 26
 
 /obj/item/wallframe/intercom/wideband/table
 	icon_state = "intercom-wideband-table"
-	result_path = /obj/item/radio/intercom/wideband/table
-	pixel_shift = 0

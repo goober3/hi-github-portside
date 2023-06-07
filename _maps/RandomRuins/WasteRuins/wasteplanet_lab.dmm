@@ -347,13 +347,6 @@
 /obj/machinery/porta_turret/syndicate/energy,
 /turf/open/floor/plating/rust,
 /area/ruin/powered)
-"pT" = (
-/obj/machinery/door/airlock/public/glass{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/mono,
-/area/ruin/powered)
 "qg" = (
 /obj/effect/turf_decal/corner/transparent/neutral/diagonal,
 /obj/machinery/plate_press,
@@ -516,9 +509,7 @@
 /turf/open/floor/plasteel/white,
 /area/ruin/powered)
 "wM" = (
-/obj/machinery/door/airlock/public/glass{
-	dir = 4
-	},
+/obj/machinery/door/airlock/public/glass,
 /turf/open/floor/plasteel/mono,
 /area/ruin/powered)
 "wT" = (
@@ -823,10 +814,8 @@
 /turf/open/floor/plasteel,
 /area/ruin/powered)
 "QL" = (
+/obj/machinery/door/airlock/public/glass,
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/door/airlock/public/glass{
-	dir = 4
-	},
 /turf/open/floor/plasteel/mono,
 /area/ruin/powered)
 "QR" = (
@@ -1169,7 +1158,7 @@ Rw
 Rw
 Rw
 GR
-pT
+QL
 QL
 Rw
 Rw
@@ -1547,7 +1536,7 @@ Rw
 Rw
 Rw
 GR
-pT
+QL
 wM
 GR
 dD
