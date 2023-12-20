@@ -393,6 +393,14 @@
 /obj/machinery/light/dim/directional/west,
 /turf/open/floor/plasteel/tech,
 /area/ruin/space/has_grav/syndicircle/winter)
+"kY" = (
+/obj/structure/flippedtable{
+	icon_state = "table"
+	},
+/obj/item/target,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/dirt/jungle/wasteland,
+/area/ruin/space/has_grav/syndicircle/training)
 "lb" = (
 /obj/structure/flippedtable{
 	dir = 4
@@ -793,12 +801,6 @@
 /area/ruin/space/has_grav/syndicircle/research)
 "vQ" = (
 /obj/machinery/light/directional/north,
-/turf/open/floor/mineral/plastitanium,
-/area/ruin/space/has_grav/syndicircle/halls)
-"vT" = (
-/obj/machinery/power/terminal{
-	dir = 1
-	},
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/space/has_grav/syndicircle/halls)
 "wa" = (
@@ -1346,6 +1348,12 @@
 /obj/item/target/alien,
 /turf/open/floor/plating/dirt/jungle/wasteland,
 /area/ruin/space/has_grav/syndicircle/training)
+"IJ" = (
+/obj/machinery/power/terminal{
+	dir = 1
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/ruin/space/has_grav/syndicircle/halls)
 "IT" = (
 /obj/structure/cable{
 	icon_state = "1-4"
@@ -1637,14 +1645,6 @@
 /turf/open/floor/plating/dirt/jungle/wasteland,
 /area/ruin/space/has_grav/syndicircle/training)
 "RV" = (
-/turf/open/floor/plating/dirt/jungle/wasteland,
-/area/ruin/space/has_grav/syndicircle/training)
-"Sb" = (
-/obj/structure/flippedtable{
-	icon_state = "table"
-	},
-/obj/item/target/clown,
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/dirt/jungle/wasteland,
 /area/ruin/space/has_grav/syndicircle/training)
 "Sf" = (
@@ -3173,7 +3173,7 @@ am
 Pq
 am
 MV
-Sb
+kY
 RV
 Oc
 Ng
@@ -3370,7 +3370,7 @@ AV
 Dm
 Bj
 IY
-vT
+IJ
 ap
 OE
 am

@@ -902,6 +902,19 @@
 	},
 /turf/open/floor/plating,
 /area/ship/engineering/engine)
+"hX" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/effect/turf_decal/industrial/radiation{
+	dir = 8
+	},
+/obj/effect/turf_decal/industrial/radiation{
+	dir = 4
+	},
+/obj/machinery/power/grounding_rod,
+/turf/open/floor/mineral/titanium,
+/area/ship/storage)
 "hZ" = (
 /obj/machinery/door/airlock/hatch{
 	dir = 4
@@ -4163,19 +4176,6 @@
 /obj/machinery/suit_storage_unit/atmos,
 /turf/open/floor/plating,
 /area/ship/engineering/atmospherics)
-"Or" = (
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
-/obj/effect/turf_decal/industrial/radiation{
-	dir = 8
-	},
-/obj/effect/turf_decal/industrial/radiation{
-	dir = 4
-	},
-/obj/machinery/power/grounding_rod,
-/turf/open/floor/mineral/titanium,
-/area/ship/storage)
 "Ot" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 10
@@ -5092,11 +5092,6 @@
 /obj/machinery/suit_storage_unit/radsuit,
 /turf/open/floor/plasteel/tech/techmaint,
 /area/ship/crew/dorm)
-"Yj" = (
-/obj/item/bedsheet/clown,
-/obj/item/clothing/head/clownmitre,
-/turf/closed/wall/mineral/bananium,
-/area/ship/medical)
 "Yl" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 5
@@ -6418,7 +6413,7 @@ sR
 gk
 bL
 bL
-Yj
+Zj
 Zj
 Zj
 Zj
@@ -7084,9 +7079,9 @@ Zy
 mV
 bB
 SY
-Or
-Or
-Or
+hX
+hX
+hX
 bb
 zy
 wg
