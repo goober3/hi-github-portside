@@ -4,7 +4,7 @@
 	dir = 4
 	},
 /turf/open/water/beach,
-/area/ruin/unpowered)
+/area/overmap_encounter/planetoid/beachplanet/explored)
 "aj" = (
 /obj/structure/railing/corner{
 	dir = 1
@@ -227,6 +227,9 @@
 /obj/structure/spacevine/weak,
 /turf/open/floor/plasteel/mono,
 /area/ruin/beach/complex)
+"ea" = (
+/turf/open/floor/plating/asteroid/sand/lit,
+/area/overmap_encounter/planetoid/beachplanet/explored)
 "ee" = (
 /obj/machinery/door/airlock/grunge{
 	dir = 4
@@ -279,7 +282,7 @@
 "fC" = (
 /obj/structure/flora/ausbushes/grassybush,
 /turf/open/floor/plating/grass/beach/lit,
-/area/ruin/unpowered)
+/area/overmap_encounter/planetoid/beachplanet/explored)
 "fE" = (
 /obj/structure/marker_beacon,
 /obj/effect/turf_decal/trimline/opaque/white/filled/warning{
@@ -403,6 +406,12 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/concrete/slab_4,
 /area/ruin/beach/complex)
+"hb" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/concrete/slab_1{
+	light_range = 2
+	},
+/area/overmap_encounter/planetoid/beachplanet/explored)
 "hg" = (
 /obj/structure/spacevine/weak,
 /obj/structure/cable{
@@ -454,7 +463,7 @@
 /turf/open/floor/concrete/slab_1{
 	light_range = 2
 	},
-/area/ruin/unpowered)
+/area/overmap_encounter/planetoid/beachplanet/explored)
 "ia" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -522,7 +531,7 @@
 "jc" = (
 /mob/living/simple_animal/beachcarp/salmon,
 /turf/open/water/beach,
-/area/ruin/unpowered)
+/area/overmap_encounter/planetoid/beachplanet/explored)
 "jd" = (
 /obj/structure/chair{
 	dir = 4
@@ -664,7 +673,7 @@
 	dir = 10
 	},
 /turf/open/water/beach,
-/area/ruin/unpowered)
+/area/overmap_encounter/planetoid/beachplanet/explored)
 "lQ" = (
 /obj/structure/spacevine/weak,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -719,12 +728,13 @@
 	},
 /area/ruin/beach/complex)
 "mC" = (
+/obj/item/toy/seashell,
 /turf/open/floor/plating/asteroid/sand/lit,
-/area/ruin/unpowered)
+/area/overmap_encounter/planetoid/beachplanet/explored)
 "mH" = (
 /obj/structure/flora/ausbushes/fernybush,
 /turf/open/floor/plating/grass/beach/lit,
-/area/ruin/unpowered)
+/area/overmap_encounter/planetoid/beachplanet/explored)
 "mL" = (
 /obj/structure/tank_dispenser,
 /obj/structure/railing{
@@ -810,14 +820,14 @@
 /turf/open/floor/concrete{
 	light_range = 2
 	},
-/area/ruin/unpowered)
+/area/overmap_encounter/planetoid/beachplanet/explored)
 "nS" = (
 /obj/structure/spacevine/dense,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/concrete{
 	light_range = 2
 	},
-/area/ruin/unpowered)
+/area/overmap_encounter/planetoid/beachplanet/explored)
 "nV" = (
 /obj/machinery/cryopod{
 	icon_state = "cryopod";
@@ -1059,7 +1069,7 @@
 	dir = 1
 	},
 /turf/open/water/beach,
-/area/ruin/unpowered)
+/area/overmap_encounter/planetoid/beachplanet/explored)
 "rA" = (
 /obj/machinery/light/small/directional/south,
 /obj/structure/cable{
@@ -1101,7 +1111,7 @@
 /turf/open/floor/concrete{
 	light_range = 2
 	},
-/area/ruin/unpowered)
+/area/overmap_encounter/planetoid/beachplanet/explored)
 "rS" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -1136,6 +1146,10 @@
 	},
 /turf/open/floor/concrete/slab_1,
 /area/ruin/beach/complex/wall)
+"sa" = (
+/obj/effect/spawner/lootdrop/garden/seaweed,
+/turf/open/water/beach,
+/area/overmap_encounter/planetoid/beachplanet/explored)
 "so" = (
 /obj/structure/cable{
 	icon_state = "2-4"
@@ -1227,7 +1241,7 @@
 /area/ruin/beach/complex/wall)
 "uo" = (
 /turf/open/floor/plating/grass/beach/lit,
-/area/ruin/unpowered)
+/area/overmap_encounter/planetoid/beachplanet/explored)
 "uw" = (
 /obj/effect/turf_decal/trimline/opaque/white/filled/warning{
 	dir = 10
@@ -1275,7 +1289,7 @@
 "uQ" = (
 /obj/effect/overlay/palmtree_l,
 /turf/open/floor/plating/grass/beach/lit,
-/area/ruin/unpowered)
+/area/overmap_encounter/planetoid/beachplanet/explored)
 "uV" = (
 /obj/structure/railing{
 	dir = 5
@@ -1302,7 +1316,7 @@
 	dir = 4
 	},
 /turf/open/water/beach,
-/area/ruin/unpowered)
+/area/overmap_encounter/planetoid/beachplanet/explored)
 "vh" = (
 /obj/structure/spacevine/weak,
 /obj/structure/cable{
@@ -1381,7 +1395,7 @@
 /turf/open/floor/concrete{
 	light_range = 2
 	},
-/area/ruin/unpowered)
+/area/overmap_encounter/planetoid/beachplanet/explored)
 "wi" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -1393,7 +1407,7 @@
 "wo" = (
 /obj/structure/spacevine/weak,
 /turf/open/floor/plating/grass/beach/lit,
-/area/ruin/unpowered)
+/area/overmap_encounter/planetoid/beachplanet/explored)
 "wr" = (
 /turf/open/floor/plating/grass{
 	light_range = 2
@@ -1520,7 +1534,7 @@
 "xP" = (
 /obj/effect/overlay/palmtree_r,
 /turf/open/floor/plating/grass/beach/lit,
-/area/ruin/unpowered)
+/area/overmap_encounter/planetoid/beachplanet/explored)
 "xR" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -1597,7 +1611,7 @@
 /area/ruin/beach/complex)
 "yF" = (
 /turf/open/water/beach,
-/area/ruin/unpowered)
+/area/overmap_encounter/planetoid/beachplanet/explored)
 "zi" = (
 /obj/structure/spacevine/weak,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -1642,7 +1656,7 @@
 	dir = 8
 	},
 /turf/open/water/beach,
-/area/ruin/unpowered)
+/area/overmap_encounter/planetoid/beachplanet/explored)
 "Ae" = (
 /mob/living/simple_animal/hostile/hivebot/strong{
 	name = "mechanoid";
@@ -1658,7 +1672,7 @@
 "Ao" = (
 /obj/structure/spacevine/dense,
 /turf/open/floor/plating/grass/beach/lit,
-/area/ruin/unpowered)
+/area/overmap_encounter/planetoid/beachplanet/explored)
 "At" = (
 /obj/structure/cable{
 	icon_state = "1-8"
@@ -1769,7 +1783,7 @@
 "BS" = (
 /obj/effect/turf_decal/weather/sand/corner,
 /turf/open/water/beach,
-/area/ruin/unpowered)
+/area/overmap_encounter/planetoid/beachplanet/explored)
 "Cb" = (
 /obj/structure/table,
 /obj/item/reagent_containers/pill/patch/silver_sulf{
@@ -2053,7 +2067,7 @@
 "Gn" = (
 /mob/living/simple_animal/beachcarp/perch,
 /turf/open/water/beach,
-/area/ruin/unpowered)
+/area/overmap_encounter/planetoid/beachplanet/explored)
 "Gs" = (
 /obj/structure/cable{
 	icon_state = "1-10"
@@ -2130,7 +2144,7 @@
 	dir = 6
 	},
 /turf/open/water/beach,
-/area/ruin/unpowered)
+/area/overmap_encounter/planetoid/beachplanet/explored)
 "HW" = (
 /obj/structure/railing{
 	dir = 8
@@ -2256,7 +2270,7 @@
 /turf/open/floor/concrete{
 	light_range = 2
 	},
-/area/ruin/unpowered)
+/area/overmap_encounter/planetoid/beachplanet/explored)
 "Jy" = (
 /obj/effect/turf_decal/trimline/opaque/white/filled/warning,
 /obj/effect/turf_decal/industrial/stand_clear/white,
@@ -2445,7 +2459,7 @@
 "LW" = (
 /obj/structure/flora/ausbushes/sunnybush,
 /turf/open/floor/plating/grass/beach/lit,
-/area/ruin/unpowered)
+/area/overmap_encounter/planetoid/beachplanet/explored)
 "Mb" = (
 /obj/machinery/light/small/directional/south,
 /obj/structure/spacevine/dense,
@@ -2455,11 +2469,11 @@
 "Mt" = (
 /obj/structure/flora/ausbushes/fullgrass,
 /turf/open/floor/plating/grass/beach/lit,
-/area/ruin/unpowered)
+/area/overmap_encounter/planetoid/beachplanet/explored)
 "ME" = (
 /mob/living/simple_animal/beachcarp/trout,
 /turf/open/water/beach,
-/area/ruin/unpowered)
+/area/overmap_encounter/planetoid/beachplanet/explored)
 "MH" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /turf/open/floor/plating/grass/beach/lit,
@@ -2527,7 +2541,7 @@
 	dir = 8
 	},
 /turf/open/water/beach,
-/area/ruin/unpowered)
+/area/overmap_encounter/planetoid/beachplanet/explored)
 "Ns" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/cable{
@@ -2543,7 +2557,7 @@
 	dir = 1
 	},
 /turf/open/water/beach,
-/area/ruin/unpowered)
+/area/overmap_encounter/planetoid/beachplanet/explored)
 "NB" = (
 /obj/structure/spacevine/dense,
 /turf/open/floor/concrete/slab_3,
@@ -2643,17 +2657,6 @@
 	light_range = 2
 	},
 /area/ruin/beach/complex)
-"Py" = (
-/obj/structure/window/reinforced/fulltile,
-/obj/structure/grille,
-/obj/structure/cable{
-	icon_state = "0-8"
-	},
-/obj/structure/cable{
-	icon_state = "0-8"
-	},
-/turf/open/floor/plating,
-/area/ruin/beach/complex/wall)
 "PD" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -2755,6 +2758,10 @@
 	},
 /turf/open/floor/plating,
 /area/ruin/beach/complex/shuttle)
+"Qw" = (
+/obj/structure/flora/rock/beach,
+/turf/open/water/beach,
+/area/overmap_encounter/planetoid/beachplanet/explored)
 "QD" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -2783,7 +2790,7 @@
 /turf/open/floor/concrete{
 	light_range = 2
 	},
-/area/ruin/unpowered)
+/area/overmap_encounter/planetoid/beachplanet/explored)
 "RP" = (
 /obj/structure/cable{
 	icon_state = "6-9"
@@ -2882,7 +2889,7 @@
 /turf/open/floor/concrete/slab_1{
 	light_range = 2
 	},
-/area/ruin/unpowered)
+/area/overmap_encounter/planetoid/beachplanet/explored)
 "Tt" = (
 /obj/structure/catwalk/over/plated_catwalk/dark,
 /obj/structure/cable{
@@ -2898,7 +2905,7 @@
 	dir = 5
 	},
 /turf/open/water/beach,
-/area/ruin/unpowered)
+/area/overmap_encounter/planetoid/beachplanet/explored)
 "Ty" = (
 /obj/machinery/light/small/directional/west,
 /obj/structure/spacevine/weak,
@@ -2990,7 +2997,7 @@
 "Vp" = (
 /mob/living/simple_animal/beachcarp/bass,
 /turf/open/water/beach,
-/area/ruin/unpowered)
+/area/overmap_encounter/planetoid/beachplanet/explored)
 "Vw" = (
 /obj/structure/spacevine/weak,
 /turf/open/floor/concrete/slab_4,
@@ -3139,7 +3146,7 @@
 	dir = 9
 	},
 /turf/open/water/beach,
-/area/ruin/unpowered)
+/area/overmap_encounter/planetoid/beachplanet/explored)
 "YE" = (
 /obj/effect/turf_decal/trimline/opaque/white/filled/warning{
 	dir = 10
@@ -3197,7 +3204,7 @@
 "Zf" = (
 /obj/effect/turf_decal/weather/sand,
 /turf/open/water/beach,
-/area/ruin/unpowered)
+/area/overmap_encounter/planetoid/beachplanet/explored)
 "ZB" = (
 /obj/effect/turf_decal/trimline/opaque/white/filled/warning{
 	dir = 6
@@ -3621,7 +3628,7 @@ yF
 yF
 yF
 yF
-yF
+Qw
 yF
 yF
 yF
@@ -3666,6 +3673,7 @@ jc
 yF
 yF
 yF
+Qw
 yF
 yF
 yF
@@ -3678,10 +3686,9 @@ yF
 yF
 yF
 yF
+Qw
 yF
-yF
-yF
-yF
+sa
 yF
 yF
 yF
@@ -3833,7 +3840,7 @@ yF
 yF
 yF
 yF
-yF
+sa
 yF
 yF
 yF
@@ -3963,6 +3970,29 @@ yF
 yF
 yF
 yF
+sa
+yF
+yF
+yF
+yF
+yF
+yF
+yF
+Qw
+yF
+yF
+yF
+yF
+yF
+yF
+yF
+yF
+yF
+yF
+yF
+yF
+yF
+Qw
 yF
 yF
 yF
@@ -3991,30 +4021,7 @@ yF
 yF
 yF
 yF
-yF
-yF
-yF
-yF
-yF
-yF
-yF
-yF
-yF
-yF
-yF
-yF
-yF
-yF
-yF
-yF
-yF
-yF
-yF
-yF
-yF
-yF
-yF
-yF
+Qw
 yF
 yF
 yF
@@ -4084,6 +4091,7 @@ yF
 yF
 yF
 yF
+sa
 yF
 yF
 yF
@@ -4091,8 +4099,7 @@ yF
 yF
 yF
 yF
-yF
-yF
+Qw
 yF
 yF
 yF
@@ -4293,11 +4300,11 @@ ad
 ad
 ad
 HR
-mC
-mC
-mC
-mC
-mC
+ea
+ea
+ea
+ea
+ea
 Tu
 ad
 ad
@@ -4307,9 +4314,9 @@ ad
 ad
 ad
 HR
-mC
-mC
-mC
+ea
+ea
+ea
 Tu
 ad
 ad
@@ -4366,31 +4373,31 @@ ad
 ad
 ad
 HR
+ea
+ea
 mC
-mC
-mC
-mC
-mC
-mC
-mC
-mC
-mC
-mC
-mC
-mC
-mC
-mC
-mC
-mC
-mC
-mC
-mC
-mC
-mC
-mC
-mC
-mC
-mC
+ea
+ea
+ea
+ea
+ea
+ea
+ea
+ea
+ea
+ea
+ea
+ea
+ea
+ea
+ea
+ea
+ea
+ea
+ea
+ea
+ea
+ea
 Nw
 yF
 yF
@@ -4440,34 +4447,34 @@ yF
 yF
 BS
 HR
-mC
-mC
-mC
-mC
-mC
-mC
-mC
-mC
+ea
+ea
+ea
+ea
+ea
+ea
+ea
+ea
 uo
 Mt
 uo
 mH
-mC
-mC
-mC
-mC
-mC
-mC
-mC
-mC
-mC
-mC
-mC
-mC
-mC
-mC
-mC
-mC
+ea
+ea
+ea
+ea
+ea
+ea
+ea
+ea
+ea
+ea
+ea
+ea
+ea
+ea
+ea
+ea
 mC
 Tu
 Ab
@@ -4517,10 +4524,10 @@ yF
 BS
 ad
 HR
-mC
-mC
-mC
-mC
+ea
+ea
+ea
+ea
 uo
 uo
 xP
@@ -4545,9 +4552,9 @@ uo
 Mt
 uo
 uo
-mC
-mC
-mC
+ea
+ea
+ea
 Nw
 yF
 yF
@@ -4576,7 +4583,7 @@ yF
 yF
 yF
 yF
-yF
+sa
 yF
 yF
 yF
@@ -4593,9 +4600,9 @@ yF
 BS
 ad
 HR
-mC
-mC
-mC
+ea
+ea
+ea
 uo
 uo
 mH
@@ -4624,8 +4631,8 @@ FF
 lS
 fC
 uo
-mC
-mC
+ea
+ea
 Nw
 yF
 yF
@@ -4669,9 +4676,9 @@ yF
 yF
 yF
 Zf
-mC
-mC
-mC
+ea
+ea
+ea
 uo
 fC
 LW
@@ -4702,8 +4709,8 @@ pM
 lS
 lS
 uo
-mC
-mC
+ea
+ea
 Nw
 yF
 yF
@@ -4748,8 +4755,8 @@ yF
 BS
 HR
 mC
-mC
-mC
+ea
+ea
 uo
 lS
 lS
@@ -4780,8 +4787,8 @@ lQ
 II
 gj
 mH
-mC
-mC
+ea
+ea
 Nw
 yF
 yF
@@ -4796,7 +4803,7 @@ yF
 yF
 yF
 yF
-yF
+Qw
 yF
 yF
 uy
@@ -4824,9 +4831,9 @@ yF
 yF
 BS
 HR
-mC
-mC
-mC
+ea
+ea
+ea
 uo
 Mt
 Ht
@@ -4839,7 +4846,7 @@ lS
 lS
 lS
 Lt
-Py
+nt
 lS
 lS
 lS
@@ -4858,8 +4865,8 @@ pM
 lS
 lS
 uo
-mC
-mC
+ea
+ea
 Tu
 Ab
 yF
@@ -4867,7 +4874,7 @@ yF
 yF
 yF
 yF
-yF
+Qw
 yF
 yF
 yF
@@ -4901,9 +4908,9 @@ yF
 yF
 yF
 Zf
-mC
-mC
-mC
+ea
+ea
+ea
 uo
 uo
 lS
@@ -4936,8 +4943,8 @@ SH
 lS
 uo
 xP
-mC
-mC
+ea
+ea
 mC
 Nw
 yF
@@ -4979,8 +4986,8 @@ yF
 yF
 BS
 HR
-mC
-mC
+ea
+ea
 uo
 uo
 LW
@@ -5015,8 +5022,8 @@ lS
 fC
 uo
 uo
-mC
-mC
+ea
+ea
 Nw
 yF
 yF
@@ -5056,9 +5063,9 @@ yF
 yF
 yF
 Zf
-mC
-mC
-mC
+ea
+ea
+ea
 uo
 Mt
 uo
@@ -5093,8 +5100,8 @@ lS
 uo
 Mt
 uo
-mC
-mC
+ea
+ea
 Nw
 yF
 yF
@@ -5104,7 +5111,7 @@ yF
 yF
 yF
 yF
-yF
+Qw
 yF
 yF
 yF
@@ -5134,8 +5141,8 @@ yF
 yF
 yF
 Zf
-mC
-mC
+ea
+ea
 uo
 uo
 uo
@@ -5171,8 +5178,8 @@ gj
 uo
 uo
 uo
-mC
-mC
+ea
+ea
 Nw
 yF
 yF
@@ -5212,8 +5219,8 @@ yF
 yF
 BS
 HR
-mC
-mC
+ea
+ea
 uo
 xP
 uo
@@ -5247,10 +5254,10 @@ lS
 pZ
 lS
 uo
-mC
-mC
-mC
-mC
+ea
+ea
+ea
+ea
 Nw
 yF
 yF
@@ -5289,9 +5296,9 @@ yF
 yF
 yF
 Zf
-mC
-mC
-mC
+ea
+ea
+ea
 uo
 LW
 mH
@@ -5325,9 +5332,9 @@ lS
 pZ
 lS
 mH
-mC
-mC
-mC
+ea
+ea
+ea
 YD
 re
 yF
@@ -5367,8 +5374,8 @@ yF
 yF
 BS
 HR
-mC
-mC
+ea
+ea
 fC
 uo
 uo
@@ -5404,8 +5411,8 @@ oJ
 lS
 Mt
 uo
-mC
-mC
+ea
+ea
 Nw
 yF
 yF
@@ -5444,9 +5451,9 @@ yF
 yF
 yF
 Zf
-mC
-mC
-mC
+ea
+ea
+ea
 uo
 lS
 lS
@@ -5482,8 +5489,8 @@ pM
 lS
 fC
 uo
-mC
-mC
+ea
+ea
 Nw
 yF
 yF
@@ -5522,8 +5529,8 @@ yF
 yF
 yF
 Zf
-mC
-mC
+ea
+ea
 uo
 Mt
 lS
@@ -5559,9 +5566,9 @@ lS
 pZ
 lS
 uo
-mC
-mC
-mC
+ea
+ea
+ea
 Nw
 yF
 yF
@@ -5600,8 +5607,8 @@ yF
 yF
 yF
 Zf
-mC
-mC
+ea
+ea
 uo
 lS
 lS
@@ -5637,9 +5644,9 @@ lS
 pZ
 lS
 uo
-mC
-mC
-mC
+ea
+ea
+ea
 Nw
 yF
 yF
@@ -5678,7 +5685,7 @@ yF
 yF
 yF
 Zf
-mC
+ea
 uo
 fC
 lS
@@ -5715,9 +5722,9 @@ lS
 aV
 lS
 Mt
-mC
-mC
-mC
+ea
+ea
+ea
 Nw
 yF
 yF
@@ -5756,7 +5763,7 @@ yF
 yF
 BS
 HR
-mC
+ea
 uo
 Mt
 lS
@@ -5794,8 +5801,8 @@ Fg
 lS
 uo
 uo
-mC
-mC
+ea
+ea
 Nw
 yF
 yF
@@ -5833,8 +5840,8 @@ yF
 yF
 yF
 Zf
-mC
-mC
+ea
+ea
 fC
 LW
 lS
@@ -5872,8 +5879,8 @@ Xo
 lS
 uo
 uo
-mC
-mC
+ea
+ea
 Nw
 yF
 yF
@@ -5885,7 +5892,7 @@ yF
 yF
 yF
 yF
-yF
+sa
 yF
 yF
 yF
@@ -5911,8 +5918,8 @@ yF
 yF
 yF
 Zf
-mC
-mC
+ea
+ea
 uo
 Mt
 Bh
@@ -5950,8 +5957,8 @@ pZ
 lS
 Mt
 uo
-mC
-mC
+ea
+ea
 Nw
 yF
 yF
@@ -5989,8 +5996,8 @@ yF
 yF
 yF
 Zf
-mC
-mC
+ea
+ea
 uo
 uo
 lS
@@ -6028,8 +6035,8 @@ pZ
 lS
 uo
 uo
-mC
-mC
+ea
+ea
 Nw
 yF
 yF
@@ -6067,8 +6074,8 @@ yF
 yF
 yF
 Zf
-mC
-mC
+ea
+ea
 uo
 mH
 lS
@@ -6106,7 +6113,7 @@ PD
 lS
 fC
 uo
-mC
+ea
 YD
 re
 yF
@@ -6145,8 +6152,8 @@ yF
 yF
 yF
 Zf
-mC
-mC
+ea
+ea
 mH
 uo
 lS
@@ -6178,12 +6185,12 @@ Vw
 np
 AA
 Tq
-Im
+hb
 lS
 Li
 gj
 Mt
-mC
+ea
 mC
 Nw
 yF
@@ -6223,8 +6230,8 @@ yF
 yF
 yF
 Zf
-mC
-mC
+ea
+ea
 uo
 LW
 lS
@@ -6261,8 +6268,8 @@ lS
 Fg
 lS
 mH
-mC
-mC
+ea
+ea
 Nw
 yF
 yF
@@ -6301,8 +6308,8 @@ Vp
 yF
 yF
 Zf
-mC
-mC
+ea
+ea
 fC
 uo
 lS
@@ -6339,8 +6346,8 @@ lS
 aV
 lS
 uo
-mC
-mC
+ea
+ea
 Nw
 yF
 yF
@@ -6380,8 +6387,8 @@ yF
 yF
 vf
 lw
-mC
-mC
+ea
+ea
 fC
 lS
 pM
@@ -6417,8 +6424,8 @@ lS
 Xo
 lS
 LW
-mC
-mC
+ea
+ea
 Nw
 yF
 yF
@@ -6458,8 +6465,8 @@ yF
 yF
 yF
 Zf
-mC
-mC
+ea
+ea
 uo
 lS
 pM
@@ -6495,8 +6502,8 @@ lS
 Xo
 lS
 uo
-mC
-mC
+ea
+ea
 Nw
 yF
 yF
@@ -6536,8 +6543,8 @@ yF
 yF
 yF
 Zf
-mC
-mC
+ea
+ea
 uo
 Bh
 hO
@@ -6573,8 +6580,8 @@ lS
 Fg
 lS
 uQ
-mC
-mC
+ea
+ea
 Nw
 yF
 yF
@@ -6614,7 +6621,7 @@ yF
 yF
 yF
 Zf
-mC
+ea
 uo
 Mt
 lS
@@ -6652,7 +6659,7 @@ aA
 lS
 uo
 uo
-mC
+ea
 Nw
 yF
 yF
@@ -6692,7 +6699,7 @@ yF
 yF
 yF
 Zf
-mC
+ea
 fC
 Mt
 lS
@@ -6730,7 +6737,7 @@ pZ
 lS
 Mt
 uo
-mC
+ea
 Nw
 yF
 yF
@@ -6770,7 +6777,7 @@ yF
 yF
 yF
 Zf
-mC
+ea
 uo
 uo
 lS
@@ -6808,7 +6815,7 @@ pZ
 lS
 uo
 uo
-mC
+ea
 Nw
 yF
 yF
@@ -6848,7 +6855,7 @@ yF
 yF
 BS
 HR
-mC
+ea
 uo
 xP
 lS
@@ -6885,8 +6892,8 @@ lS
 TG
 lS
 uo
-mC
-mC
+ea
+ea
 Tu
 Ab
 yF
@@ -6925,8 +6932,8 @@ yF
 yF
 yF
 Zf
-mC
-mC
+ea
+ea
 uo
 uo
 lS
@@ -6963,9 +6970,9 @@ lS
 cl
 lS
 fC
-mC
-mC
-mC
+ea
+ea
+ea
 Nw
 yF
 yF
@@ -7003,8 +7010,8 @@ yF
 yF
 yF
 Zf
-mC
-mC
+ea
+ea
 uo
 LW
 lS
@@ -7041,9 +7048,9 @@ lS
 pM
 lS
 uo
-mC
-mC
-mC
+ea
+ea
+ea
 Nw
 yF
 yF
@@ -7081,8 +7088,8 @@ yF
 yF
 yF
 Zf
-mC
-mC
+ea
+ea
 uo
 uo
 lS
@@ -7120,8 +7127,8 @@ Xo
 lS
 LW
 uo
-mC
-mC
+ea
+ea
 Nw
 yF
 yF
@@ -7159,8 +7166,8 @@ yF
 yF
 yF
 Zf
-mC
-mC
+ea
+ea
 LW
 Mt
 Bh
@@ -7198,8 +7205,8 @@ RQ
 gj
 uo
 uo
-mC
-mC
+ea
+ea
 Nw
 yF
 yF
@@ -7237,8 +7244,8 @@ yF
 yF
 yF
 Zf
-mC
-mC
+ea
+ea
 uo
 mH
 lS
@@ -7276,8 +7283,8 @@ DF
 lS
 uo
 uo
-mC
-mC
+ea
+ea
 Nw
 yF
 yF
@@ -7287,7 +7294,7 @@ yF
 yF
 yF
 yF
-yF
+Qw
 yF
 yF
 yF
@@ -7315,8 +7322,8 @@ yF
 yF
 yF
 Zf
-mC
-mC
+ea
+ea
 fC
 uo
 lS
@@ -7354,8 +7361,8 @@ pZ
 lS
 Mt
 mH
-mC
-mC
+ea
+ea
 Nw
 yF
 yF
@@ -7364,7 +7371,7 @@ yF
 yF
 yF
 yF
-yF
+Qw
 yF
 yF
 yF
@@ -7390,11 +7397,11 @@ yF
 yF
 yF
 yF
-yF
+Qw
 yF
 Zf
-mC
-mC
+ea
+ea
 Mt
 uo
 lS
@@ -7432,8 +7439,8 @@ pZ
 lS
 lS
 uo
-mC
-mC
+ea
+ea
 Nw
 yF
 yF
@@ -7471,8 +7478,8 @@ yF
 yF
 yF
 Zf
-mC
-mC
+ea
+ea
 uo
 LW
 lS
@@ -7511,7 +7518,7 @@ hg
 DT
 uo
 uo
-mC
+ea
 Nw
 yF
 yF
@@ -7546,11 +7553,11 @@ yF
 Gn
 yF
 yF
-yF
+Qw
 yF
 Zf
-mC
-mC
+ea
+ea
 uo
 lS
 lS
@@ -7589,7 +7596,7 @@ lS
 lS
 LW
 mH
-mC
+ea
 Nw
 yF
 yF
@@ -7599,7 +7606,7 @@ yF
 yF
 yF
 yF
-yF
+Qw
 yF
 yF
 yF
@@ -7628,7 +7635,7 @@ yF
 yF
 vf
 lw
-mC
+ea
 Mt
 Bh
 wZ
@@ -7677,7 +7684,7 @@ yF
 yF
 yF
 yF
-yF
+Qw
 yF
 yF
 yF
@@ -7703,10 +7710,10 @@ yF
 yF
 yF
 yF
-yF
+Qw
 yF
 Zf
-mC
+ea
 uo
 lS
 lS
@@ -7744,8 +7751,8 @@ uo
 uo
 fC
 uo
-mC
-mC
+ea
+ea
 Nw
 yF
 yF
@@ -7813,16 +7820,16 @@ uo
 uo
 uo
 uo
-mC
-mC
-mC
-mC
-mC
-mC
-mC
-mC
-mC
-mC
+ea
+ea
+ea
+ea
+ea
+ea
+ea
+ea
+ea
+ea
 YD
 re
 yF
@@ -7862,8 +7869,8 @@ yF
 yF
 yF
 Zf
-mC
-mC
+ea
+ea
 xP
 uo
 uo
@@ -7874,28 +7881,28 @@ uo
 uo
 uo
 uo
+ea
+ea
 mC
-mC
-mC
-mC
-mC
-mC
+ea
+ea
+ea
 uo
 uo
 uo
+ea
+ea
+ea
+ea
+ea
+ea
+ea
+ea
+ea
+ea
+ea
 mC
-mC
-mC
-mC
-mC
-mC
-mC
-mC
-mC
-mC
-mC
-mC
-mC
+ea
 YD
 Nq
 Nq
@@ -7941,31 +7948,31 @@ yF
 yF
 vf
 lw
-mC
-mC
-mC
-mC
-mC
+ea
+ea
+ea
+ea
+ea
 uo
 Mt
 uo
 mH
 uo
-mC
-mC
-mC
-mC
-mC
-mC
-mC
-mC
-mC
-mC
-mC
-mC
-mC
-mC
-mC
+ea
+ea
+ea
+ea
+ea
+ea
+ea
+ea
+ea
+ea
+ea
+ea
+ea
+ea
+ea
 YD
 Nq
 Nq
@@ -7988,7 +7995,7 @@ yF
 yF
 yF
 yF
-yF
+sa
 yF
 yF
 yF
@@ -8022,23 +8029,23 @@ vf
 Nq
 Nq
 lw
-mC
-mC
-mC
-mC
-mC
-mC
-mC
-mC
-mC
-mC
+ea
+ea
+ea
+ea
+ea
+ea
+ea
+ea
+ea
+ea
 YD
 Nq
 lw
-mC
-mC
-mC
-mC
+ea
+ea
+ea
+ea
 mC
 YD
 Nq
@@ -8098,7 +8105,7 @@ yF
 yF
 yF
 yF
-yF
+Qw
 vf
 Nq
 Nq
@@ -8177,7 +8184,7 @@ yF
 yF
 yF
 yF
-yF
+Qw
 yF
 yF
 yF
@@ -8269,7 +8276,7 @@ yF
 yF
 yF
 yF
-yF
+sa
 yF
 yF
 yF
@@ -8301,7 +8308,7 @@ yF
 yF
 yF
 yF
-yF
+Qw
 yF
 yF
 yF
@@ -8437,6 +8444,7 @@ yF
 yF
 yF
 yF
+Qw
 yF
 yF
 yF
@@ -8455,9 +8463,8 @@ yF
 yF
 yF
 yF
-yF
-yF
-yF
+Qw
+Qw
 yF
 yF
 yF
@@ -8513,6 +8520,7 @@ yF
 yF
 yF
 yF
+Qw
 yF
 yF
 yF
@@ -8532,8 +8540,7 @@ yF
 yF
 yF
 yF
-yF
-yF
+Qw
 yF
 yF
 yF
@@ -8591,6 +8598,14 @@ yF
 yF
 yF
 yF
+Qw
+yF
+yF
+yF
+yF
+yF
+yF
+sa
 yF
 yF
 yF
@@ -8604,15 +8619,7 @@ yF
 yF
 yF
 yF
-yF
-yF
-yF
-yF
-yF
-yF
-yF
-yF
-yF
+Qw
 yF
 yF
 yF
@@ -8804,7 +8811,7 @@ yF
 yF
 yF
 yF
-yF
+sa
 yF
 yF
 yF

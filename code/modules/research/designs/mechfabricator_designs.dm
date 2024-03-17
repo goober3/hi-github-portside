@@ -135,6 +135,26 @@
 	id = "vprosthetic_r_leg"
 	build_path = /obj/item/bodypart/leg/right/robot/surplus/vox
 
+/datum/design/prosthetic_l_arm/lizard
+	name = "Surplus Prosthetic Lizard Left Arm"
+	id = "lprosthetic_l_arm"
+	build_path = /obj/item/bodypart/l_arm/robot/surplus/lizard
+
+/datum/design/prosthetic_r_arm/lizard
+	name = "Surplus Prosthetic Lizard Right Arm"
+	id = "lprosthetic_r_arm"
+	build_path = /obj/item/bodypart/r_arm/robot/surplus/lizard
+
+/datum/design/prosthetic_l_leg/lizard
+	name = "Surplus Prosthetic Lizard Left Leg"
+	id = "lprosthetic_l_leg"
+	build_path = /obj/item/bodypart/leg/left/robot/surplus/lizard
+
+/datum/design/prosthetic_r_leg/lizard
+	name = "Surplus Prosthetic Lizard Right Leg"
+	id = "lprosthetic_r_leg"
+	build_path = /obj/item/bodypart/leg/right/robot/surplus/lizard
+
 //Ripley
 /datum/design/ripley_chassis
 	name = "Exosuit Chassis (APLU \"Ripley\")"
@@ -549,18 +569,18 @@
 	category = list("Phazon")
 
 //Exosuit Equipment
-/datum/design/cmm_ripley_upgrade
+/datum/design/clip_ripley_upgrade
 	name = "Ripley MK-I to MK-IV conversion kit"
-	id = "cmm_ripley_upgrade"
+	id = "clip_ripley_upgrade"
 	build_type = AUTOLATHE
-	build_path = /obj/item/mecha_parts/mecha_equipment/conversion_kit/ripley/cmm
+	build_path = /obj/item/mecha_parts/mecha_equipment/conversion_kit/ripley/clip
 	materials = list(/datum/material/iron=10000,/datum/material/plasma=10000)
 	construction_time = 100
 	category = list("Exosuit Equipment")
 
-/datum/design/cmm_durand_upgrade
+/datum/design/clip_durand_upgrade
 	name = "Durand to Paladin conversion kit"
-	id = "cmm_durand_upgrade"
+	id = "clip_durand_upgrade"
 	build_type = AUTOLATHE
 	build_path = /obj/item/mecha_parts/mecha_equipment/conversion_kit/paladin
 	materials = list(/datum/material/iron=10000,/datum/material/plasma=10000)

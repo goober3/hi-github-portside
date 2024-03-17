@@ -4,7 +4,7 @@
 #define BODY_BEHIND_LAYER 29 //certain mutantrace features (tail when looking south) that must appear behind the body parts
 #define BODYPARTS_LOW_LAYER 28 //Layer for bodyparts that should appear behind every other bodypart - Mostly, legs when facing WEST or EAST
 #define BODYPARTS_LAYER 27 //Initially "AUGMENTS", this was repurposed to be a catch-all bodyparts flag
-#define BODY_ADJ_LAYER 26 //certain mutantrace features (snout, body markings) that must appear above the body parts
+#define BODY_ADJ_LAYER 26 //certain mutantrace features (face markings, body markings) that must appear above the body parts
 #define BODY_LAYER 25 //underwear, undershirts, socks, eyes, lips(makeup)
 #define FRONT_MUTATIONS_LAYER 24 //mutations that should appear above body, body_adj and bodyparts layer (e.g. laser eyes)
 #define DAMAGE_LAYER 23 //damage indicators (cuts and burns)
@@ -14,7 +14,7 @@
 #define GLOVES_LAYER 19
 #define SHOES_LAYER 18
 #define EARS_LAYER 17
-#define SPLINT_LAYER 16 //WS Edit - breakable bones
+#define SPLINT_LAYER 16
 #define SUIT_LAYER 15
 #define GLASSES_LAYER 14
 #define BELT_LAYER 13 //Possible make this an overlay of somethign required to wear a belt?
@@ -73,18 +73,6 @@
 #define GAME_STATE_SETTING_UP 2
 #define GAME_STATE_PLAYING 3
 #define GAME_STATE_FINISHED 4
-
-//FONTS:
-// Used by Paper and PhotoCopier (and PaperBin once a year).
-// Used by PDA's Notekeeper.
-// Used by NewsCaster and NewsPaper.
-// Used by Modular Computers
-#define PEN_FONT "Verdana"
-#define FOUNTAIN_PEN_FONT "Segoe Script"
-#define CRAYON_FONT "Comic Sans MS"
-#define PRINTER_FONT "Times New Roman"
-#define SIGNFONT "Times New Roman"
-#define CHARCOAL_FONT "Candara"
 
 #define RESIZE_DEFAULT_SIZE 1
 
@@ -161,6 +149,13 @@ GLOBAL_LIST_EMPTY(bloody_footprints_cache)
 //subtypesof(), typesof() without the parent path
 #define subtypesof(typepath) (typesof(typepath) - typepath)
 
+/// Takes a datum as input, returns its ref string, or a cached version of it
+/// This allows us to cache \ref creation, which ensures it'll only ever happen once per datum, saving string tree time
+/// It is slightly less optimal then a []'d datum, but the cost is massively outweighed by the potential savings
+/// It will only work for datums mind, for datum reasons
+/// : because of the embedded typecheck
+#define text_ref(datum) (isdatum(datum) ? (datum:cached_ref ||= "\ref[datum]") : ("\ref[datum]"))
+
 //Gets the turf this atom inhabits
 #define get_turf(A) (get_step(A, 0))
 
@@ -203,13 +198,6 @@ GLOBAL_LIST_INIT(ghost_accs_options, list(GHOST_ACCS_NONE, GHOST_ACCS_DIR, GHOST
 
 GLOBAL_LIST_INIT(ghost_others_options, list(GHOST_OTHERS_SIMPLE, GHOST_OTHERS_DEFAULT_SPRITE, GHOST_OTHERS_THEIR_SETTING)) //Same as ghost_accs_options.
 
-//pda fonts
-#define MONO "Monospaced"
-#define VT "VT323"
-#define ORBITRON "Orbitron"
-#define SHARE "Share Tech Mono"
-
-GLOBAL_LIST_INIT(pda_styles, sortList(list(MONO, VT, ORBITRON, SHARE)))
 
 /////////////////////////////////////
 // atom.appearence_flags shortcuts //
@@ -419,6 +407,7 @@ GLOBAL_LIST_INIT(pda_styles, sortList(list(MONO, VT, ORBITRON, SHARE)))
 #define GAUSSIAN_BLUR(filter_size) filter(type="blur", size=filter_size)
 
 #define STANDARD_GRAVITY 1 //Anything above this is high gravity, anything below no grav
+#define GAS_GIANT_GRAVITY 2
 #define GRAVITY_DAMAGE_TRESHOLD 3 //Starting with this value gravity will start to damage mobs
 
 #define CAMERA_NO_GHOSTS 0
@@ -481,7 +470,6 @@ GLOBAL_LIST_INIT(pda_styles, sortList(list(MONO, VT, ORBITRON, SHARE)))
 /// Possible value of [/atom/movable/buckle_lying]. If set to a different (positive-or-zero) value than this, the buckling thing will force a lying angle on the buckled.
 #define NO_BUCKLE_LYING -1
 
-#define STATION_HOLODECK (1<<0)
-#define CUSTOM_HOLODECK_ONE (1<<1)
-#define CUSTOM_HOLODECK_TWO (1<<2)
-#define HOLODECK_DEBUG (1<<3)//you should never see this
+#define ROUND_END_NOT_DELAYED 0
+#define ROUND_END_DELAYED 1
+#define ROUND_END_TGS 2

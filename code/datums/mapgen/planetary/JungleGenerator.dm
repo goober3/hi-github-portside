@@ -175,12 +175,13 @@
 	mob_spawn_list = list(
 		/mob/living/simple_animal/hostile/asteroid/wolf/random = 1,
 		/mob/living/simple_animal/hostile/retaliate/bat = 1,
-		/mob/living/simple_animal/hostile/retaliate/poison/snake
+		/mob/living/simple_animal/hostile/retaliate/poison/snake = 1
 	)
 	feature_spawn_chance = 0.5
 	feature_spawn_list = list(
 		/obj/item/pickaxe/rusted = 1,
-		/obj/structure/spawner/ice_moon = 1
+		/obj/structure/spawner/ice_moon = 1,
+		/obj/effect/spawner/lootdrop/anomaly/jungle = 1
 	)
 
 /datum/biome/cave/jungle/dirt
@@ -227,9 +228,9 @@
 	)
 	mob_spawn_chance = 1
 	mob_spawn_list = list(
-		/mob/living/simple_animal/hostile/poison/bees/toxin = 1,
+		/mob/living/simple_animal/hostile/poison/bees = 1,
 		/mob/living/simple_animal/hostile/mushroom = 1,
-		/mob/living/simple_animal/pet/dog/corgi/capybara
+		/mob/living/simple_animal/pet/dog/corgi/capybara = 1
 	)
 
 /datum/biome/cave/lush/bright

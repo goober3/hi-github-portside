@@ -319,11 +319,11 @@
 	name = "JaniDrobe"
 	desc = "A self cleaning vending machine capable of dispensing clothing for janitors."
 	icon_state = "janidrobe"
-	product_ads = "Come and get your janitorial clothing, now endorsed by lizard janitors everywhere!"
+	product_ads = "Come and get your janitorial clothing, now endorsed by janitors everywhere!"
 	vend_reply = "Thank you for using the JaniDrobe!"
 	products = list(/obj/item/clothing/under/rank/civilian/janitor = 2,
 					/obj/item/cartridge/janitor = 2,
-					/obj/item/clothing/head/beret/service = 2, //WS edit - berets
+					/obj/item/clothing/head/beret/service = 2,
 					/obj/item/clothing/under/rank/civilian/janitor/skirt = 2,
 					/obj/item/clothing/gloves/color/black = 2,
 					/obj/item/clothing/head/soft/purple = 2,
@@ -410,10 +410,7 @@
 					/obj/item/clothing/accessory/armband/med = 4,
 					/obj/item/clothing/head/beanie/rasta = 1)
 	contraband = list(/obj/item/toy/plush/plushvar = 1,
-					/obj/item/toy/plush/narplush = 1,
-					/obj/item/clothing/head/medievaljewhat = 3,
-					/obj/item/clothing/suit/chaplainsuit/clownpriest = 1,
-					/obj/item/clothing/head/clownmitre = 1)
+					/obj/item/toy/plush/narplush = 1)
 	premium = list(/obj/item/clothing/suit/chaplainsuit/bishoprobe = 1,
 					/obj/item/clothing/head/bishopmitre = 1)
 	refill_canister = /obj/item/vending_refill/wardrobe/chap_wardrobe
@@ -514,3 +511,86 @@
 
 /obj/item/vending_refill/wardrobe/det_wardrobe
 	machine_name = "DetDrobe"
+
+
+/obj/machinery/vending/wardrobe/cent_wardrobe
+	name = "\improper CentDrobe"
+	desc = "A one-of-a-kind vending machine for all your centcom aesthetic needs!"
+	icon_state = "centdrobe"
+	product_ads = "Show those ERTs who's the most stylish in the briefing room!"
+	vend_reply = "Thank you for using the CentDrobe!"
+	products = list(
+		/obj/item/clothing/shoes/laceup = 3,
+		/obj/item/clothing/shoes/jackboots = 3,
+		/obj/item/clothing/gloves/combat = 3,
+		/obj/item/clothing/glasses/sunglasses = 3,
+		/obj/item/clothing/under/rank/centcom/commander = 3,
+		/obj/item/clothing/under/rank/centcom/centcom_skirt = 3,
+		/obj/item/clothing/under/rank/centcom/intern = 3,
+		/obj/item/clothing/under/rank/centcom/official = 3,
+		/obj/item/clothing/under/rank/centcom/officer = 3,
+		/obj/item/clothing/under/rank/centcom/officer_skirt = 3,
+		/obj/item/clothing/suit/toggle/armor/vest/centcom_formal = 3,
+		/obj/item/clothing/suit/space/officer = 3,
+		/obj/item/clothing/suit/hooded/wintercoat/centcom = 3,
+		/obj/item/clothing/head/centcom_cap = 3,
+		/obj/item/clothing/head/centhat = 3,
+		/obj/item/clothing/head/intern = 3,
+	)
+	refill_canister = /obj/item/vending_refill/wardrobe/cent_wardrobe
+/obj/item/vending_refill/wardrobe/cent_wardrobe
+	machine_name = "CentDrobe"
+	light_color = LIGHT_COLOR_ELECTRIC_GREEN
+
+
+/obj/machinery/vending/wardrobe/clip_wardrobe
+	name = "\improper CLIPDrobe"
+	desc = "A very special vending machine that somehow vends every piece of clothing used by the Confederated League! Wow! You get the feeling this is meant for debugging."
+	icon_state = "clipdrobe"
+	product_ads = "Coast guard in style!"
+	vend_reply = "Thank you for using the CLIPDrobe!"
+	products = list(
+		/obj/item/clothing/shoes/laceup = 3,
+		/obj/item/clothing/shoes/jackboots = 3,
+		/obj/item/clothing/gloves/combat = 3,
+		/obj/item/clothing/glasses/sunglasses = 3,
+
+		/obj/item/clothing/under/clip = 3,
+		/obj/item/clothing/under/clip/minutemen = 3,
+		/obj/item/clothing/under/clip/formal/with_shirt = 3,
+		/obj/item/clothing/under/clip/formal/with_shirt/alt = 3,
+		/obj/item/clothing/under/clip/medic = 3,
+		/obj/item/clothing/under/clip/officer = 3,
+		/obj/item/clothing/under/clip/officer/alt = 3,
+
+		/obj/item/clothing/mask/gas/clip = 3,
+		/obj/item/storage/belt/military/clip = 3,
+		/obj/item/storage/belt/medical/webbing/clip = 3,
+		/obj/item/clothing/gloves/color/latex/nitrile/clip = 3,
+
+		/obj/item/clothing/suit/toggle/lawyer/clip = 3,
+		/obj/item/clothing/suit/armor/vest/capcarapace/clip = 3,
+		/obj/item/clothing/suit/armor/vest/capcarapace/clip/admiral = 3,
+		/obj/item/clothing/suit/armor/clip_trenchcoat = 3,
+		/obj/item/clothing/suit/armor/vest/bulletproof = 3,
+		/obj/item/clothing/suit/armor/riot/clip = 3,
+
+		/obj/item/clothing/suit/space/hardsuit/security/independent/clip = 3,
+		/obj/item/clothing/suit/space/hardsuit/clip_spotter = 3,
+
+		/obj/item/clothing/head/helmet/bulletproof/x11/clip = 3,
+		/obj/item/clothing/head/helmet/riot/clip = 3,
+		/obj/item/clothing/head/clip = 3,
+		/obj/item/clothing/head/clip/corpsman = 3,
+		/obj/item/clothing/head/clip/slouch = 3,
+		/obj/item/clothing/head/clip/slouch/officer = 3,
+		/obj/item/clothing/head/clip/boonie = 3,
+		/obj/item/clothing/head/fedora/det_hat/clip = 3,
+		/obj/item/clothing/head/flatcap/clip = 3,
+		/obj/item/clothing/head/clip/bicorne = 3,
+
+	)
+	refill_canister = /obj/item/vending_refill/wardrobe/clip_wardrobe
+/obj/item/vending_refill/wardrobe/clip_wardrobe
+	machine_name = "CLIPDrobe"
+	light_color = LIGHT_COLOR_CYAN

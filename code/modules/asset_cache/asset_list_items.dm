@@ -99,6 +99,7 @@
 		"stamp-clown" = 'icons/stamp_icons/large_stamp-clown.png',
 		"stamp-deny" = 'icons/stamp_icons/large_stamp-deny.png',
 		"stamp-ok" = 'icons/stamp_icons/large_stamp-ok.png',
+		"stamp-void" = 'icons/stamp_icons/large_stamp-void.png',
 		"stamp-hop" = 'icons/stamp_icons/large_stamp-hop.png',
 		"stamp-cmo" = 'icons/stamp_icons/large_stamp-cmo.png',
 		"stamp-ce" = 'icons/stamp_icons/large_stamp-ce.png',
@@ -107,9 +108,26 @@
 		"stamp-cap" = 'icons/stamp_icons/large_stamp-cap.png',
 		"stamp-qm" = 'icons/stamp_icons/large_stamp-qm.png',
 		"stamp-law" = 'icons/stamp_icons/large_stamp-law.png',
-		"stamp-solgov" = 'icons/stamp_icons/large_stamp-solgov.png'
+		"stamp-chap" = 'icons/stamp_icons/large_stamp-chap.png',
+		"stamp-mime" = 'icons/stamp_icons/large_stamp-mime.png',
+		"stamp-centcom" = 'icons/stamp_icons/large_stamp-centcom.png',
+		"stamp-syndicate" = 'icons/stamp_icons/large_stamp-syndicate.png',
+		"stamp-solgov" = 'icons/stamp_icons/large_stamp-solgov.png',
+		"stamp-inteq" = 'icons/stamp_icons/large_stamp-inteq.png',
+		"stamp-vanguard" = 'icons/stamp_icons/large_stamp-vanguard.png',
+		"stamp-maa" = 'icons/stamp_icons/large_stamp-maa.png',
+		"stamp-artificer" = 'icons/stamp_icons/large_stamp-artificer.png',
+		"stamp-clip" = 'icons/stamp_icons/large_stamp-clip.png',
+		"stamp-bard" = 'icons/stamp_icons/large_stamp-bard.png',
+		"stamp-gold" = 'icons/stamp_icons/large_stamp-gold.png',
+		"stamp-cybersun" = 'icons/stamp_icons/large_stamp-cybersun.png',
+		"stamp-donk" = 'icons/stamp_icons/large_stamp-donk.png'
 	)
 
+/datum/asset/simple/fuckywucky
+	assets = list(
+		"fuckywucky.png" = 'html/fuckywucky.png'
+	)
 
 /datum/asset/simple/IRV
 	assets = list(
@@ -429,3 +447,37 @@
 		"fishing_background_default" = 'icons/ui_icons/fishing/default.png',
 		"fishing_background_lavaland" = 'icons/ui_icons/fishing/lavaland.png'
 	)
+
+/datum/asset/spritesheet/supplypods
+	name = "supplypods"
+
+/datum/asset/spritesheet/supplypods/register()
+	for (var/style in 1 to length(GLOB.podstyles))
+		var/icon_file = 'icons/obj/supplypods.dmi'
+		var/states = icon_states(icon_file)
+		if (style == STYLE_SEETHROUGH)
+			Insert("pod_asset[style]", icon(icon_file, "seethrough-icon", SOUTH))
+			continue
+		var/base = GLOB.podstyles[style][POD_BASE]
+		if (!base)
+			Insert("pod_asset[style]", icon(icon_file, "invisible-icon", SOUTH))
+			continue
+		var/icon/podIcon = icon(icon_file, base, SOUTH)
+		var/door = GLOB.podstyles[style][POD_DOOR]
+		if (door)
+			door = "[base]_door"
+			if(door in states)
+				podIcon.Blend(icon(icon_file, door, SOUTH), ICON_OVERLAY)
+		var/shape = GLOB.podstyles[style][POD_SHAPE]
+		if (shape == POD_SHAPE_NORML)
+			var/decal = GLOB.podstyles[style][POD_DECAL]
+			if (decal)
+				if(decal in states)
+					podIcon.Blend(icon(icon_file, decal, SOUTH), ICON_OVERLAY)
+			var/glow = GLOB.podstyles[style][POD_GLOW]
+			if (glow)
+				glow = "pod_glow_[glow]"
+				if(glow in states)
+					podIcon.Blend(icon(icon_file, glow, SOUTH), ICON_OVERLAY)
+		Insert("pod_asset[style]", podIcon)
+	return ..()

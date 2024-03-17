@@ -19,7 +19,6 @@ GLOBAL_LIST_INIT(astroloot, list(
 	/obj/item/tank/jetpack/suit = 10,
 	/obj/item/survivalcapsule = 15,
 	/obj/item/reagent_containers/hypospray/medipen/survival = 15,
-	/obj/item/card/mining_point_card = 15,
 	/obj/item/gps/mining = 10,
 	/obj/item/extraction_pack = 10,
 	/obj/item/reagent_containers/food/drinks/beer = 15,
@@ -42,10 +41,12 @@ GLOBAL_LIST_INIT(astroloot, list(
 	var/faction = list("hostile")
 	var/spawn_sound = list('sound/effects/break_stone.ogg')
 	var/spawner_type = /datum/component/spawner
+	var/spawn_distance_min = 1
+	var/spawn_distance_max = 1
 
 /obj/structure/spawner/Initialize()
 	. = ..()
-	AddComponent(spawner_type, mob_types, spawn_time, faction, spawn_text, max_mobs, spawn_sound)
+	AddComponent(spawner_type, mob_types, spawn_time, faction, spawn_text, max_mobs, spawn_sound, spawn_distance_min, spawn_distance_max)
 
 /obj/structure/spawner/attack_animal(mob/living/simple_animal/M)
 	if(faction_check(faction, M.faction, FALSE)&&!M.client)
@@ -110,6 +111,7 @@ GLOBAL_LIST_INIT(astroloot, list(
 	spawn_text = "crawls out of"
 	mob_types = list(/mob/living/simple_animal/hostile/asteroid/goldgrub, /mob/living/simple_animal/hostile/asteroid/goliath, /mob/living/simple_animal/hostile/asteroid/hivelord, /mob/living/simple_animal/hostile/asteroid/basilisk, /mob/living/simple_animal/hostile/asteroid/fugu)
 	faction = list("mining")
+	density = 0
 
 /obj/structure/spawner/mining/deconstruct(disassembled)
 	adestroy_effect()
@@ -147,3 +149,9 @@ GLOBAL_LIST_INIT(astroloot, list(
 	name = "wumborian fugu den"
 	desc = "A den housing a nest of wumborian fugus, how do they all even fit in there?"
 	mob_types = list(/mob/living/simple_animal/hostile/asteroid/fugu)
+
+/obj/structure/spawner/mining/carp
+	name = "carp den"
+	desc = "A den housing a nest of space carp, seems fishy!"
+	mob_types = list(/mob/living/simple_animal/hostile/carp)
+	spawn_text = "emerges from"

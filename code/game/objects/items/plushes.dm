@@ -254,7 +254,7 @@
 		vowbroken = TRUE
 		mood_message = pick(vowbroken_message)
 
-	update_plush_desc()
+	update_desc()
 
 /obj/item/toy/plush/proc/scorned_by(obj/item/toy/plush/Outmoded)
 	scorned_by.Add(Outmoded)
@@ -268,7 +268,7 @@
 	lover.cheer_up()
 
 	mood_message = pick(love_message)
-	update_plush_desc()
+	update_desc()
 
 	if(partner)	//who?
 		partner = null	//more like who cares
@@ -285,7 +285,7 @@
 	partner.heal_memories()
 
 	mood_message = pick(partner_message)
-	update_plush_desc()
+	update_desc()
 
 /obj/item/toy/plush/proc/plop(obj/item/toy/plush/Daddy)
 	if(partner != Daddy)
@@ -310,12 +310,12 @@
 	young = TRUE
 	name = "[Mama] Jr"	//Icelandic naming convention pending
 	normal_desc = "[src] is a little baby of [maternal_parent] and [paternal_parent]!"	//original desc won't be used so the child can have moods
-	update_plush_desc()
+	update_desc()
 
 	Mama.mood_message = pick(Mama.parent_message)
-	Mama.update_plush_desc()
+	Mama.update_desc()
 	Dada.mood_message = pick(Dada.parent_message)
-	Dada.update_plush_desc()
+	Dada.update_desc()
 
 /obj/item/toy/plush/proc/bad_news(obj/item/toy/plush/Deceased)	//cotton to cotton, sawdust to sawdust
 	var/is_that_letter_for_me = FALSE
@@ -354,7 +354,7 @@
 	if(is_that_letter_for_me)
 		heartbroken = TRUE
 		mood_message = pick(heartbroken_message)
-		update_plush_desc()
+		update_desc()
 
 /obj/item/toy/plush/proc/cheer_up()	//it'll be all right
 	if(!heartbroken)
@@ -366,7 +366,7 @@
 
 	if(mood_message in heartbroken_message)
 		mood_message = null
-	update_plush_desc()
+	update_desc()
 
 /obj/item/toy/plush/proc/heal_memories()	//time fixes all wounds
 	if(!vowbroken)
@@ -375,8 +375,9 @@
 			mood_message = null
 	cheer_up()
 
-/obj/item/toy/plush/proc/update_plush_desc()
+/obj/item/toy/plush/update_desc()
 	desc = normal_desc
+	. = ..()
 	if(mood_message)
 		desc += mood_message
 
@@ -608,8 +609,7 @@
 	item_state = "moffplush"
 	attack_verb = list("fluttered", "flapped")
 	squeak_override = list('sound/voice/moth/scream_moth.ogg'=1)
-///Used to track how many people killed themselves with item/toy/plush/moth
-	var/suicide_count = 0
+
 
 /obj/item/toy/plush/moth/monarch
 	name = "monarch moth plushie"
@@ -653,7 +653,7 @@
 
 /obj/item/toy/plush/moth/punished
 	name = "punished moth plushie"
-	desc = "An adorable mothperson plushy. It's a sad bug... that's quite sad actualy."
+	desc = "An adorable mothperson plushy. It's a sad bug... that's quite sad actually."
 	icon_state = "moffplush_punished"
 
 /obj/item/toy/plush/moth/firewatch
@@ -698,25 +698,8 @@
 
 /obj/item/toy/plush/moth/rainbow
 	name = "rainbow moth plushie"
-	desc = "An adorable mothperson plushy. It's a colorfull bug!"
+	desc = "An adorable mothperson plushy. It's a colorful bug!"
 	icon_state = "moffplush_rainbow"
-
-/obj/item/toy/plush/moth/suicide_act(mob/living/user)
-	user.visible_message("<span class='suicide'>[user] stares deeply into the eyes of [src] and it begins consuming [user.p_them()]!  It looks like [user.p_theyre()] trying to commit suicide!</span>")
-	suicide_count++
-	if(suicide_count < 3)
-		desc = "A plushie depicting an unsettling mothperson. After killing [suicide_count] [suicide_count == 1 ? "person" : "people"] it's not looking so huggable now..."
-	else
-		desc = "A plushie depicting a creepy mothperson. It's killed [suicide_count] people! I don't think I want to hug it any more!"
-		divine = TRUE
-		resistance_flags = INDESTRUCTIBLE | FIRE_PROOF | ACID_PROOF | LAVA_PROOF
-	playsound(src, 'sound/hallucinations/wail.ogg', 50, TRUE, -1)
-	var/list/available_spots = get_adjacent_open_turfs(loc)
-	if(available_spots.len) //If the user is in a confined space the plushie will drop normally as the user dies, but in the open the plush is placed one tile away from the user to prevent squeak spam
-		var/turf/open/random_open_spot = pick(available_spots)
-		forceMove(random_open_spot)
-	user.dust(just_ash = FALSE, drop_items = TRUE)
-	return MANUAL_SUICIDE
 
 /obj/item/toy/plush/spider
 	name = "spider plushie"
@@ -780,6 +763,54 @@
 	name = "flushed plushie"
 	desc = "Hgrgrhrhg cute."
 	icon_state = "flushplush"
+
+/obj/item/toy/plush/blahaj
+	name = "Solarian Marine Society mascot plushie"
+	desc = "The adorable little mascot of the solarian marine society. Popular with vampires."
+	icon_state = "blahaj"
+	item_state = "blahaj"
+	lefthand_file = 'icons/mob/inhands/misc/plushes_lefthand.dmi' //todo: sort the god damn plushie inhands
+	righthand_file = 'icons/mob/inhands/misc/plushes_righthand.dmi'
+
+/obj/item/toy/plush/rilena
+	name = "Ri plushie"
+	desc = "A plush of the protagonist of the popular combination video game series and webcomic RILENA."// Makes the iconic hurt sound from the game!" //sadly does not :pensive:
+	icon_state = "rilenaplush_ri"
+	attack_verb = list("blasted", "shot", "shmupped")
+	//squeak_override = list('sound/voice/ //kepori lack a voice :(
+	gender = FEMALE
+
+/obj/item/toy/plush/tali
+	name = "T4L1 plushie"
+	desc = "A surprisingly soft plushie of a recurring miniboss from the popular combination video game series and webcomic RILENA. The cannon arm does not function."
+	icon_state = "rilenaplush_t4l1"
+	attack_verb = list("blasted", "shot", "cannoned")
+	gender = FEMALE
+
+/obj/item/toy/plush/sharai
+	name = "Sharai plushie"
+	desc = "A plushie of the four winged kepori boss from the popular combination video game series and webcomic RILENA."
+	icon_state = "rilenaplush_sharai"
+	attack_verb = list("blasted", "shot", "radial bursted")
+	gender = FEMALE
+
+/obj/item/toy/plush/xader
+	name = "Xader plushie"
+	desc = "A plushie of the recurring transdimensional transgender shopkeep from the popular webseries RILENA."
+	icon_state = "rilenaplush_xader"
+	gender = FEMALE
+
+/obj/item/toy/plush/mora
+	name = "Mora plushie"
+	desc = "A plushie of Mora from the popular webseries RILENA."
+	icon_state = "rilenaplush_mora"
+	gender = FEMALE
+
+/obj/item/toy/plush/kari
+	name = "knockoff RILENA plushie"
+	desc = "A plushie of a FBP Kepori. The tag calls it 'Kari' and claims it to be from 'RAYALA: RUNNING FROM EVIL'. The cannon arm does not function."
+	icon_state = "fbplush"
+	gender = FEMALE
 
 /obj/item/toy/plush/among
 	name = "amoung pequeño"
