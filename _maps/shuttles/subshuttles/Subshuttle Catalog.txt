@@ -68,3 +68,8 @@ Size = "10x7"
 Purpose = "A boarding dropship employed by the PGFN."
 File Path = "_maps\shuttles\subshuttles\pgf_nail.dmm"
 
+Name = "Skink Cargo Runner"
+Size = "8x6"
+Purpose = "A small cargo shuttle. Typically found on Tegu-class freighters."
+File Path = "_maps\shuttles\subshuttles\nanotrasen_skink.dmm"
+
