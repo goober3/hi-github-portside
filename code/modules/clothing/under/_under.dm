@@ -2,6 +2,8 @@
 	name = "under"
 	icon = 'icons/obj/clothing/under/default.dmi'
 	mob_overlay_icon = 'icons/mob/clothing/under/default.dmi'
+	lefthand_file = 'icons/mob/inhands/clothing/suits_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/clothing/suits_righthand.dmi'
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	permeability_coefficient = 0.9
 	slot_flags = ITEM_SLOT_ICLOTHING
@@ -13,6 +15,7 @@
 	clothamnt = 3
 	greyscale_colors = list(list(15, 17), list(10, 19), list(15, 10))
 	greyscale_icon_state = "under"
+
 	var/has_sensor = HAS_SENSORS // For the crew computer
 	var/random_sensor = TRUE
 	var/sensor_mode = NO_SENSORS
@@ -22,19 +25,24 @@
 	var/obj/item/clothing/accessory/attached_accessory
 	var/mutable_appearance/accessory_overlay
 	var/freshly_laundered = FALSE
+
 	supports_variations = VOX_VARIATION
+	blood_overlay_type = "uniform"
 
 /obj/item/clothing/under/worn_overlays(isinhands = FALSE)
-	. = list()
+	. = ..()
 	if(!isinhands)
 		if(damaged_clothes)
 			. += mutable_appearance('icons/effects/item_damage.dmi', "damageduniform")
 		if(HAS_BLOOD_DNA(src))
-			var/mutable_appearance/bloody_uniform = mutable_appearance('icons/effects/blood.dmi', "uniformblood")
-			bloody_uniform.color = get_blood_dna_color(return_blood_DNA())
-			. += bloody_uniform
+			. += setup_blood_overlay()
 		if(accessory_overlay)
 			. += accessory_overlay
+
+/obj/item/clothing/under/Destroy()
+	. = ..()
+	if(attached_accessory)
+		attached_accessory.detach(src)
 
 /obj/item/clothing/under/attackby(obj/item/I, mob/user, params)
 	if((has_sensor == BROKEN_SENSORS) && istype(I, /obj/item/stack/cable_coil))
@@ -43,6 +51,9 @@
 		has_sensor = HAS_SENSORS
 		to_chat(user,"<span class='notice'>You repair the suit sensors on [src] with [C].</span>")
 		return 1
+	if(attached_accessory && ispath(attached_accessory.pocket_storage_component_path) && loc == user)
+		attached_accessory.attackby(I,user)
+		return
 	if(!attach_accessory(I, user))
 		return ..()
 
@@ -84,7 +95,6 @@
 	if(attached_accessory && slot != ITEM_SLOT_HANDS && ishuman(user))
 		var/mob/living/carbon/human/H = user
 		attached_accessory.on_uniform_equip(src, user)
-		H.fan_hud_set_fandom()
 		if(attached_accessory.above_suit)
 			H.update_inv_wear_suit()
 
@@ -99,7 +109,6 @@
 		attached_accessory.on_uniform_dropped(src, user)
 		if(ishuman(user))
 			var/mob/living/carbon/human/H = user
-			H.fan_hud_set_fandom()
 			if(attached_accessory.above_suit)
 				H.update_inv_wear_suit()
 
@@ -134,7 +143,6 @@
 				var/mob/living/carbon/human/H = loc
 				H.update_inv_w_uniform()
 				H.update_inv_wear_suit()
-				H.fan_hud_set_fandom()
 
 			return TRUE
 
@@ -156,7 +164,6 @@
 			var/mob/living/carbon/human/H = loc
 			H.update_inv_w_uniform()
 			H.update_inv_wear_suit()
-			H.fan_hud_set_fandom()
 
 
 /obj/item/clothing/under/examine(mob/user)
@@ -181,7 +188,9 @@
 			if(SENSOR_COORDS)
 				. += "Its vital tracker and tracking beacon appear to be enabled."
 	if(attached_accessory)
-		. += "\A [attached_accessory] is attached to it."
+		. += "\A [attached_accessory] is attached to it. You could Ctrl-click on it to remove it."
+		if(attached_accessory.pocket_storage_component_path)
+			. += "You could open the storage of \the [attached_accessory] with Alt-click."
 
 /obj/item/clothing/under/rank
 	dying_key = DYE_REGISTRY_UNDER

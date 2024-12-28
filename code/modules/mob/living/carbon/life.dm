@@ -25,9 +25,12 @@
 		if(.) //not dead
 			handle_blood()
 
-		if(isLivingSSD())//if you're disconnected, you're going to sleep
-			if(AmountSleeping() < 20)
-				AdjustSleeping(20)//adjust every 10 seconds
+		if(isLivingSSD()) // If you're disconnected, you're going to sleep
+			if(trunc((world.time - lastclienttime) / (3 MINUTES)) > 0) // After a three minute grace period, your character will fall asleep
+				if(AmountSleeping() < 20)
+					AdjustSleeping(20) // Adjust every 10 seconds
+				if(ssd_indicator)
+					cut_overlay(GLOB.ssd_indicator_overlay) // Prevents chronically SSD players from breaking immersion
 
 		if(stat != DEAD)
 			var/bprv = handle_bodyparts()
@@ -173,7 +176,7 @@
 	var/oxygen_used = 0
 	var/moles = breath.total_moles()
 	var/breath_pressure = (moles*R_IDEAL_GAS_EQUATION*breath.return_temperature())/BREATH_VOLUME
-	var/O2_partialpressure = ((breath.get_moles(GAS_O2)/moles)*breath_pressure) + (((breath.get_moles(GAS_PLUOXIUM)*8)/moles)*breath_pressure)
+	var/O2_partialpressure = ((breath.get_moles(GAS_O2)/moles)*breath_pressure) + (((breath.get_moles(GAS_O3)*2)/moles)*breath_pressure)
 	var/Toxins_partialpressure = (breath.get_moles(GAS_PLASMA)/moles)*breath_pressure
 	var/CO2_partialpressure = (breath.get_moles(GAS_CO2)/moles)*breath_pressure
 
@@ -257,11 +260,6 @@
 	if(breath.get_moles(GAS_TRITIUM))
 		var/tritium_partialpressure = (breath.get_moles(GAS_TRITIUM)/breath.total_moles())*breath_pressure
 		radiation += tritium_partialpressure/10
-
-	//NITRYL
-	if(breath.get_moles(GAS_NITRYL))
-		var/nitryl_partialpressure = (breath.get_moles(GAS_NITRYL)/breath.total_moles())*breath_pressure
-		adjustFireLoss(nitryl_partialpressure/4)
 
 	//FREON
 	if(breath.get_moles(GAS_FREON))
@@ -474,10 +472,8 @@ All effects don't start immediately, but rather get worse over time; the rate is
 
 	if(drunkenness)
 		drunkenness = max(drunkenness - (drunkenness * 0.04) - 0.01, 0)
-		if(drunkenness >= 6)
+		if(drunkenness >= 11)
 			SEND_SIGNAL(src, COMSIG_ADD_MOOD_EVENT, "drunk", /datum/mood_event/drunk)
-			if(prob(25))
-				slurring += 2
 			jitteriness = max(jitteriness - 3, 0)
 			throw_alert("drunk", /atom/movable/screen/alert/drunk)
 			sound_environment_override = SOUND_ENVIRONMENT_PSYCHOTIC
@@ -486,8 +482,8 @@ All effects don't start immediately, but rather get worse over time; the rate is
 			clear_alert("drunk")
 			sound_environment_override = SOUND_ENVIRONMENT_NONE
 
-		if(drunkenness >= 11 && slurring < 5)
-			slurring += 1.2
+		if(drunkenness >= 31 && slurring < 5)
+			slurring += 0.5
 
 		if(drunkenness >= 41)
 			if(prob(25))
@@ -655,6 +651,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 
 	if(bodytemperature >= min_temp && bodytemperature <= max_temp)
 		bodytemperature = clamp(bodytemperature + amount,min_temp,max_temp)
+		return amount
 
 
 /////////

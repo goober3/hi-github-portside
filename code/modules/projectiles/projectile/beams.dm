@@ -37,6 +37,15 @@
 	muzzle_type = /obj/effect/projectile/muzzle/laser
 	impact_type = /obj/effect/projectile/impact/laser
 
+/obj/projectile/beam/laser/sharplite
+	speed = 0.4
+
+/obj/projectile/beam/laser/light
+	damage = 15
+
+/obj/projectile/beam/laser/light/sharplite
+	speed = 0.4
+
 /obj/projectile/beam/laser/eoehoma
 	damage = 25
 	armour_penetration = -10
@@ -54,6 +63,12 @@
 	muzzle_type = /obj/effect/projectile/muzzle/heavy_laser
 	impact_type = /obj/effect/projectile/impact/heavy_laser
 
+/obj/projectile/beam/laser/heavylaser/assault
+	armour_penetration = 20
+
+/obj/projectile/beam/laser/heavylaser/sharplite
+	speed = 0.4
+
 /obj/projectile/beam/laser/on_hit(atom/target, blocked = FALSE)
 	. = ..()
 	if(iscarbon(target))
@@ -67,6 +82,10 @@
 
 /obj/projectile/beam/weaker
 	damage = 10
+
+/obj/projectile/beam/weak/low_range
+	damage = 10
+	range = 9
 
 /obj/projectile/beam/weak/penetrator
 	armour_penetration = 50
@@ -119,8 +138,14 @@
 	muzzle_type = /obj/effect/projectile/muzzle/disabler
 	impact_type = /obj/effect/projectile/impact/disabler
 
+/obj/projectile/beam/disabler/sharplite
+	speed = 0.4
+
 /obj/projectile/beam/disabler/weak
 	damage = 15
+
+/obj/projectile/beam/disabler/weak/sharplite
+	speed = 0.4
 
 /obj/projectile/beam/disabler/weak/negative_ap
 	armour_penetration = -30
@@ -133,6 +158,8 @@
 	name = "pulse"
 	icon_state = "u_laser"
 	damage = 40
+	wall_damage_flags = PROJECTILE_BONUS_DAMAGE_MINERALS | PROJECTILE_BONUS_DAMAGE_WALLS | PROJECTILE_BONUS_DAMAGE_WALLS
+	wall_damage_override = 200
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/blue_laser
 	light_color = LIGHT_COLOR_BLUE
 	tracer_type = /obj/effect/projectile/tracer/pulse
@@ -145,6 +172,11 @@
 	if(!isopenturf(targets_turf))
 		return
 	targets_turf.IgniteTurf(rand(8,22), "blue")
+
+/obj/projectile/beam/pulse/sharplite_turret
+	wall_damage_flags = null
+	wall_damage_override = 0
+	speed = 0.4
 
 /obj/projectile/beam/pulse/shotgun
 	damage = 40

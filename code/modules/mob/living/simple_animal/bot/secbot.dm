@@ -10,8 +10,7 @@
 	damage_coeff = list(BRUTE = 0.5, BURN = 0.7, TOX = 0, CLONE = 0, STAMINA = 0, OXY = 0)
 	pass_flags = PASSMOB
 
-	radio_key = /obj/item/encryptionkey/secbot //AI Priv + Security
-	radio_channel = RADIO_CHANNEL_COMMAND //Security channel
+	radio_channel = RADIO_CHANNEL_EMERGENCY //Security channel
 	bot_type = SEC_BOT
 	model = "Securitron"
 	bot_core_type = /obj/machinery/bot_core/secbot
@@ -40,8 +39,6 @@
 	var/fair_market_price_arrest = 25 // On arrest, charges the violator this much. If they don't have that much in their account, the securitron will beat them instead
 	var/fair_market_price_detain = 5 // Charged each time the violator is stunned on detain
 	var/weapon_force = 20 // Only used for NAP violation beatdowns on non-grievous securitrons
-	var/market_verb = "Suspect"
-	var/payment_department = ACCOUNT_SEC
 
 /mob/living/simple_animal/bot/secbot/beepsky
 	name = "Commander Beep O'sky"
@@ -73,7 +70,6 @@
 /mob/living/simple_animal/bot/secbot/pingsky
 	name = "Officer Pingsky"
 	desc = "It's Officer Pingsky! Delegated to satellite guard duty for harbouring anti-human sentiment."
-	radio_channel = RADIO_CHANNEL_AI_PRIVATE
 
 /mob/living/simple_animal/bot/secbot/Initialize()
 	. = ..()
@@ -237,10 +233,7 @@ Auto Patrol: []"},
 	if(iscarbon(A))
 		var/mob/living/carbon/C = A
 		if(!C.IsParalyzed() || arrest_type)
-			if(!check_nap_violations())
-				stun_attack(A, TRUE)
-			else
-				stun_attack(A)
+			stun_attack(A)
 		else if(C.canBeHandcuffed() && !C.handcuffed)
 			cuff(A)
 	else
@@ -320,10 +313,7 @@ Auto Patrol: []"},
 
 			if(target)		// make sure target exists
 				if(Adjacent(target) && isturf(target.loc))	// if right next to perp
-					if(!check_nap_violations())
-						stun_attack(target, TRUE)
-					else
-						stun_attack(target)
+					stun_attack(target)
 
 					mode = BOT_PREP_ARREST
 					set_anchored(TRUE)
@@ -367,9 +357,6 @@ Auto Patrol: []"},
 				return
 
 			if(target.handcuffed) //no target or target cuffed? back to idle.
-				if(!check_nap_violations())
-					stun_attack(target, TRUE)
-					return
 				back_to_idle()
 				return
 
@@ -497,38 +484,3 @@ Auto Patrol: []"},
 
 /obj/machinery/bot_core/secbot
 	req_access = list(ACCESS_SECURITY)
-
-/// Returns false if the current target is unable to pay the fair_market_price for being arrested/detained
-/mob/living/simple_animal/bot/secbot/proc/check_nap_violations()
-	if(!SSeconomy.full_ancap)
-		return TRUE
-
-	if(target)
-		if(ishuman(target))
-			var/mob/living/carbon/human/H = target
-			var/obj/item/card/id/I = H.get_idcard(TRUE)
-			if(I)
-				var/datum/bank_account/insurance = I.registered_account
-				if(!insurance)
-					say("[market_verb] NAP Violation: No bank account found.")
-					nap_violation(target)
-					return FALSE
-				else
-					var/fair_market_price = (arrest_type ? fair_market_price_detain : fair_market_price_arrest)
-					if(!insurance.adjust_money(-fair_market_price))
-						say("[market_verb] NAP Violation: Unable to pay.")
-						nap_violation(target)
-						return FALSE
-					var/datum/bank_account/D = SSeconomy.get_dep_account(payment_department)
-					say("Thank you for your compliance. Your account been charged [fair_market_price] credits.")
-					if(D)
-						D.adjust_money(fair_market_price)
-			else
-				say("[market_verb] NAP Violation: No ID card found.")
-				nap_violation(target)
-				return FALSE
-	return TRUE
-
-/// Does nothing
-/mob/living/simple_animal/bot/secbot/proc/nap_violation(mob/violator)
-	return

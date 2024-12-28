@@ -63,7 +63,7 @@
 #warn compiling in TESTING mode. testing() debug messages will be visible.
 #endif
 
-#ifdef CIBUILDING
+#if defined(CIBUILDING) && !defined(OPENDREAM)
 #define UNIT_TESTS
 #endif
 
@@ -91,15 +91,15 @@
 // If you think you need more, rethink it
 #define MAX_ATOM_OVERLAYS 100
 
-#define AUXMOS (world.system_type == MS_WINDOWS ? "auxmos.dll" : __detect_auxmos())
-
-/proc/__detect_auxmos()
-	var/static/auxmos_path
-	if(!auxmos_path)
-		if (fexists("./libauxmos.so"))
-			auxmos_path = "./libauxmos.so"
-		else if (fexists("[world.GetConfig("env", "HOME")]/.byond/bin/libauxmos.so"))
-			auxmos_path = "[world.GetConfig("env", "HOME")]/.byond/bin/libauxmos.so"
-		else
-			CRASH("Could not find libauxmos.so")
-	return auxmos_path
+#if defined(OPENDREAM)
+	#if !defined(CIBUILDING)
+		#warn You are building with OpenDream. Remember to build TGUI manually.
+		#warn You can do this by running tgui-build.cmd from the bin directory.
+	#endif
+#else
+	#if !defined(CBT) && !defined(SPACEMAN_DMM)
+		#warn Building with Dream Maker is no longer supported and will result in errors.
+		#warn In order to build, run BUILD.cmd in the root directory.
+		#warn Consider switching to VSCode editor instead, where you can press Ctrl+Shift+B to build.
+	#endif
+#endif

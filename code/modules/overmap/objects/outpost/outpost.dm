@@ -24,10 +24,12 @@
 	// NOTE: "planetary" outposts should use baseturf specification and possibly different ztrait sun type, for both hangars and main level.
 	var/list/main_level_ztraits = list(
 		ZTRAIT_STATION = TRUE,
-		ZTRAIT_SUN_TYPE = AZIMUTH
+		ZTRAIT_SUN_TYPE = AZIMUTH,
+		ZTRAIT_GRAVITY = STANDARD_GRAVITY
 	)
 	var/list/hangar_ztraits = list(
-		ZTRAIT_SUN_TYPE = STATIC_EXPOSED
+		ZTRAIT_SUN_TYPE = STATIC_EXPOSED,
+		ZTRAIT_GRAVITY = STANDARD_GRAVITY
 	)
 
 	/// The mapzone used by the outpost level and hangars. Using a single mapzone means networked radio messages.
@@ -39,6 +41,12 @@
 	var/max_missions = 15
 	/// List of missions that can be accepted at this outpost. Missions which have been accepted are removed from this list.
 	var/list/datum/mission/missions
+	/// List of all of the things this outpost offers
+	var/list/supply_packs = list()
+	/// our 'Order number'
+	var/ordernum = 1
+	/// Our faction of the outpost
+	var/datum/faction/faction
 
 /datum/overmap/outpost/Initialize(position, ...)
 	. = ..()
@@ -62,6 +70,7 @@
 	Rename(gen_outpost_name())
 
 	fill_missions()
+	populate_cargo()
 	addtimer(CALLBACK(src, PROC_REF(fill_missions)), 10 MINUTES, TIMER_STOPPABLE|TIMER_LOOP|TIMER_DELETE_ME)
 
 /datum/overmap/outpost/Destroy(...)
@@ -119,16 +128,14 @@
 		// fun fact: "Hutton" is in last_names
 		person_name = pick(GLOB.last_names)
 	else
-		switch(rand(1, 5))
+		switch(rand(1, 4))
 			if(1)
-				person_name = pick(GLOB.moth_last)
-			if(2)
 				person_name = pick(prob(50) ? GLOB.lizard_names_male : GLOB.lizard_names_female)
-			if(3)
+			if(2)
 				person_name = pick(GLOB.spider_last)
-			if(4)
+			if(3)
 				person_name = kepori_name()
-			if(5)
+			if(4)
 				person_name = vox_name()
 
 	return "[person_name] [pick(GLOB.station_suffixes)]"
@@ -138,6 +145,17 @@
 		var/mission_type = get_weighted_mission_type()
 		var/datum/mission/M = new mission_type(src)
 		LAZYADD(missions, M)
+
+/datum/overmap/outpost/proc/populate_cargo()
+	ordernum = rand(1, 99000)
+
+	for(var/datum/supply_pack/current_pack as anything in subtypesof(/datum/supply_pack))
+		current_pack = new current_pack()
+		if(current_pack.faction)
+			current_pack.faction = new current_pack.faction()
+		if(!current_pack.contains)
+			continue
+		supply_packs += current_pack
 
 /datum/overmap/outpost/proc/load_main_level()
 	if(!main_template)

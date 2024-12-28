@@ -18,7 +18,7 @@
 
 /obj/item/reagent_containers/hypospray
 	name = "hypospray"
-	desc = "The DeForest Medical Corporation hypospray is a sterile, air-needle autoinjector for rapid administration of drugs to patients."
+	desc = "The hypospray is a sterile, air-needle autoinjector for rapid administration of drugs to patients."
 	icon = 'icons/obj/syringe.dmi'
 	item_state = "hypo"
 	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
@@ -102,15 +102,6 @@
 /obj/item/reagent_containers/hypospray/combat/nanites/update_icon_state()
 	icon_state = "[base_icon_state][(reagents.total_volume > 0) ? null : 0]"
 	return ..()
-
-/obj/item/reagent_containers/hypospray/combat/heresypurge
-	name = "holy water piercing injector"
-	desc = "A modified air-needle autoinjector for use in combat situations. Prefilled with 5 doses of a holy water and pacifier mixture. Not for use on your teammates."
-	item_state = "holy_hypo"
-	icon_state = "holy_hypo"
-	volume = 250
-	list_reagents = list(/datum/reagent/water/holywater = 150, /datum/reagent/peaceborg/tire = 50, /datum/reagent/peaceborg/confuse = 50)
-	amount_per_transfer_from_this = 50
 
 //MediPens
 
@@ -395,7 +386,7 @@
 		to_chat(user, "<span class='notice'>You remove [vial] from [src].</span>")
 		vial = null
 		update_appearance()
-		playsound(loc, 'sound/weapons/empty.ogg', 50, 1)
+		playsound(loc, SOUND_EMPTY_MAG, 50, 1)
 	else
 		to_chat(user, "<span class='notice'>This hypo isn't loaded!</span>")
 		return
@@ -490,7 +481,7 @@
 					if(L != user)
 						L.visible_message("<span class='danger'>[user] is trying to inject [L] with [src]!</span>", \
 										"<span class='userdanger'>[user] is trying to inject [L] with [src]!</span>")
-						if(!do_mob(user, L, inject_wait))
+						if(!do_after(user, inject_wait, L))
 							return
 						if(!penetrates && !L.can_inject(user, 1))
 							return
@@ -501,7 +492,7 @@
 						L.visible_message("<span class='danger'>[user] uses the [src] on [L]!</span>", \
 										"<span class='userdanger'>[user] uses the [src] on [L]!</span>")
 					else
-						if(!do_mob(user, L, inject_self))
+						if(!do_after(user, inject_self, L))
 							return
 						if(!penetrates && !L.can_inject(user, 1))
 							return
@@ -526,7 +517,7 @@
 					if(L != user)
 						L.visible_message("<span class='danger'>[user] is trying to spray [L] with [src]!</span>", \
 										"<span class='userdanger'>[user] is trying to spray [L] with [src]!</span>")
-						if(!do_mob(user, L, spray_wait))
+						if(!do_after(user, spray_wait, L))
 							return
 						if(!penetrates && !L.can_inject(user, 1))
 							return
@@ -537,7 +528,7 @@
 						L.visible_message("<span class='danger'>[user] uses the [src] on [L]!</span>", \
 										"<span class='userdanger'>[user] uses the [src] on [L]!</span>")
 					else
-						if(!do_mob(user, L, spray_self))
+						if(!do_after(user, spray_self, L))
 							return
 						if(!penetrates && !L.can_inject(user, 1))
 							return

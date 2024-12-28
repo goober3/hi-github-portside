@@ -20,7 +20,7 @@
 	var/id_tag = null
 	var/scrubbing = SCRUBBING //0 = siphoning, 1 = scrubbing
 
-	var/filter_types = list(GAS_CO2, GAS_BZ)
+	var/filter_types = list(GAS_CO2, GAS_BZ, GAS_CO)
 	var/volume_rate = 200
 	var/widenet = 0 //is this scrubber acting on the 3x3 area around it.
 	var/list/turf/adjacent_turfs = list()
@@ -48,8 +48,8 @@
 	radio_connection = null
 	adjacent_turfs.Cut()
 	return ..()
-
-/obj/machinery/atmospherics/components/unary/vent_scrubber/auto_use_power()
+/*
+/obj/machinery/atmospherics/components/unary/vent_scrubber/auto_use_power() //auto_use_power no longer called
 	if(!on || welded || !is_operational || !powered(power_channel))
 		return FALSE
 
@@ -64,7 +64,7 @@
 		amount += amount * (adjacent_turfs.len * (adjacent_turfs.len / 2))
 	use_power(amount, power_channel)
 	return TRUE
-
+*/
 /obj/machinery/atmospherics/components/unary/vent_scrubber/update_icon_nopipes()
 	cut_overlays()
 	if(showpipe)
@@ -138,13 +138,20 @@
 	..()
 
 	if(welded || !on || !is_operational)
+		if(use_static_power != NO_POWER_USE)
+			set_no_power()
 		return FALSE
 	if(!nodes[1])
 		return FALSE
 	scrub(loc)
 	if(widenet)
+		if(use_static_power != ACTIVE_POWER_USE)
+			set_active_power()
 		for(var/turf/tile in adjacent_turfs)
 			scrub(tile)
+	else
+		if(use_static_power != IDLE_POWER_USE)
+			set_idle_power()
 	return TRUE
 
 /obj/machinery/atmospherics/components/unary/vent_scrubber/proc/scrub(turf/tile)
@@ -276,7 +283,7 @@
 
 /obj/machinery/atmospherics/components/unary/vent_scrubber/layer1
 	piping_layer = 1
-	icon_state = "scrub_map-1"
+	icon_state = "scrub_map-2"
 
 /obj/machinery/atmospherics/components/unary/vent_scrubber/layer2
 	piping_layer = 2
@@ -292,7 +299,7 @@
 
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer1
 	piping_layer = 1
-	icon_state = "scrub_map_on-1"
+	icon_state = "scrub_map_on-2"
 
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2
 	piping_layer = 2
@@ -303,10 +310,10 @@
 	icon_state = "scrub_map_on-4"
 
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/lavaland
-	filter_types = list(GAS_CO2, GAS_PLASMA, GAS_H2O, GAS_BZ)
+	filter_types = list(GAS_CO2, GAS_PLASMA, GAS_H2O, GAS_BZ, GAS_CO)
 
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3/lavaland
-	filter_types = list(GAS_CO2, GAS_PLASMA, GAS_H2O, GAS_BZ)
+	filter_types = list(GAS_CO2, GAS_PLASMA, GAS_H2O, GAS_BZ, GAS_CO)
 
 #undef SIPHONING
 #undef SCRUBBING

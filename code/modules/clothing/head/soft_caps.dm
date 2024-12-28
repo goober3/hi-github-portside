@@ -121,13 +121,11 @@
 	desc = "It's a robust baseball hat in tasteful red colour."
 	icon_state = "secsoft"
 	soft_type = "sec"
-	armor = list("melee" = 30, "bullet" = 25, "laser" = 25, "energy" = 35, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 20, "acid" = 50)
-	strip_delay = 60
 	dog_fashion = null
 
 /obj/item/clothing/head/soft/sec/brig_phys
 	name = "security medic cap"
-	icon_state = "secmedsoft"
+	icon_state = "secsoft"
 
 /obj/item/clothing/head/soft/paramedic
 	name = "paramedic cap"
@@ -155,7 +153,6 @@
 	desc = "A rich brown utility cover with the golden shield of the IRMG on it."
 	icon_state = "inteqsoft"
 	soft_type = "inteq"
-	armor = list("melee" = 30, "bullet" = 25, "laser" = 25, "energy" = 35, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 20, "acid" = 50)
 	dog_fashion = null
 
 /obj/item/clothing/head/soft/inteq/corpsman
@@ -164,3 +161,32 @@
 	icon_state = "inteqmedsoft"
 	soft_type = "inteqmed"
 	dog_fashion = null
+
+/obj/item/clothing/head/soft/utility_beige
+	name = "beige utility cover"
+	desc = "A flat beige utility cover, unbranded. Just the right color for those sandy planetoids."
+	icon_state = "patrolbeigesoft"
+	soft_type = "patrolbeige"
+	dog_fashion = null
+
+/obj/item/clothing/head/soft/utility_black
+	name = "black utility cover"
+	desc = "A flat black utility cover, unbranded. Night Vision Goggles sold separately."
+	icon_state = "patrolblacksoft"
+	soft_type = "patrolblack"
+	dog_fashion = null
+
+/obj/item/clothing/head/soft/utility_olive
+	name = "miskilamao cap"
+	desc = "An olive utility cover emblazoned with the Miskilamo Shipbreaking logo. The material feels cheap."
+	icon_state = "patrololivesoft"
+	soft_type = "patrololive"
+	dog_fashion = null
+
+/obj/item/clothing/head/soft/utility_navy
+	name = "navy utility cover"
+	desc = "A navy blue utility cover, unbranded. Perfect for Seamen on long voyages."
+	icon_state = "patrolnavysoft"
+	soft_type = "patrolnavy"
+	dog_fashion = null
+//recompile icons comment!!!!!

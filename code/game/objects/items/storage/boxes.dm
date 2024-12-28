@@ -41,6 +41,9 @@
 /obj/item/storage/box/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.storage_flags = STORAGE_FLAGS_VOLUME_DEFAULT
+	STR.max_volume = STORAGE_VOLUME_CONTAINER_S
+	STR.max_w_class = WEIGHT_CLASS_SMALL
 	STR.use_sound = 'sound/items/storage/briefcase.ogg'
 
 /obj/item/storage/box/update_overlays()
@@ -99,7 +102,15 @@
 	for(var/i in 1 to 7)
 		new /obj/item/disk/data(src)
 
+/obj/item/storage/box/holodisc
+	name = "holodisc box"
+	illustration = "disk_kit"
 
+/obj/item/storage/box/holodisc/PopulateContents()
+	for(var/i in 1 to 7)
+		new /obj/item/disk/holodisk(src)
+
+//guys why are my tests failing
 /obj/item/storage/box/disks_plantgene
 	name = "plant data disks box"
 	illustration = "disk_kit"
@@ -121,9 +132,15 @@
 	var/mask_type = /obj/item/clothing/mask/breath
 	var/internal_type = /obj/item/tank/internals/emergency_oxygen
 	var/medipen_type = /obj/item/reagent_containers/hypospray/medipen
+	var/radio_type = /obj/item/radio
 
 /obj/item/storage/box/survival/PopulateContents()
-	new mask_type(src)
+	if(!isnull(mask_type))
+		new mask_type(src)
+
+	if(!isnull(radio_type))
+		new radio_type(src)
+
 	if(!isnull(medipen_type))
 		new medipen_type(src)
 
@@ -131,10 +148,6 @@
 		new internal_type(src)
 	else
 		new /obj/item/tank/internals/plasmaman/belt(src)
-
-/obj/item/storage/box/survival/radio/PopulateContents()
-	..() // we want the survival stuff too.
-	new /obj/item/radio/off(src)
 
 // Mining survival box
 /obj/item/storage/box/survival/mining
@@ -148,10 +161,6 @@
 /obj/item/storage/box/survival/engineer
 	internal_type = /obj/item/tank/internals/emergency_oxygen/engi
 
-/obj/item/storage/box/survival/engineer/radio/PopulateContents()
-	..() // we want the regular items too.
-	new /obj/item/radio/off(src)
-
 // Syndie survival box
 /obj/item/storage/box/survival/syndie
 	mask_type = /obj/item/clothing/mask/gas/syndicate
@@ -160,11 +169,7 @@
 
 // Security survival box
 /obj/item/storage/box/survival/security
-	mask_type = /obj/item/clothing/mask/gas/sechailer
-
-/obj/item/storage/box/survival/security/radio/PopulateContents()
-	..() // we want the regular stuff too
-	new /obj/item/radio/off(src)
+	mask_type = /obj/item/clothing/mask/gas
 
 // Medical survival box
 /obj/item/storage/box/survival/medical
@@ -173,15 +178,17 @@
 /obj/item/storage/box/survival/clip
 	internal_type = /obj/item/tank/internals/emergency_oxygen/engi //clip actually cares about their personnel
 
-/obj/item/storage/box/survival/clip/PopulateContents()
-	. = ..()
-	new /obj/item/radio/off(src)
-
 /obj/item/storage/box/survival/clip/balaclava
-	mask_type = /obj/item/clothing/mask/gas/sechailer/balaclava
-
-/obj/item/storage/box/survival/clip/balaclava
+	mask_type = /obj/item/clothing/mask/balaclava
 	internal_type = /obj/item/tank/internals/emergency_oxygen/double
+
+/obj/item/storage/box/survival/inteq
+	mask_type = /obj/item/clothing/mask/balaclava/inteq
+	internal_type = /obj/item/tank/internals/emergency_oxygen/engi
+
+/obj/item/storage/box/survival/frontier
+	mask_type = null // we spawn in gas masks in frontiersmen bags alongside this, so it isn't nessary
+	internal_type = /obj/item/tank/internals/emergency_oxygen //frontiersmen dont
 
 /obj/item/storage/box/gloves
 	name = "box of latex gloves"
@@ -463,7 +470,7 @@
 
 /obj/item/storage/box/condimentbottles/PopulateContents()
 	for(var/i in 1 to 6)
-		new /obj/item/reagent_containers/food/condiment(src)
+		new /obj/item/reagent_containers/condiment(src)
 
 /obj/item/storage/box/cups
 	name = "box of paper cups"
@@ -484,11 +491,6 @@
 /obj/item/storage/box/donkpockets/PopulateContents()
 	for(var/i in 1 to 6)
 		new donktype(src)
-
-/obj/item/storage/box/donkpockets/ComponentInitialize()
-	. = ..()
-	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	STR.set_holdable(list(/obj/item/reagent_containers/food/snacks/donkpocket))
 
 /obj/item/storage/box/donkpockets/donkpocketspicy
 	name = "box of spicy-flavoured donk-pockets"
@@ -527,12 +529,6 @@
 	illustration = null
 	var/cube_type = /obj/item/reagent_containers/food/snacks/monkeycube
 
-/obj/item/storage/box/monkeycubes/ComponentInitialize()
-	. = ..()
-	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	STR.max_items = 7
-	STR.set_holdable(list(/obj/item/reagent_containers/food/snacks/monkeycube))
-
 /obj/item/storage/box/monkeycubes/PopulateContents()
 	for(var/i in 1 to 5)
 		new cube_type(src)
@@ -546,12 +542,6 @@
 	desc = "Waffle Co. brand gorilla cubes. Do not taunt."
 	icon_state = "monkeycubebox"
 	illustration = null
-
-/obj/item/storage/box/gorillacubes/ComponentInitialize()
-	. = ..()
-	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	STR.max_items = 3
-	STR.set_holdable(list(/obj/item/reagent_containers/food/snacks/monkeycube))
 
 /obj/item/storage/box/gorillacubes/PopulateContents()
 	for(var/i in 1 to 3)
@@ -620,35 +610,6 @@
 	for(var/i in 1 to 6)
 		new /obj/item/cartridge/security(src)
 
-/obj/item/storage/box/firingpins
-	name = "box of standard firing pins"
-	desc = "A box full of standard firing pins, to allow newly-developed firearms to operate."
-	icon_state = "secbox"
-	illustration = "firingpin"
-
-/obj/item/storage/box/firingpins/PopulateContents()
-	for(var/i in 1 to 5)
-		new /obj/item/firing_pin(src)
-
-/obj/item/storage/box/firingpins/paywall
-	name = "box of paywall firing pins"
-	desc = "A box full of paywall firing pins, to allow newly-developed firearms to operate behind a custom-set paywall."
-	illustration = "firingpin"
-
-/obj/item/storage/box/firingpins/paywall/PopulateContents()
-	for(var/i in 1 to 5)
-		new /obj/item/firing_pin/paywall(src)
-
-/obj/item/storage/box/lasertagpins
-	name = "box of laser tag firing pins"
-	desc = "A box full of laser tag firing pins, to allow newly-developed firearms to require wearing brightly coloured plastic armor before being able to be used."
-	illustration = "firingpin"
-
-/obj/item/storage/box/lasertagpins/PopulateContents()
-	for(var/i in 1 to 3)
-		new /obj/item/firing_pin/tag/red(src)
-		new /obj/item/firing_pin/tag/blue(src)
-
 /obj/item/storage/box/handcuffs
 	name = "box of spare handcuffs"
 	desc = "A box full of handcuffs."
@@ -713,12 +674,6 @@
 	icon = 'icons/obj/toy.dmi'
 	icon_state = "spbox"
 
-/obj/item/storage/box/snappops/ComponentInitialize()
-	. = ..()
-	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	STR.set_holdable(list(/obj/item/toy/snappop))
-	STR.max_items = 8
-
 /obj/item/storage/box/snappops/PopulateContents()
 	SEND_SIGNAL(src, COMSIG_TRY_STORAGE_FILL_TYPE, /obj/item/toy/snappop)
 
@@ -732,13 +687,7 @@
 	slot_flags = ITEM_SLOT_BELT
 	drop_sound = 'sound/items/handling/matchbox_drop.ogg'
 	pickup_sound =  'sound/items/handling/matchbox_pickup.ogg'
-	custom_price = 20
-
-/obj/item/storage/box/matches/ComponentInitialize()
-	. = ..()
-	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	STR.max_items = 10
-	STR.set_holdable(list(/obj/item/match))
+	custom_price = 2
 
 /obj/item/storage/box/matches/PopulateContents()
 	SEND_SIGNAL(src, COMSIG_TRY_STORAGE_FILL_TYPE, /obj/item/match)
@@ -757,9 +706,10 @@
 	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
 	foldable = /obj/item/stack/sheet/cardboard //BubbleWrap
 
-/obj/item/storage/box/lights/ComponentInitialize()
+/obj/item/storage/box/lights/ComponentInitialize()//holy oversized box. this one can stay the way it is, for now
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.storage_flags = STORAGE_FLAGS_LEGACY_DEFAULT
 	STR.max_items = 21
 	STR.set_holdable(list(/obj/item/light/tube, /obj/item/light/bulb))
 	STR.max_combined_w_class = 21
@@ -795,6 +745,14 @@
 	for(var/i in 1 to 7)
 		new /obj/item/flashlight/flare(src)
 
+/obj/item/storage/box/glowsticks
+	name = "box of glowsticks"
+	illustration = "sparkler"
+
+/obj/item/storage/box/glowsticks/PopulateContents()
+	for(var/i in 1 to 7)
+		new /obj/effect/spawner/random/decoration/glowstick(src)
+
 /obj/item/storage/box/deputy
 	name = "box of deputy armbands"
 	desc = "To be issued to those authorized to act as deputy of security."
@@ -804,6 +762,15 @@
 /obj/item/storage/box/deputy/PopulateContents()
 	for(var/i in 1 to 7)
 		new /obj/item/clothing/accessory/armband/deputy(src)
+
+/obj/item/storage/box/smokebombs
+	name = "box of smoke grenades"
+	desc = "Used for rapidly laying cover."
+	illustration = "grenade"
+
+/obj/item/storage/box/smokebombs/PopulateContents()
+	for(var/i in 1 to 7)
+		new /obj/item/grenade/smokebomb(src)
 
 /obj/item/storage/box/metalfoam
 	name = "box of metal foam grenades"
@@ -892,6 +859,16 @@
 /obj/item/storage/box/lethalshot/PopulateContents()
 	for(var/i in 1 to 7)
 		new /obj/item/ammo_casing/shotgun/buckshot(src)
+
+/obj/item/storage/box/techshot
+	name = "box of unloaded shotgun tech shells"
+	desc = "A box full of unloaded tech shells, capable of producing a variety of effects once loaded."
+	icon_state = "techshot_box"
+	illustration = null
+
+/obj/item/storage/box/techshot/PopulateContents()
+	for(var/i in 1 to 7)
+		new /obj/item/ammo_casing/shotgun/techshell(src)
 
 /obj/item/storage/box/beanbag
 	name = "box of beanbags"
@@ -1355,30 +1332,6 @@
 		/obj/item/screwdriver = 1)
 	generate_items_inside(items_inside,src)
 
-//It's a maid costume from the IRMG and Syndicate, what else.
-/obj/item/storage/box/inteqmaid
-	name = "IRMG non standard issue maid outfit"
-	desc = "A box containing a 'tactical' and 'practical' maid outfit from the IRMG."
-
-/obj/item/storage/box/inteqmaid/PopulateContents()
-	var/static/items_inside = list(
-		/obj/item/clothing/head/maidheadband/inteq = 1,
-		/obj/item/clothing/under/syndicate/inteq/skirt/maid = 1,
-		/obj/item/clothing/gloves/combat/maid/inteq = 1,)
-	generate_items_inside(items_inside,src)
-
-/obj/item/storage/box/syndimaid
-	name = "Syndicate maid outfit"
-	desc = "A box containing a 'tactical' and 'practical' maid outfit."
-	icon_state = "syndiebox"
-
-/obj/item/storage/box/syndimaid/PopulateContents()
-	var/static/items_inside = list(
-		/obj/item/clothing/head/maidheadband/syndicate = 1,
-		/obj/item/clothing/under/syndicate/skirt/maid = 1,
-		/obj/item/clothing/gloves/combat/maid = 1,)
-	generate_items_inside(items_inside,src)
-
 // because i have no idea where the fuck to put this
 /obj/item/storage/box/maid
 	name = "Maid box"
@@ -1389,7 +1342,8 @@
 		/obj/item/clothing/head/maidheadband = 1,
 		/obj/item/clothing/under/costume/maid = 1,
 		/obj/item/clothing/gloves/maid = 1,
-		/obj/item/clothing/neck/maid = 1,)
+		/obj/item/clothing/neck/maid = 1,
+		/obj/item/clothing/accessory/maidapron = 1,)
 	generate_items_inside(items_inside,src)
 
 /obj/item/storage/box/material
@@ -1413,10 +1367,10 @@
 		/obj/item/stack/sheet/mineral/uranium=20,\
 		/obj/item/stack/sheet/mineral/diamond=50,\
 		/obj/item/stack/sheet/bluespace_crystal=50,\
-		/obj/item/stack/sheet/mineral/bananium=50,\
+		/obj/item/stack/sheet/mineral/hidden/hellstone=50,\
 		/obj/item/stack/sheet/mineral/wood=50,\
 		/obj/item/stack/sheet/plastic/fifty=1,\
-		/obj/item/stack/sheet/runed_metal/fifty=1
+		/obj/item/stack/sheet/mineral/hidden/hellstone/fifty=1
 		)
 	generate_items_inside(items_inside,src)
 
@@ -1501,13 +1455,12 @@
 	w_class = WEIGHT_CLASS_TINY
 	illustration = null
 	foldable = null
-	custom_price = 120
+	custom_price = 5
 
 /obj/item/storage/box/gum/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	STR.set_holdable(list(/obj/item/reagent_containers/food/snacks/chewable/bubblegum))
-	STR.max_items = 4
+	STR.max_volume = (STORAGE_VOLUME_CONTAINER_S / 2)
 
 /obj/item/storage/box/gum/PopulateContents()
 	for(var/i in 1 to 4)
@@ -1517,7 +1470,7 @@
 	name = "nicotine gum packet"
 	desc = "Designed to help with nicotine addiction and oral fixation all at once without destroying your lungs in the process. Mint flavored!"
 	icon_state = "bubblegum_nicotine"
-	custom_premium_price = 275
+	custom_premium_price = 10
 
 /obj/item/storage/box/gum/nicotine/PopulateContents()
 	for(var/i in 1 to 4)
@@ -1527,8 +1480,8 @@
 	name = "HP+ gum packet"
 	desc = "A seemingly homemade packaging with an odd smell. It has a weird drawing of a smiling face sticking out its tongue."
 	icon_state = "bubblegum_happiness"
-	custom_price = 300
-	custom_premium_price = 300
+	custom_price = 10
+	custom_premium_price = 10
 
 /obj/item/storage/box/gum/happiness/Initialize()
 	. = ..()
@@ -1563,53 +1516,3 @@
 		)
 	generate_items_inside(items_inside,src)
 
-/obj/item/storage/box/coffeepack
-	icon_state = "arabica_beans"
-	name = "arabica beans"
-	desc = "A bag containing fresh, dry coffee arabica beans. Ethically sourced and packaged by Donk! Co."
-	illustration = null
-	icon = 'icons/obj/food/containers.dmi'
-	var/beantype = /obj/item/reagent_containers/food/snacks/grown/coffee
-
-/obj/item/storage/box/cofeepack/Initialize(mapload)
-	. = ..()
-	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	STR.max_items = 5
-	STR.set_holdable(list(/obj/item/reagent_containers/food/snacks/grown/coffee))
-
-/obj/item/storage/box/coffeepack/PopulateContents()
-	var/static/items_inside = list(
-		/obj/item/reagent_containers/food/snacks/grown/coffee = 5,
-		/obj/item/reagent_containers/food/snacks/grown/coffee/robusta = 5)
-	generate_items_inside(items_inside,src)
-
-/obj/item/storage/box/coffeepack/robusta
-	icon_state = "robusta_beans"
-	name = "robusta beans"
-	desc = "A bag containing fresh, dry coffee robusta beans. Ethically sourced and packaged by Donk! Co."
-	beantype = /obj/item/reagent_containers/food/snacks/grown/coffee/robusta
-
-
-/*
- * Coffee condiments display -- someone can make this fancy eventually, i cant fucking figure it out for the life of me -- it exists in TG
- */
-
-/obj/item/storage/box/coffee_condi_display
-	name = "coffee condiments display"
-	desc = "A neat small box, holding all your favorite coffee condiments."
-
-/obj/item/storage/box/coffee_condi_display/Initialize(mapload)
-	. = ..()
-	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	STR.max_items = 14
-	STR.set_holdable(list(
-		/obj/item/reagent_containers/food/condiment/pack/sugar,
-		/obj/item/reagent_containers/food/condiment/pack/creamer,
-		/obj/item/reagent_containers/food/condiment/pack/astrotame,
-	))
-
-/obj/item/storage/box/coffee_condi_display/PopulateContents()
-	for(var/i in 1 to 4)
-		new /obj/item/reagent_containers/food/condiment/pack/sugar(src)
-		new /obj/item/reagent_containers/food/condiment/pack/creamer(src)
-		new /obj/item/reagent_containers/food/condiment/pack/astrotame(src)
