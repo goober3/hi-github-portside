@@ -52,20 +52,8 @@
 	path = /obj/item/clothing/suit/toggle/lawyer/charcoal
 
 /datum/gear/suit/jacket/hoodie_black
-	display_name = "hoodie, black"
-	path = /obj/item/clothing/suit/hooded/hoodie/black
-
-/datum/gear/suit/jacket/hoodie_red
-	display_name = "hoodie, red"
-	path = /obj/item/clothing/suit/hooded/hoodie/red
-
-/datum/gear/suit/jacket/hoodie_blue
-	display_name = "hoodie, blue"
-	path = /obj/item/clothing/suit/hooded/hoodie/blue
-
-/datum/gear/suit/jacket/hoodie_gray
-	display_name = "hoodie, gray"
-	path = /obj/item/clothing/suit/hooded/hoodie/gray
+	display_name = "hoodie, recolorable"
+	path = /obj/item/clothing/suit/hooded/hoodie
 
 /datum/gear/suit/jacket/hoodie_fbp
 	display_name = "hoodie, fbp kepori"
@@ -86,6 +74,10 @@
 /datum/gear/suit/jacket/hazard
 	display_name = "hazard jacket"
 	path = /obj/item/clothing/suit/toggle/hazard
+
+/datum/gear/suit/jacket/windbreaker
+	display_name = "windbreaker, colorable"
+	path = /obj/item/clothing/suit/toggle/windbreaker
 
 //Suspenders
 /datum/gear/suit/suspenders
@@ -122,9 +114,19 @@
 	path = /obj/item/clothing/suit/ianshirt
 
 /datum/gear/suit/hawaiian
-	display_name = "floral shirt"
-	description = "From grills to guns, this shirt's seen it all."
+	display_name = "blue floral shirt"
+	description = "A stylish short-sleeved button up in a dark blue."
 	path = /obj/item/clothing/suit/hawaiian
+
+/datum/gear/suit/hawaiian/pink
+	display_name = "pink floral shirt"
+	description = "A stylish short-sleeved button up in a bright pink."
+	path = /obj/item/clothing/suit/hawaiian/pink
+
+/datum/gear/suit/hawaiian/red
+	display_name = "red floral shirt"
+	description = "A stylish short-sleeved button up in a dark red."
+	path = /obj/item/clothing/suit/hawaiian/red
 
 /datum/gear/suit/hazardvest
 	display_name = "hazard vest"
