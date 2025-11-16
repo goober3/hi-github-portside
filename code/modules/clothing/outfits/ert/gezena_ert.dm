@@ -1,7 +1,7 @@
 /datum/outfit/job/gezena/ert
 	name = "ERT - PGF Marine Rifleman"
 	id_assignment = "Marine Rifleman"
-	jobtype = /datum/job/officer
+	jobtype = /datum/job/ert/sec
 	job_icon = "securityofficer"
 
 	uniform = /obj/item/clothing/under/gezena/marine
@@ -27,16 +27,17 @@
 	suit_store = /obj/item/gun/energy/kalix/pgf/heavy
 
 /datum/outfit/job/gezena/ert/engineer
-	name = "ERT - PGF Marine Combat Engineer"
-	id_assignment = "Marine Combat Engineer"
+	name = "ERT - PGF Marine Pioneer"
+	id_assignment = "Marine Pioneer"
 
-	suit_store = /obj/item/gun/energy/kalix/pgf
+	suit_store = /obj/item/gun/energy/kalix/pgf/nock
 	belt = /obj/item/storage/belt/military/gezena/engineer
+	neck = /obj/item/clothing/neck/cloak/gezena/engi
 
 /datum/outfit/job/gezena/ert/medic
 	name = "ERT - PGF Marine Medic"
 	id_assignment = "Marine Medic"
-	jobtype = /datum/job/paramedic
+	jobtype = /datum/job/ert/med
 	job_icon = "paramedic"
 
 	belt = /obj/item/storage/belt/medical/gezena/paramedic
@@ -56,7 +57,7 @@
 /datum/outfit/job/gezena/ert/leader
 	name = "ERT - PGF Marine Sergeant"
 	id_assignment = "Marine Sergeant"
-	jobtype = /datum/job/hos
+	jobtype = /datum/job/ert/commander
 	job_icon = "headofsecurity"
 
 	suit = /obj/item/clothing/suit/armor/gezena/marine
@@ -72,12 +73,12 @@
 /datum/outfit/job/gezena/ert/inspector
 	name = "ERT - PGF Naval Observer"
 	id_assignment = "Naval Observer"
-	jobtype = /datum/job/head_of_personnel
+	jobtype = /datum/job/ert/commander
 	job_icon = "headofpersonnel"
 
 	head = /obj/item/clothing/head/gezena
 	neck = /obj/item/clothing/neck/cloak/gezena/command
-	uniform = /obj/item/clothing/under/gezena
+	uniform = /obj/item/clothing/under/gezena/officer
 	suit = /obj/item/clothing/suit/armor/gezena
 	shoes = /obj/item/clothing/shoes/combat/gezena
 	suit_store = null
