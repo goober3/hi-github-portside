@@ -51,8 +51,6 @@
 	pixel_x = base_pixel_x + rand(-5, 5)
 	pixel_y = base_pixel_y + rand(-5, 5)
 
-	make_dryable()
-
 	for(var/datum/plant_gene/trait/trait in seed.genes)
 		trait.on_new(src, loc)
 
@@ -83,9 +81,6 @@
 				bite_consumption = bite_consumption,\
 				microwaved_type = microwaved_type,\
 				junkiness = junkiness)
-
-/obj/item/food/grown/proc/make_dryable()
-	AddElement(/datum/element/dryable, type)
 
 /obj/item/food/grown/make_leave_trash()
 	if(trash_type)

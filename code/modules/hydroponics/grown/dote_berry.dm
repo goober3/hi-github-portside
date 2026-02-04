@@ -4,7 +4,7 @@
 /obj/item/seeds/dote_berries
 	name = "pack of dote berry seeds"
 	desc = "These seeds grow into dote berry bushes."
-	icon_state = ""
+	icon_state = "seed-dote"
 	species = "berry"
 	plantname = "dote bush"
 	product = /obj/item/food/grown/dote_berries
@@ -28,6 +28,8 @@
 	bite_consumption_mod = 2
 	foodtypes = FRUIT
 	juice_results = list(/datum/reagent/consumable/dote_juice = 0)
-	//dried_type = /obj/item/reagent_containers/food/snacks/dote
 	tastes = list("berry" = 1)
 	distill_reagent = null
+
+/obj/item/food/grown/dote_berries/make_dryable()
+	AddElement(/datum/element/dryable, /obj/item/food/dote/homemade)

@@ -158,7 +158,7 @@
 		ui = new(user, src, "Crayon", name)
 		ui.open()
 
-/obj/item/toy/crayon/spraycan/AltClick(mob/user)
+/obj/item/toy/crayon/spraycan/attack_self_secondary(mob/user)
 	if(user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
 		if(has_cap)
 			is_capped = !is_capped
@@ -398,7 +398,7 @@
 	if(affected_turfs.len)
 		fraction /= affected_turfs.len
 	for(var/t in affected_turfs)
-		reagents.trans_to(t, ., volume_multiplier, transfered_by = user, method = TOUCH)
+		reagents.trans_to(t, ., volume_multiplier, transfered_by = user, methods = TOUCH)
 	check_empty(user)
 
 /obj/item/toy/crayon/attack(mob/M, mob/user)
@@ -417,7 +417,7 @@
 		var/eaten = use_charges(user, 5, FALSE)
 		if(check_empty(user)) //Prevents divsion by zero
 			return
-		reagents.trans_to(M, eaten, volume_multiplier, transfered_by = user, method = INGEST)
+		reagents.trans_to(M, eaten, volume_multiplier, transfered_by = user, methods = INGEST)
 		// check_empty() is called during afterattack
 	else
 		..()
@@ -639,7 +639,8 @@
 			C.blur_eyes(3)
 			C.blind_eyes(1)
 		if(C.get_eye_protection() <= 0) // no eye protection? ARGH IT BURNS. Warning: don't add a stun here. It's a roundstart item with some quirks.
-			C.apply_effects(eyeblur = 5, jitter = 10)
+			C.apply_effects(eyeblur = 5)
+			C.set_timed_status_effect(20 SECONDS, /datum/status_effect/jitter, only_if_higher = TRUE)
 			flash_color(C, flash_color=paint_color, flash_time=40)
 		if(ishuman(C) && actually_paints)
 			var/mob/living/carbon/human/H = C
@@ -651,12 +652,12 @@
 
 		return
 
-	if(isobj(target) && !istype(target, /obj/effect/decal/cleanable/crayon/gang))
+
+	if(isobj(target) && !istype(target, /obj/effect/decal/cleanable/crayon/gang) && !istype(target, /obj/item/clothing))
 		if(actually_paints)
 			if(color_hex2num(paint_color) < 350 && !istype(target, /obj/structure/window) && !istype(target, /obj/effect/decal/cleanable/crayon)) //Colors too dark are rejected
 				to_chat(usr, span_warning("A color that dark on an object like this? Surely not..."))
 				return FALSE
-
 			target.add_atom_colour(paint_color, WASHABLE_COLOUR_PRIORITY)
 
 			if(istype(target, /obj/structure/window))
@@ -666,7 +667,7 @@
 					target.set_opacity(initial(target.opacity))
 
 		. = use_charges(user, 2)
-		reagents.trans_to(target, ., volume_multiplier, transfered_by = user, method = VAPOR)
+		reagents.trans_to(target, ., volume_multiplier, transfered_by = user, methods = VAPOR)
 
 		if(pre_noise || post_noise)
 			playsound(user.loc, 'sound/effects/spray.ogg', 5, TRUE, 5)

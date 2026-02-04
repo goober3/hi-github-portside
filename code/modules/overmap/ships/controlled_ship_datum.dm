@@ -40,7 +40,7 @@
 	/// List of currently-accepted missions.
 	var/list/datum/mission/missions
 	/// The maximum number of currently active missions that a ship may take on.
-	var/max_missions = 2
+	var/max_missions = 3
 
 	/// Manifest list of people on the ship. Indexed by mob REAL NAME. value is JOB INSTANCE
 	var/list/manifest = list()
@@ -119,7 +119,7 @@
  * * creation_template - The template used to create the ship.
  * * target_port - The port to dock the new ship to.
  */
-/datum/overmap/ship/controlled/Initialize(position, system_spawned_in, datum/map_template/shuttle/creation_template, create_shuttle = TRUE)
+/datum/overmap/ship/controlled/Initialize(position, system_spawned_in, datum/map_template/shuttle/creation_template, create_shuttle = TRUE, outpost_special_docking_perms)
 	. = ..()
 	if(creation_template)
 		source_template = creation_template
@@ -138,6 +138,8 @@
 
 			refresh_engines()
 		ship_account = new(name, source_template.starting_funds)
+		if(outpost_special_docking_perms)
+			outpost_special_dock_perms = TRUE
 
 	else
 		stack_trace("Attempted to create a controlled ship without a template!")
@@ -151,6 +153,9 @@
 #endif
 	SSovermap.controlled_ships += src
 	current_overmap.controlled_ships += src
+
+	GLOB.ship_select_tgui?.update_static_data_for_all_viewers()
+	GLOB.crew_manifest_tgui?.update_static_data_for_all_viewers()
 
 /datum/overmap/ship/controlled/Destroy()
 	//SHOULD be called first
@@ -179,6 +184,8 @@
 		// it handles removal itself
 		qdel(applications[a_key])
 	LAZYCLEARLIST(applications)
+	GLOB.ship_select_tgui?.update_static_data_for_all_viewers()
+	GLOB.crew_manifest_tgui?.update_static_data_for_all_viewers()
 	// set ourselves to ownerless to unregister signals
 	set_owner_mob(null)
 
@@ -347,7 +354,7 @@
 	)
 	LAZYSET(owner_candidates, H.mind, mind_info)
 	H.mind.original_ship = WEAKREF(src)
-	RegisterSignal(H.mind, COMSIG_PARENT_QDELETING, PROC_REF(crew_mind_deleting))
+	RegisterSignal(H.mind, COMSIG_QDELETING, PROC_REF(crew_mind_deleting))
 	if(!owner_mob)
 		set_owner_mob(H)
 
@@ -356,6 +363,14 @@
 	job_holder_refs[human_job] += WEAKREF(H)
 	if(H.account_id)
 		crew_bank_accounts += WEAKREF(H.get_bank_account())
+
+	GLOB.crew_manifest_tgui?.update_static_data_for_all_viewers()
+	GLOB.ship_select_tgui?.update_static_data_for_all_viewers()
+
+/datum/overmap/ship/controlled/proc/manifest_remove(mob/living/carbon/human/removed)
+	manifest -= removed.real_name
+	GLOB.crew_manifest_tgui?.update_static_data_for_all_viewers()
+	GLOB.ship_select_tgui?.update_static_data_for_all_viewers()
 
 /**
  * adds a mob's real name to a crew's guestbooks
@@ -422,7 +437,7 @@
 /datum/overmap/ship/controlled/proc/crew_mind_deleting(datum/mind/del_mind)
 	SIGNAL_HANDLER
 
-	UnregisterSignal(del_mind, COMSIG_PARENT_QDELETING)
+	UnregisterSignal(del_mind, COMSIG_QDELETING)
 	LAZYREMOVE(owner_candidates, del_mind)
 	if(owner_mind == del_mind)
 		set_owner_mob(get_best_owner_mob())

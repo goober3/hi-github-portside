@@ -339,7 +339,8 @@
 		timerid = addtimer(CALLBACK(src, PROC_REF(retract)), 10, TIMER_STOPPABLE)
 
 /obj/effect/temp_visual/goliath_tentacle/proc/on_hit(mob/living/target)
-	target.apply_damage(rand(20,30), BRUTE, pick(BODY_ZONE_L_LEG, BODY_ZONE_R_LEG))
+	target.apply_damage(rand(10,20), BRUTE, pick(BODY_ZONE_L_LEG, BODY_ZONE_R_LEG), wound_bonus = CANT_WOUND) //already dangerous, don't break legs too
+
 	if(iscarbon(target))
 		var/obj/item/restraints/legcuffs/beartrap/goliath/B = new /obj/item/restraints/legcuffs/beartrap/goliath(get_turf(target))
 		B.on_entered(src, target)
@@ -348,7 +349,7 @@
 	icon_state = "marker"
 	flick(retract,src)
 	deltimer(timerid)
-	timerid = QDEL_IN(src, 7)
+	timerid = QDEL_IN_STOPPABLE(src, 7)
 
 /obj/item/saddle
 	name = "saddle"
@@ -504,7 +505,7 @@
 	armor = list("melee" = 30, "bullet" = 65, "laser" = 55, "energy" = 30, "bomb" = 60, "bio" = 30, "rad" = 50, "fire" = 30, "acid" = 50)
 	move_to_delay = 3 SECONDS
 	speed = 3
-	//mob_trophy = /obj/item/mob_trophy/elder_tentacle
+	mob_trophy = /obj/item/mob_trophy/elder_tentacle
 	pre_attack_icon = "ws_ancient_goliath_preattack"
 	throw_message = "does nothing to the rocky hide of the"
 	guaranteed_butcher_results = list()

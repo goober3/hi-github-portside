@@ -158,9 +158,13 @@
 /obj/item/storage/box/survival/clip
 	internal_type = /obj/item/tank/internals/emergency_oxygen/engi //clip actually cares about their personnel
 
-/obj/item/storage/box/survival/clip/balaclava
-	mask_type = /obj/item/clothing/mask/balaclava
+/obj/item/storage/box/survival/clip/minutemen
+	mask_type = /obj/item/clothing/mask/balaclava/combat
 	internal_type = /obj/item/tank/internals/emergency_oxygen/double
+
+/obj/item/storage/box/survival/pgf
+	mask_type = /obj/item/clothing/mask/breath/pgfmask
+	internal_type = /obj/item/tank/internals/emergency_oxygen/engi
 
 /obj/item/storage/box/survival/inteq
 	mask_type = /obj/item/clothing/mask/balaclava/inteq
@@ -169,6 +173,10 @@
 /obj/item/storage/box/survival/frontier
 	mask_type = null // we spawn in gas masks in frontiersmen bags alongside this, so it isn't nessary
 	internal_type = /obj/item/tank/internals/emergency_oxygen //frontiersmen dont
+
+/obj/item/storage/box/survival/vi
+	mask_type = /obj/item/clothing/mask/gas/vigilitas
+	internal_type = /obj/item/tank/internals/emergency_oxygen/engi
 
 /obj/item/storage/box/gloves
 	name = "box of latex gloves"
@@ -260,9 +268,9 @@
 
 /obj/item/storage/box/hypospray/PopulateContents()
 	new /obj/item/hypospray/mkii(src)
-	new /obj/item/reagent_containers/glass/bottle/vial/small/preloaded/bicaridine(src)
-	new /obj/item/reagent_containers/glass/bottle/vial/small/preloaded/antitoxin(src)
-	new /obj/item/reagent_containers/glass/bottle/vial/small/preloaded/kelotane(src)
+	new /obj/item/reagent_containers/glass/bottle/vial/small/preloaded/indomide(src)
+	new /obj/item/reagent_containers/glass/bottle/vial/small/preloaded/pancrazine(src)
+	new /obj/item/reagent_containers/glass/bottle/vial/small/preloaded/alvitane(src)
 	new /obj/item/reagent_containers/glass/bottle/vial/small/preloaded/dexalin(src)
 
 /obj/item/storage/box/hypospray/mkiii
@@ -270,10 +278,10 @@
 
 /obj/item/storage/box/hypospray/mkiii/PopulateContents()
 	new /obj/item/hypospray/mkii/mkiii(src)
-	new /obj/item/reagent_containers/glass/bottle/vial/large/preloaded/bicaridine(src)
-	new /obj/item/reagent_containers/glass/bottle/vial/large/preloaded/antitoxin(src)
-	new /obj/item/reagent_containers/glass/bottle/vial/large/preloaded/kelotane(src)
-	new /obj/item/reagent_containers/glass/bottle/vial/large/preloaded/dexalin(src)
+	new /obj/item/reagent_containers/glass/bottle/vial/large/preloaded/silfrine(src)
+	new /obj/item/reagent_containers/glass/bottle/vial/large/preloaded/gjalrazine(src)
+	new /obj/item/reagent_containers/glass/bottle/vial/large/preloaded/ysiltane(src)
+	new /obj/item/reagent_containers/glass/bottle/vial/large/preloaded/salbutamol(src)
 
 /obj/item/storage/box/medigels
 	name = "box of medical gels"
@@ -299,11 +307,21 @@
 	name = "box of smoke grenades (WARNING)"
 	desc = "<B>WARNING: Do not use in enclosed areas. Protective mask must be worn when in smoke cloud.</B>"
 	icon_state = "secbox"
-	illustration = "flashbang"
+	illustration = "smoke"
 
 /obj/item/storage/box/smokebombs/PopulateContents()
 	for(var/i in 1 to 7)
 		new /obj/item/grenade/smokebomb(src)
+
+/obj/item/storage/box/barriers
+	name = "box of barrier grenades (WARNING)"
+	desc = "<B>WARNING: Deploy barriers with care, providing ample space for automatic deployment to prevent accidental injury.</B>"
+	icon_state = "secbox"
+	illustration = "flashbang"
+
+/obj/item/storage/box/barriers/PopulateContents()
+	for(var/i in 1 to 7)
+		new /obj/item/grenade/barrier(src)
 
 /obj/item/storage/box/flashbangs
 	name = "box of flashbangs (WARNING)"
@@ -453,6 +471,24 @@
 	for(var/i in 1 to 6)
 		new /obj/item/reagent_containers/food/drinks/drinkingglass(src)
 
+/obj/item/storage/box/shotglasses
+	name = "box of shot glasses"
+	desc = "It has a picture of shot glasses on it."
+	illustration = "drinkglass"
+
+/obj/item/storage/box/shotglasses/PopulateContents()
+	for(var/i in 1 to 6)
+		new /obj/item/reagent_containers/food/drinks/drinkingglass/shotglass(src)
+
+/obj/item/storage/box/modglasses
+	name = "box of malleable glasses"
+	desc = "It has a picture of malleable glasses on it."
+	illustration = "drinkglass"
+
+/obj/item/storage/box/modglasses/PopulateContents()
+	for(var/i in 1 to 6)
+		new /obj/item/reagent_containers/food/drinks/modglass(src)
+
 /obj/item/storage/box/condimentbottles
 	name = "box of condiment bottles"
 	desc = "It has a large ketchup smear on it."
@@ -521,6 +557,15 @@
 /obj/item/storage/box/ids/PopulateContents()
 	for(var/i in 1 to 7)
 		new /obj/item/card/id(src)
+
+/obj/item/storage/box/bankcard
+	name = "box of spare bank cards"
+	desc = "Has so many empty bank cards."
+	illustration = "id"
+
+/obj/item/storage/box/bankcard/PopulateContents()
+	for(var/i in 1 to 7)
+		new /obj/item/card/bank(src)
 
 //Some spare PDAs in a box
 /obj/item/storage/box/PDAs
@@ -605,16 +650,6 @@
 /obj/item/storage/box/alienhandcuffs/PopulateContents()
 	for(var/i in 1 to 7)
 		new	/obj/item/restraints/handcuffs/alien(src)
-
-/obj/item/storage/box/fakesyndiesuit
-	name = "boxed space suit and helmet"
-	desc = "A sleek, sturdy box used to hold replica spacesuits."
-	icon_state = "syndiebox"
-	illustration = "syndiesuit"
-
-/obj/item/storage/box/fakesyndiesuit/PopulateContents()
-	new /obj/item/clothing/head/syndicatefake(src)
-	new /obj/item/clothing/suit/syndicatefake(src)
 
 /obj/item/storage/box/mousetraps
 	name = "box of Pest-B-Gon mousetraps"
@@ -949,7 +984,7 @@
 			/obj/item/food/grown/potato,
 			/obj/item/food/grown/sweet_potato,
 			/obj/item/food/grown/apple,
-			/obj/item/reagent_containers/food/snacks/chocolatebar,
+			/obj/item/food/chocolatebar,
 			/obj/item/food/grown/cherries,
 			/obj/item/food/grown/banana,
 			/obj/item/food/grown/cabbage,
@@ -1018,7 +1053,7 @@
 	for(var/i in 1 to 2)
 		new /obj/item/food/grown/cherries(src)
 		new /obj/item/food/grown/banana(src)
-	new /obj/item/reagent_containers/food/snacks/chocolatebar(src)
+	new /obj/item/food/chocolatebar(src)
 	new /obj/item/food/grown/cocoapod(src)
 	new /obj/item/food/grown/apple(src)
 
@@ -1050,10 +1085,9 @@
 /obj/item/storage/box/ingredients/carnivore/PopulateContents()
 	new /obj/item/food/meat/slab/bear(src)
 	new /obj/item/food/meat/slab/spider(src)
-	new /obj/item/reagent_containers/food/snacks/spidereggs(src)
+	new /obj/item/food/spidereggs(src)
 	new /obj/item/food/fishmeat/carp(src)
 	new /obj/item/food/meat/slab/xeno(src)
-	new /obj/item/food/meat/slab/corgi(src)
 	new /obj/item/food/meatball(src)
 
 /obj/item/storage/box/ingredients/exotic
@@ -1168,14 +1202,14 @@
 	new /obj/item/circuitboard/machine/circuit_imprinter/department/science(src)
 	new /obj/item/circuitboard/computer/rdconsole(src)
 
-/obj/item/storage/box/silver_sulf
-	name = "box of silver sulfadiazine patches"
+/obj/item/storage/box/alvitane
+	name = "box of alvitane patches"
 	desc = "Contains patches used to treat burns."
 	illustration = "firepatch"
 
-/obj/item/storage/box/silver_sulf/PopulateContents()
+/obj/item/storage/box/alvitane/PopulateContents()
 	for(var/i in 1 to 7)
-		new /obj/item/reagent_containers/pill/patch/silver_sulf(src)
+		new /obj/item/reagent_containers/pill/patch/alvitane(src)
 
 /obj/item/storage/box/fountainpens
 	name = "box of fountain pens"
@@ -1449,59 +1483,6 @@
 	for(var/i in 1 to 7)
 		new/obj/item/sparkler(src)
 
-/obj/item/storage/box/gum
-	name = "bubblegum packet"
-	desc = "The packaging is entirely in japanese, apparently. You can't make out a single word of it."
-	icon_state = "bubblegum_generic"
-	w_class = WEIGHT_CLASS_TINY
-	illustration = null
-	foldable = null
-	custom_price = 5
-
-/obj/item/storage/box/gum/ComponentInitialize()
-	. = ..()
-	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	STR.max_volume = (STORAGE_VOLUME_CONTAINER_S / 2)
-
-/obj/item/storage/box/gum/PopulateContents()
-	for(var/i in 1 to 4)
-		new/obj/item/reagent_containers/food/snacks/chewable/bubblegum(src)
-
-/obj/item/storage/box/gum/nicotine
-	name = "nicotine gum packet"
-	desc = "Designed to help with nicotine addiction and oral fixation all at once without destroying your lungs in the process. Mint flavored!"
-	icon_state = "bubblegum_nicotine"
-	custom_premium_price = 10
-
-/obj/item/storage/box/gum/nicotine/PopulateContents()
-	for(var/i in 1 to 4)
-		new/obj/item/reagent_containers/food/snacks/chewable/bubblegum/nicotine(src)
-
-/obj/item/storage/box/gum/happiness
-	name = "HP+ gum packet"
-	desc = "A seemingly homemade packaging with an odd smell. It has a weird drawing of a smiling face sticking out its tongue."
-	icon_state = "bubblegum_happiness"
-	custom_price = 10
-	custom_premium_price = 10
-
-/obj/item/storage/box/gum/happiness/Initialize()
-	. = ..()
-	if (prob(25))
-		desc += "You can faintly make out the word 'Hemopagopril' was once scribbled on it."
-
-/obj/item/storage/box/gum/happiness/PopulateContents()
-	for(var/i in 1 to 4)
-		new/obj/item/reagent_containers/food/snacks/chewable/bubblegum/happiness(src)
-
-/obj/item/storage/box/gum/bubblegum
-	name = "bubblegum gum packet"
-	desc = "The packaging is entirely in Demonic, apparently. You feel like even opening this would be a sin."
-	icon_state = "bubblegum_bubblegum"
-
-/obj/item/storage/box/gum/bubblegum/PopulateContents()
-	for(var/i in 1 to 4)
-		new/obj/item/reagent_containers/food/snacks/chewable/bubblegum/bubblegum(src)
-
 /obj/item/storage/box/shipping
 	name = "box of shipping supplies"
 	desc = "Contains several scanners and labelers for shipping things. Wrapping Paper not included."
@@ -1517,3 +1498,12 @@
 		)
 	generate_items_inside(items_inside,src)
 
+/obj/item/storage/box/plasticware
+	name = "plasticware box"
+	desc = "Contains plastic forks, spoons and knives for eating food (and other things)."
+
+/obj/item/storage/box/plasticware/PopulateContents()
+	for(var/i in 1 to 3)
+		new /obj/item/kitchen/fork/plastic(src)
+		new /obj/item/kitchen/spoon/plastic(src)
+		new /obj/item/melee/knife/plastic(src)

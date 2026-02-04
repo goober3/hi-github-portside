@@ -1,4 +1,4 @@
-#define SERENE_ATTACHMENTS list(/obj/item/attachment/rail_light, /obj/item/attachment/bayonet,/obj/item/attachment/scope,/obj/item/attachment/long_scope, /obj/item/attachment/sling, /obj/item/attachment/gun, /obj/item/attachment/ammo_counter)
+#define SERENE_ATTACHMENTS list(/obj/item/attachment/rail_light, /obj/item/attachment/bayonet,/obj/item/attachment/scope, /obj/item/attachment/ammo_counter,/obj/item/attachment/gun)
 #define SERENE_ATTACH_SLOTS list(ATTACHMENT_SLOT_MUZZLE = 1, ATTACHMENT_SLOT_RAIL = 1, ATTACHMENT_SLOT_SCOPE = 1)
 
 /* Micro Target */
@@ -93,8 +93,8 @@ NO_MAG_GUN_HELPER(automatic/pistol/m17)
 	eject_sound = 'sound/weapons/gun/pistol/deagle_unload.ogg'
 	eject_empty_sound = 'sound/weapons/gun/pistol/deagle_unload.ogg'
 
-	recoil_unwielded = 4
-	recoil = 1
+	recoil_unwielded = 3
+	recoil = 0.5
 
 	slot_offsets = list(
 		ATTACHMENT_SLOT_MUZZLE = list(
@@ -163,7 +163,7 @@ NO_MAG_GUN_HELPER(automatic/pistol/m20_auto_elite)
 	fire_delay =  0.4 SECONDS
 	burst_size = 1
 	w_class = WEIGHT_CLASS_BULKY
-	slot_flags = ITEM_SLOT_BACK
+	slot_flags = ITEM_SLOT_BACK | ITEM_SLOT_SUITSTORE
 	show_magazine_on_sprite = TRUE
 	bolt_type = BOLT_TYPE_LOCKING
 
@@ -257,18 +257,16 @@ EMPTY_GUN_HELPER(automatic/m12_sporter/mod)
 
 	bolt_type = BOLT_TYPE_LOCKING
 
-	slot_flags = ITEM_SLOT_BACK
+	slot_flags = ITEM_SLOT_BACK | ITEM_SLOT_SUITSTORE
 
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_MEDIUM
-
-	slot_flags = ITEM_SLOT_BACK
 
 	spread = -4
 	spread_unwielded = 20
 	recoil = 1.25
 	recoil_unwielded = 6
-	fire_delay = 0.5 SECONDS
+	fire_delay = 0.75 SECONDS
 	wield_delay = 1.15 SECONDS //a little longer and less wieldy than other DMRs
 	zoom_out_amt = 2
 
@@ -307,21 +305,11 @@ NO_MAG_GUN_HELPER(automatic/marksman/woodsman)
 /obj/item/ammo_box/magazine/m23/empty
 	start_empty = TRUE
 
-/obj/item/ammo_box/magazine/m23/extended
-	name = "Model 23 Extended Magazine (8x50mmR)"
-	desc = "A 10-round magazine for the Model 23 \"Woodsman\". These rounds do high damage, with excellent armor penetration."
-	icon_state = "woodsman_extended-1"
-	base_icon_state = "woodsman_extended"
-	max_ammo = 10
-
-/obj/item/ammo_box/magazine/m23/extended/empty
-	start_empty = TRUE
-
 /* super soaker */
 
 /obj/item/gun/ballistic/automatic/m15
 	name = "Model 15 Super Sporter"
-	desc = "A popular semi-automatic hunting rifle produced by Serene Outdoors. Solid all-round performance, high accuracy, and ease of access compared to military rifles makes the Super Sporter a popular choice for hunting medium game and occasionally self-defense. Chambered in 5.56mm."
+	desc = "A popular semi-automatic hunting rifle produced by Serene Outdoors. Solid all-round performance, high accuracy, and ease of access compared to military rifles makes the Super Sporter a popular choice for hunting medium game and occasionally self-defense. Chambered in 7.62x40mm CLIP."
 
 	icon = 'icons/obj/guns/manufacturer/serene_outdoors/48x32.dmi'
 	lefthand_file = 'icons/obj/guns/manufacturer/serene_outdoors/lefthand.dmi'
@@ -342,12 +330,10 @@ NO_MAG_GUN_HELPER(automatic/marksman/woodsman)
 
 	bolt_type = BOLT_TYPE_LOCKING
 
-	slot_flags = ITEM_SLOT_BACK
+	slot_flags = ITEM_SLOT_BACK | ITEM_SLOT_SUITSTORE
 
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_MEDIUM
-
-	slot_flags = ITEM_SLOT_BACK
 
 	spread = 0
 	spread_unwielded = 20
@@ -355,6 +341,12 @@ NO_MAG_GUN_HELPER(automatic/marksman/woodsman)
 	recoil_unwielded = 3
 	wield_slowdown = LIGHT_RIFLE_SLOWDOWN
 	wield_delay = 1 SECONDS
+
+	fire_delay = 3
+
+	wear_minor_threshold = 200
+	wear_major_threshold = 600
+	wear_maximum = 1200
 
 	valid_attachments = SERENE_ATTACHMENTS
 	slot_available = SERENE_ATTACH_SLOTS
@@ -365,7 +357,7 @@ NO_MAG_GUN_HELPER(automatic/marksman/woodsman)
 			"y" = 21,
 		),
 		ATTACHMENT_SLOT_SCOPE = list(
-			"x" = 13,
+			"x" = 15,
 			"y" = 23,
 		),
 		ATTACHMENT_SLOT_RAIL = list(
@@ -378,12 +370,12 @@ EMPTY_GUN_HELPER(automatic/m15)
 NO_MAG_GUN_HELPER(automatic/m15)
 
 /obj/item/ammo_box/magazine/m15
-	name = "Model 15 magazine (5.56x42mm CLIP)"
-	desc = "A 20-round magazine for the Model 15 \"Super Sporter\". These rounds do average damage and perform moderately against armor."
+	name = "Model 15 magazine (7.62x40mm CLIP)"
+	desc = "A 20-round magazine for the Model 15 \"Super Sporter\". These rounds do good damage with good armor penetration."
 	icon_state = "p16_mag-1"
 	base_icon_state = "p16_mag"
-	ammo_type = /obj/item/ammo_casing/a556_42
-	caliber = "5.56x42mm"
+	ammo_type = /obj/item/ammo_casing/a762_40
+	caliber = "7.62x40mm"
 	max_ammo = 20
 	multiple_sprites = AMMO_BOX_FULL_EMPTY
 

@@ -38,13 +38,6 @@
 	max_integrity = 140
 	integrity_failure = 0.6
 
-/obj/machinery/porta_turret/ruin/ramzi/light/bonnie
-	lethal = TRUE
-
-/obj/machinery/porta_turret/ruin/ramzi/light/bonnie/Initialize()
-	. = ..()
-	take_damage(rand(120, 130),BRUTE)
-
 /obj/machinery/porta_turret/ruin/ramzi/heavy
 	name = "Revolt Turret"
 	desc = "A durable turret manufactured by the Gorlex Marauders during the ICW. Some reported examples used anti-vehicle munitions. Most surviving examples are poorly maintained."
@@ -61,9 +54,9 @@
 /obj/machinery/porta_turret/ruin/ramzi/super_heavy
 	name = "Rebellion Turret"
 	desc = "A durable anti-vehicle turret system manufactured by the Gorlex Marauders during the ICW. Most users are unable to get more parts for the turret, leading to a slow reduction in the amount of redundant, working parts."
-	stun_projectile = /obj/item/ammo_casing/p50/soporific
+	stun_projectile = /obj/projectile/bullet/p50/soporific
 	stun_projectile_sound = 'sound/weapons/gun/sniper/shot.ogg'
-	lethal_projectile = /obj/item/ammo_casing/p50
+	lethal_projectile = /obj/projectile/bullet/p50
 	lethal_projectile_sound = 'sound/weapons/gun/sniper/shot.ogg'
 	scan_range = 14
 	shot_delay = 30
@@ -153,3 +146,10 @@
 	shot_delay = 15
 	burst_size = 2
 	burst_delay = 3
+
+/obj/machinery/porta_turret/ruin/nt/heavy
+	name = "Sharplite Defense Cannon"
+	desc = "A heavy laser mounting designed by Sharplite for usage on Nanotrasen vessels."
+	lethal_projectile = /obj/projectile/beam/laser/heavylaser/sharplite
+	lethal_projectile_sound = 'sound/weapons/lasercannonfire.ogg'
+	max_integrity = 250

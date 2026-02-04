@@ -94,7 +94,8 @@
 /obj/item/radio/Destroy()
 	remove_radio_all(src) //Just to be sure
 	QDEL_NULL(wires)
-	QDEL_NULL(keyslot)
+	if(istype(keyslot))
+		QDEL_NULL(keyslot)
 	return ..()
 
 /obj/item/radio/Initialize()
@@ -103,6 +104,8 @@
 		wires.cut(WIRE_TX) // OH GOD WHY
 	secure_radio_connections = new
 	. = ..()
+	if(ispath(keyslot))
+		keyslot = new keyslot()
 	frequency = sanitize_frequency(frequency, freerange)
 	set_frequency(frequency)
 
@@ -229,6 +232,8 @@
 		spans = list(M.speech_span)
 	if(!language)
 		language = M.get_selected_language()
+	if((initial(language?.flags) & SIGNED_LANGUAGE) && !HAS_TRAIT(M, TRAIT_CAN_SIGN_ON_COMMS))
+		return
 	INVOKE_ASYNC(src, PROC_REF(talk_into_impl), M, message, channel, spans.Copy(), language, message_mods)
 	return ITALICS | REDUCE_RANGE
 
@@ -434,7 +439,7 @@
 	. = ..()
 
 /obj/item/radio/borg/syndicate
-	keyslot = new /obj/item/encryptionkey/syndicate
+	keyslot = /obj/item/encryptionkey/syndicate
 
 /obj/item/radio/borg/syndicate/Initialize()
 	. = ..()

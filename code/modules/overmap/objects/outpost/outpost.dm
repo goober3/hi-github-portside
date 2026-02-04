@@ -2,6 +2,7 @@
 	name = "outpost"
 	char_rep = "T"
 	token_icon_state = "outpost_small"
+	interference_power = -50
 
 	interaction_options = list(INTERACTION_OVERMAP_DOCK, INTERACTION_OVERMAP_QUICKDOCK)
 
@@ -10,7 +11,9 @@
 	// Set to an instance of the singleton for its type in New.
 	var/datum/map_template/outpost/main_template = null
 
-	var/list/obj/docking_port/stationary/reserve_docks
+	var/list/obj/docking_port/stationary/reserve_docks = list()
+
+	var/list/obj/docking_port/stationary/main_floor_docks = list()
 
 	var/datum/map_template/outpost/elevator_template = null
 	/// List of hangar templates. This list should contain hangar templates sufficient for any ship to dock within one,
@@ -56,6 +59,7 @@
 	var/datum/faction/faction
 	/// simple var that toggles the flag on/off, neant for eventing purposes
 	var/flag_overlay = TRUE
+	var/outpost_name
 
 /datum/overmap/outpost/Initialize(position, datum/overmap_star_system/system_spawned_in, ...)
 	. = ..()
@@ -84,7 +88,9 @@
 		market.name = "[name] market"
 
 	fill_missions()
-	addtimer(CALLBACK(src, PROC_REF(fill_missions)), 10 MINUTES, TIMER_STOPPABLE|TIMER_LOOP|TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(cycle_missions)), 1 HOURS, TIMER_STOPPABLE|TIMER_LOOP|TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(fill_missions)), 30 MINUTES, TIMER_STOPPABLE|TIMER_LOOP|TIMER_DELETE_ME)
+
 
 /datum/overmap/outpost/Destroy(...)
 	SSpoints_of_interest.remove_point_of_interest(token)
@@ -138,6 +144,8 @@
 
 // Shamelessly cribbed from how Elite: Dangerous does station names.
 /datum/overmap/outpost/proc/gen_outpost_name()
+	if(main_template?.outpost_name)
+		return "[main_template.outpost_name]"
 	return "[random_species_name()] [pick(GLOB.station_suffixes)]"
 
 /proc/random_species_name()
@@ -156,11 +164,19 @@
 	return person_name
 
 /datum/overmap/outpost/proc/fill_missions()
-	max_missions = min(10 + (SSovermap.controlled_ships.len * 2), 25)
+	max_missions = min(20 + (SSovermap.controlled_ships.len * 2), 40)
 	while(LAZYLEN(missions) < max_missions)
 		var/mission_type = SSmissions.get_weighted_mission_type()
-		var/datum/mission/outpost/M = new mission_type(src)
+		var/datum/mission/M = new mission_type(src)
 		LAZYADD(missions, M)
+
+/datum/overmap/outpost/proc/cycle_missions()
+	for(var/datum/mission/target_mission as anything in missions)
+		//don't blow up active missions or high priority ones
+		if(!target_mission.accepted && !target_mission.high_priority)
+			LAZYREMOVE(missions, target_mission)
+			qdel(target_mission)
+	fill_missions()
 
 /datum/overmap/outpost/proc/load_main_level()
 	if(!main_template)
@@ -211,6 +227,13 @@
 		else
 			shaft_lists[mach_mark.shaft] += mach_mark
 
+	for(var/obj/effect/landmark/outpost/subshuttle_dock/sub_dock in GLOB.outpost_landmarks)
+		sub_dock.set_up_dock(src)
+
+	for(var/obj/docking_port/stationary/docks in main_floor_docks)
+		docks.name = "[name] subshuttle dock"
+		docks.load_roundstart()
+
 	for(var/shaft_name in shaft_lists)
 		var/list/obj/shaft_li = shaft_lists[shaft_name]
 		var/obj/effect/landmark/outpost/elevator/anchor_landmark = shaft_li[1]
@@ -218,7 +241,7 @@
 
 		// load the template
 		elevator_template.load(anchor_landmark.loc)
-		plat = locate() in anchor_landmark.loc
+		plat = locate(/obj/structure/elevator_platform) in anchor_landmark.loc
 		// create the shaft datum
 		shaft_datums += new /datum/hangar_shaft(shaft_name, plat.master_datum)
 		// give the elevator a first floor
@@ -256,6 +279,10 @@
 	for(var/obj/docking_port/stationary/reserve_dock as anything in reserve_docks)
 		if(!reserve_dock.docked && !reserve_dock.current_docking_ticket)
 			LAZYADD(docks, reserve_dock)
+	if(requesting_interactor.outpost_special_dock_perms == TRUE)
+		for(var/obj/docking_port/stationary/main_floor_dock as anything in main_floor_docks)
+			if(!main_floor_dock.docked && !main_floor_dock.current_docking_ticket)
+				LAZYADD(docks, main_floor_dock)
 	return docks
 
 /datum/overmap/outpost/post_docked(datum/overmap/ship/controlled/dock_requester)

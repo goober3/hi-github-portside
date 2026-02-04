@@ -103,7 +103,7 @@
 	if(!proximity_flag)
 		return
 
-	if(istype(attack_target, /obj/item/reagent_containers/food/snacks/store/cheesewheel))
+	if(istype(attack_target, /obj/item/food/cheese/wheel))
 		try_consume_cheese(attack_target)
 		return TRUE
 
@@ -119,7 +119,7 @@
 		to_chat(entered, span_notice("[icon2html(src, entered)] Squeak!"))
 
 /// Attempts to consume a piece of cheese, causing a few effects.
-/mob/living/basic/mouse/proc/try_consume_cheese(obj/item/reagent_containers/food/snacks/store/cheesewheel/cheese)
+/mob/living/basic/mouse/proc/try_consume_cheese(obj/item/food/cheese/wheel/cheese)
 	var/cap = CONFIG_GET(number/ratcap)
 	// Normal cheese will either heal us
 	if(prob(90) || health < maxHealth)
@@ -186,6 +186,15 @@
 	body_color = "brown"
 	icon_state = "mouse_brown"
 	held_state = "mouse_brown"
+
+/mob/living/basic/mouse/gray/pet
+	name = "pet mouse"
+	desc = "This little guy isn't just cute, but is trained to not nibble on your ship's cables!"
+	ai_controller = /datum/ai_controller/basic_controller/mouse/nocable
+
+/mob/living/basic/mouse/gray/pet/remy
+	name = "Remy"
+	desc = "The Manager's loyal little assistant. Likes to sleep inside of chef hats."
 
 //TOM IS ALIVE! SQUEEEEEEEE~K :)
 /mob/living/basic/mouse/brown/tom
@@ -296,6 +305,12 @@
 		// Otherwise, look for and execute hunts for cabling
 		/datum/ai_planning_subtree/find_and_hunt_target/look_for_cables,
 	)
+
+/datum/ai_controller/basic_controller/mouse/nocable ///mause that does everything except kill itself on cables, for ship pets
+	planning_subtrees = list(
+		/datum/ai_planning_subtree/find_and_hunt_target/look_for_cheese,
+		/datum/ai_planning_subtree/random_speech/mouse,
+)
 
 /// AI controller for rats, slightly more complex than mice becuase they attack people
 /datum/ai_controller/basic_controller/mouse/rat

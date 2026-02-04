@@ -101,17 +101,6 @@
 	stock_max = 6
 	availability_prob = 0
 
-/datum/blackmarket_item/ammo/saber_mag
-	name = "Saber 9x18mm SMG Magazines"
-	desc = "Magazines for use in the Saber 9x18mm SMG. No, they don't work as swords."
-	item = /obj/item/ammo_box/magazine/smgm9mm
-
-	cost_min = 150
-	cost_max = 450
-	stock_min = 4
-	stock_max = 6
-	availability_prob = 0
-
 /datum/blackmarket_item/ammo/model_h_mag
 	name = "Model H Magazine"
 	desc = "A 10 round magazine for Model H slug pistol."
@@ -176,6 +165,17 @@
 	stock = 2
 	availability_prob = 20
 
+/datum/blackmarket_item/ammo/military_etherbor_cell
+	name = "military-grade Etherbor cell"
+	desc = "A military-grade Etherbor weapon cell. A surefire upgrade to the ones on the civilian market. Lime flavor!"
+	item = /obj/item/stock_parts/cell/gun/pgf
+
+	cost_min = 800
+	cost_max = 1200
+	stock_min = 2
+	stock_max = 4
+	availability_prob = 40
+
 /datum/blackmarket_item/ammo/gauss_cell
 	name = "SolCon Weapon Cell"
 	desc = "A Solarian weapon cell, for powering their gauss weaponry."
@@ -188,7 +188,7 @@
 	availability_prob = 0
 
 /datum/blackmarket_item/ammo/damaged_cell
-	name = "Discount Advanced Weapon Power Cells"
+	name = "Discount Advanced Eoehoma Power Cells"
 	desc = "These cells got a little banged up during a raid by GOLD authorities, but they still should be safe to use. They probably won't explode. In theory."
 	item = /obj/item/stock_parts/cell/gun/upgraded
 
@@ -209,7 +209,7 @@
 	return damaged_cell
 
 /datum/blackmarket_item/ammo/advanced_weapon_cell
-	name = "Upgraded Weapon Power Cells"
+	name = "Upgraded Eoehoma Power Cells"
 	desc = "These upgraded weapon powercells come with twice the capacity of the standard cells, and quality checked to make sure they won't explode!"
 	item = /obj/item/stock_parts/cell/gun/upgraded
 
@@ -244,7 +244,7 @@
 /datum/blackmarket_item/ammo/mauler_mag
 	name = "Mauler Magazine"
 	desc = "A 12 round 9x18mm magazine for the Mauler machine pistol."
-	item = /obj/item/ammo_box/magazine/m9mm_mauler
+	item = /obj/item/ammo_box/magazine/m9mm_mauler/extended
 
 	cost_min = 150
 	cost_max = 300
@@ -271,6 +271,27 @@
 	cost_min = 150
 	cost_max = 350
 	stock = 2
+	availability_prob = 0
+
+/datum/blackmarket_item/ammo/cottonmouth
+	name = "Cottonmouth Magazine"
+	desc = "A 14 round magazine for the modified Cottonmouth machine pistol."
+	item = /obj/item/ammo_box/magazine/m10mm_cottonmouth
+
+	cost_min = 100
+	cost_max = 300
+	stock = 4
+	availability_prob = 0
+
+/datum/blackmarket_item/ammo/f4_magazine
+	name = "F4 Magazine"
+	desc = "10 round .308 magazine for use in the F4 rifle and it's predecessor, the F3."
+	item = /obj/item/ammo_box/magazine/f4_308
+
+	cost_min = 300
+	cost_max = 500
+	stock_min = 2
+	stock_max = 6
 	availability_prob = 0
 
 /datum/blackmarket_item/ammo/a4570hp

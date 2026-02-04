@@ -22,6 +22,8 @@
 	smoothing_flags = SMOOTH_BITMASK
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_FLOOR_SNOWED)
 	canSmoothWith = list(SMOOTH_GROUP_CLOSED_TURFS, SMOOTH_GROUP_FLOOR_SNOWED)
+	MAP_SWITCH(pixel_x = 0, pixel_x = -19)
+	MAP_SWITCH(pixel_y = 0, pixel_y = -19)
 	digResult = /obj/item/stack/sheet/mineral/snow
 	light_color = COLOR_ICEPLANET_LIGHT
 	flammability = -5
@@ -84,6 +86,9 @@
 
 /turf/open/floor/plating/asteroid/snow/safe
 	initial_gas_mix = OPENTURF_DEFAULT_ATMOS
+
+/turf/open/floor/plating/asteroid/snow/safe/noplanet
+	planetary_atmos = FALSE
 
 /turf/open/floor/plating/asteroid/snow/safe/lit
 	light_range = 2
