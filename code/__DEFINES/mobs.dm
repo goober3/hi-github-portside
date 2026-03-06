@@ -359,7 +359,7 @@
 //MINOR TWEAKS/MISC
 #define AGE_MIN 18 //youngest a character can be
 #define AGE_MAX 85 //oldest a character can be
-#define AGE_MINOR 20 //legal age of space drinking and smoking
+#define AGE_DRINKING 20 //legal age of space drinking and smoking
 #define WIZARD_AGE_MIN 30 //youngest a wizard can be
 #define APPRENTICE_AGE_MIN 29 //youngest an apprentice can be
 #define SHOES_SLOWDOWN 0 //How much shoes slow you down by default. Negative values speed you up
@@ -382,7 +382,7 @@
 #define FLASH_PROTECTION_SENSITIVE -1
 #define FLASH_PROTECTION_NONE 0
 #define FLASH_PROTECTION_FLASH 1
-#define FLASH_PROTECTION_WELDER 2
+#define FLASH_PROTECTION_WELDER 3
 
 // Roundstart trait system
 
