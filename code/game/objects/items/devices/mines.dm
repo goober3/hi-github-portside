@@ -115,8 +115,13 @@
 
 /// Can this mine trigger on the passed movable?
 /obj/item/mine/proc/can_trigger(atom/movable/on_who)
+
 	if(triggered || !isturf(loc) || !armed || iseffect(on_who) || istype(on_who, /obj/item/mine))
 		return FALSE
+	if isitem(on_who)
+		var/obj/item/stupidthing = on_who
+		if(stupidthing.w_class < WEIGHT_CLASS_SMALL)
+			return FALSE
 	return TRUE
 
 /// When something sets off a mine
@@ -410,10 +415,10 @@
 
 
 //pew pew
-/obj/item/mine/directional/mine_effect(mob/victim)
+/obj/item/mine/directional/mine_effect(mob/living/victim)
 	if(casingtype && target_turf && victim ?(src.loc != victim.loc) : victim == null)
 		var/obj/item/ammo_casing/casing = new casingtype(src)
-		casing.fire_casing(target_turf, null, null, null, 30, ran_zone(), 60, src)
+		casing.fire_casing(target_turf, null, null, null, 30, null, 60, src)
 	. = ..()
 
 /obj/item/mine/directional/disarm()
@@ -479,7 +484,7 @@
 
 
 /obj/item/mine/pressure/explosive/fire
-	name = "\improper G-82 Incindeary"
+	name = "\improper G-82 Incendiary"
 	desc = "An anti-infantry explosive produced during the corporate wars. Transforms into superheated slag and a ball of fire on detonation. "
 
 	range_flame = 6
@@ -597,7 +602,7 @@
 ///like all real 'less' than lethal crowd control options this is, in fact, not very good at being nonlethal
 /obj/item/mine/proximity/explosive/sting
 	name = "\improper'Stinger' Crowd Management Device"
-	desc = "A \"less\" than lethal crowd control weapon, designed to demoralise and scatter anti-NT protestors. The bands of ballistic gel inside strike targets and incapacitate without causing serious maiming. In Theory."
+	desc = "A \"less\" than lethal crowd control weapon, designed to demoralize and scatter protestors. The bands of ballistic gel inside strike targets and incapacitate without causing serious maiming. In Theory."
 
 	range_heavy = 0
 	range_light = 1
@@ -608,7 +613,7 @@
 
 	shrapnel_magnitude = 8
 	shrapnel_type = /obj/projectile/bullet/pellet/stingball
-	manufacturer = MANUFACTURER_WARRA_OLD
+	manufacturer = MANUFACTURER_VIGILITAS
 
 
 /obj/item/mine/proximity/explosive/plasma
@@ -697,7 +702,7 @@
 	else
 		. = ..()
 
-/obj/item/mine/directional/claymore/mine_effect(mob/victim)
+/obj/item/mine/directional/claymore/mine_effect(mob/living/victim)
 	. = ..()
 	//if you somehow explode it while on the same tile, you win bonus shrapnel
 	//also spews stuff everywhere if it's triggered while not set up
@@ -716,7 +721,7 @@
 		light_dam = light_damage, light_item_dam = light_item_damage, heavy_dam = heavy_damage, heavy_item_dam = heavy_item_damage)
 		if(shredtype)
 			var/obj/item/ammo_casing/shredcasing = new shredtype(src)
-			shredcasing.fire_casing(target_turf, null, null, null, 30, ran_zone(), 50, src)
+			shredcasing.fire_casing(target_turf, null, null, null, 30, null, 50, src)
 
 /obj/item/mine/directional/claymore/plasma
 	name = "\improper Etherbor EC-1"

@@ -418,7 +418,7 @@
 #define COMSIG_MOB_GO_INACTIVE "mob_go_afk"
 ///from base of mob/death(): (gibbed)
 #define COMSIG_MOB_DEATH "mob_death"
-///from base of mob/set_stat(): (new_stat)
+///from base of mob/set_stat(): (new_stat, old_stat)
 #define COMSIG_MOB_STATCHANGE "mob_statchange"
 ///from base of mob/clickon(): (atom/A, params)
 #define COMSIG_MOB_CLICKON "mob_clickon"
@@ -592,6 +592,8 @@
 #define COMSIG_CARBON_HUG "carbon_hug"
 ///When a carbon mob is hugged, this is called on the carbon that is hugged. (mob/living/hugger)
 #define COMSIG_CARBON_HUGGED "carbon_hugged"
+///When a carbon mob is booped, this is called on the carbon that is booped. (mob/living/booper)
+#define COMSIG_CARBON_BOOP "carbon_booped"
 ///When a carbon mob is headpatted, this is called on the carbon that is headpatted. (mob/living/headpatter)
 #define COMSIG_CARBON_HEADPAT "carbon_headpatted"
 ///When a carbon slips. Called on /turf/open/handle_slip()

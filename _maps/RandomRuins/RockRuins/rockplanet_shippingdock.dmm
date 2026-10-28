@@ -321,7 +321,7 @@
 /obj/effect/turf_decal/industrial/warning/dust{
 	dir = 1
 	},
-/obj/item/emptysandbag,
+/obj/item/stack/empty_sandbags,
 /turf/open/floor/plasteel/dark,
 /area/ruin/rockplanet/shippingdockwarehouse)
 "dI" = (
@@ -482,7 +482,7 @@
 /obj/effect/turf_decal/industrial/warning/dust{
 	dir = 4
 	},
-/obj/item/emptysandbag,
+/obj/item/stack/empty_sandbags,
 /turf/open/floor/plasteel/dark,
 /area/ruin/rockplanet/shippingdockwarehouse)
 "fB" = (
@@ -2899,8 +2899,6 @@
 /obj/structure/closet/crate/large,
 /obj/item/bot_assembly/floorbot,
 /obj/item/bot_assembly/floorbot,
-/obj/item/bot_assembly/firebot,
-/obj/item/bot_assembly/firebot,
 /turf/open/floor/plasteel/tech,
 /area/ruin/rockplanet/shippingdockwarehouse)
 "CW" = (
